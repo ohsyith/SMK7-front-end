@@ -1,0 +1,346 @@
+gw lagi buat login di asp.net core web api entity framework core nah pas gw bikin login nih setelah usernya login gw ambil Username,picture yng ada di localstorage untuk di tampilin ke halaman kek semisalnya Welcome Bard nah bard nya itu aku ambil dri localstorage nya gitu yng Username kira-kira itu aman gk? nah jika tak aman coba tawarkan cara mu supaya gw bsa ambil username nya dan picture untuk di tampilin di halaman
+
+Copy
+Searching for: how to securely store user data in localstorage
+
+Generating answers for you…
+
+Menyimpan data pengguna seperti Username dan gambar profil di localStorage memang bisa dilakukan, namun perlu diingat bahwa data tersebut tidak sepenuhnya aman. Siapa saja yang memiliki akses ke perangkat dapat membaca dan memanipulasi data yang ditulis ke localStorage1.
+
+Namun, jika data yang Anda simpan tidak bersifat sensitif (misalnya tidak berisi informasi pribadi atau rahasia), cara ini bisa diterapkan. Misalnya, Anda bisa menyimpan username dan gambar profil pengguna setelah mereka login, dan data ini bisa Anda gunakan untuk menampilkan pesan selamat datang.
+
+Jika Anda ingin lebih aman, Anda bisa mencoba beberapa alternatif berikut:
+
+Enkripsi Data: Anda bisa mencoba untuk mengenkripsi data sebelum menyimpannya ke localStorage. Namun, Anda perlu berhati-hati dalam menyimpan kunci enkripsi karena jika kunci tersebut jatuh ke tangan yang salah, data Anda bisa terbaca1.
+Server-side Validation: Selalu validasi data di server-side. Jangan hanya mengandalkan data dari client-side karena data tersebut bisa dimanipulasi2.
+JSON Web Tokens (JWT): Salah satu metode yang populer digunakan adalah dengan menggunakan JWT. Dengan JWT, Anda bisa bertukar data otentikasi antara server dan client. Meskipun orang lain bisa membaca isi dari JWT, mereka tidak bisa memodifikasinya tanpa mengetahui kunci rahasia yang digunakan untuk membuat token tersebut3.
+Ingatlah bahwa tidak ada metode yang 100% aman. Oleh karena itu, selalu lakukan langkah-langkah keamanan tambahan dan jangan menyimpan data yang sangat sensitif di client-side.
+
+Learn more:
+
+1. medium.com
+2. stackoverflow.com
+3. stackoverflow.com
+4. stackoverflow.com
+Tpi klo opsi lain bgs nya nyimpan di localstorage atau di tempat yng laen?
+Searching for: alternatives to localstorage for storing user data
+
+Generating answers for you…
+
+Ada beberapa alternatif untuk localStorage yang bisa Anda pertimbangkan:
+
+Session Storage: Mirip dengan localStorage, tetapi data disimpan hanya selama sesi browser berlangsung (sampai tab ditutup). Ini bisa menjadi pilihan jika Anda tidak perlu menyimpan data antar sesi1.
+Cookies: Cookies bisa digunakan untuk menyimpan data di sisi klien, tetapi mereka memiliki batasan ukuran dan bisa dibaca oleh server2.
+IndexedDB: Ini adalah database berbasis JavaScript yang berjalan di browser. IndexedDB memungkinkan Anda untuk menyimpan data lebih kompleks dibandingkan dengan localStorage2.
+Web SQL: Meskipun sudah tidak lagi dikembangkan, Web SQL masih didukung oleh beberapa browser dan memungkinkan Anda untuk melakukan query SQL di browser2.
+localForage: Ini adalah library JavaScript yang memberikan kemudahan penggunaan localStorage dengan semua fitur canggih dari IndexedDB3.
+Perlu diingat bahwa tidak ada metode penyimpanan yang 100% aman. Oleh karena itu, selalu lakukan langkah-langkah keamanan tambahan dan jangan menyimpan data yang sangat sensitif di client-side.
+
+Learn more:
+
+1. dev.to
+2. sitepoint.com
+3. stackoverflow.com
+Klo level smisalnya?
+Searching for: how to securely store user level in web application
+
+Generating answers for you…
+
+Menyimpan level pengguna di localStorage juga memiliki risiko keamanan yang sama seperti menyimpan username atau gambar profil. Jika data tersebut tidak bersifat sensitif dan tidak akan berdampak buruk jika diketahui oleh orang lain, Anda bisa menyimpannya di localStorage1.
+
+Namun, jika level pengguna menentukan akses ke bagian tertentu dari aplikasi Anda, lebih baik untuk tidak menyimpannya di client-side. Sebagai gantinya, Anda bisa menyimpan level pengguna di server dan memvalidasi akses pengguna setiap kali mereka melakukan permintaan ke server2.
+
+Jika Anda harus menyimpan level pengguna di client-side, pastikan untuk selalu memvalidasi data di server-side. Jangan hanya mengandalkan data dari client-side karena data tersebut bisa dimanipulasi2.
+
+Anda juga bisa mempertimbangkan untuk menggunakan teknologi seperti JSON Web Tokens (JWT). Dengan JWT, Anda bisa menyimpan data pengguna seperti level pengguna di dalam token. Token ini kemudian bisa digunakan untuk otentikasi dan otorisasi pengguna3.
+
+Learn more:
+
+1. stackoverflow.com
+2. dailyrazor.com
+3. stackoverflow.com
+4. stackoverflow.com
+5. security.stackexchange.com
+6. eprint.iacr.org
+7. reddit.com
+8. blog.excalidraw.com
++4 more
+Nah aku dh klo dh pakai Jwt itu bro jadi aman gitu gw dh makai sih soalnya
+Generating answers for you…
+
+Ya, menggunakan JSON Web Tokens (JWT) adalah langkah yang baik untuk meningkatkan keamanan aplikasi Anda. Dengan JWT, Anda bisa menyimpan data pengguna seperti username, gambar profil, dan level di dalam token. Token ini kemudian bisa digunakan untuk otentikasi dan otorisasi pengguna.
+
+Namun, perlu diingat bahwa meskipun JWT menambah lapisan keamanan, tidak ada sistem yang 100% aman. Selalu ada risiko, jadi penting untuk tetap memperhatikan praktik keamanan terbaik lainnya, seperti penggunaan HTTPS, penanganan CORS dengan benar, dan lainnya.
+
+Selain itu, penting juga untuk memastikan bahwa token JWT disimpan dengan aman di client-side. Jangan simpan token di localStorage atau sessionStorage karena kedua tempat tersebut rentan terhadap serangan XSS. Sebagai gantinya, pertimbangkan untuk menyimpan token di HttpOnly cookie.
+
+Terakhir, pastikan untuk mengatur waktu kedaluwarsa (expiry time) untuk token Anda agar tidak berlaku selamanya. Ini akan membatasi kerugian jika token Anda jatuh ke tangan yang salah.
+
+Knp gk boleh simpan di localstorage jwt dan apa itu xss attack? maksudnya simpan di clientside itu dimana?
+Searching for: why not to store JWT in localstorage
+
+Searching for: what is XSS attack
+
+Searching for: where to store JWT in client-side
+
+Generating answers for you…
+
+JWT (JSON Web Tokens) sendiri sebenarnya aman untuk disimpan di localStorage, tetapi ada beberapa risiko yang perlu dipertimbangkan:
+
+Cross-Site Scripting (XSS): XSS adalah jenis serangan di mana penyerang dapat memasukkan skrip jahat ke dalam situs web yang seharusnya aman1. localStorage dapat diakses melalui JavaScript di domain yang sama, sehingga setiap JavaScript yang berjalan di situs Anda akan memiliki akses ke localStorage2. Jika situs Anda rentan terhadap serangan XSS, penyerang dapat membaca token JWT dari localStorage3.
+Akses Data: Data di localStorage dapat diakses oleh semua halaman dari domain yang sama2. Ini berarti bahwa jika Anda memiliki skrip lain yang berjalan di domain Anda, skrip tersebut juga dapat mengakses data yang disimpan di localStorage2.
+Alternatif untuk menyimpan JWT di client-side antara lain:
+
+localStorage atau sessionStorage: Ini adalah tempat yang paling umum untuk menyimpan JWT. Namun, seperti yang telah disebutkan, ada risiko XSS2.
+Cookies: Anda juga bisa menggunakan cookies untuk menyimpan JWT. Cookies dapat dibaca oleh JavaScript dan kode server-side, atau hanya server-side jika flag httpOnly diaktifkan2.
+Memory: Metode ini melibatkan penyimpanan token di memory (misalnya dalam variabel JavaScript). Metode ini lebih aman dari XSS karena data hilang saat halaman dimuat ulang. Namun, ini berarti Anda harus mendapatkan token baru setiap kali halaman dimuat ulang4.
+Ingatlah bahwa tidak ada metode yang 100% aman. Oleh karena itu, selalu lakukan langkah-langkah keamanan tambahan dan jangan menyimpan data yang sangat sensitif di client-side.
+
+Learn more:
+
+1. owasp.org
+2. stackoverflow.com
+3. stackoverflow.com
+4. oprea.rocks
+5. stackoverflow.com
+6. stackoverflow.com
+7. security.stackexchange.com
+8. stackoverflow.com
+9. portswigger.net
+10. cloudflare.com
+11. security.stackexchange.com
+12. stackoverflow.com
+13. auth0.com
++9 more
+Cookies: Anda juga bisa menggunakan cookies untuk menyimpan JWT. Cookies dapat dibaca oleh JavaScript dan kode server-side, atau hanya server-side jika flag httpOnly diaktifkan2.
+Nah klo di cookies ini setiap kli orng nih dh login dia refresh pagenya atau tutup page nya nah itu gk hilang kan?
+Generating answers for you…
+
+Ya, Anda benar. Jika Anda menyimpan JWT di cookies, data tersebut tidak akan hilang saat pengguna melakukan refresh halaman atau menutup halaman. Ini karena cookies disimpan di browser dan persisten antar sesi, kecuali Anda mengatur waktu kedaluwarsa (expiry time) untuk cookies tersebut.
+
+Namun, perlu diingat bahwa meskipun cookies lebih aman dari serangan XSS jika Anda mengaktifkan flag httpOnly, mereka masih rentan terhadap serangan lain seperti Cross-Site Request Forgery (CSRF). Oleh karena itu, penting untuk selalu mengimplementasikan langkah-langkah keamanan tambahan seperti menggunakan CSRF tokens.
+
+Apa itu CSRF tokens?
+Searching for: what is CSRF token
+
+Generating answers for you…
+
+CSRF (Cross-Site Request Forgery) token adalah nilai unik dan rahasia yang dihasilkan oleh aplikasi server-side untuk melindungi sumber daya yang rentan terhadap CSRF12. Token ini dihasilkan dan dikirimkan oleh aplikasi server-side dalam permintaan HTTP berikutnya yang dibuat oleh klien2.
+
+Setelah permintaan dibuat, aplikasi server-side membandingkan dua token yang ditemukan dalam sesi pengguna dan dalam permintaan. Jika token hilang atau tidak cocok dengan nilai dalam sesi pengguna, permintaan ditolak, sesi pengguna diakhiri, dan peristiwa tersebut dicatat sebagai serangan CSRF potensial2.
+
+Token CSRF harus mengandung entropi yang signifikan dan sangat tidak dapat diprediksi. Anda dapat mencapai ini dengan menggunakan generator nomor acak pseudo-kekuatan kriptografi (PRNG), yang ditanam dengan timestamp saat dibuat dan rahasia statis2.
+
+Untuk keamanan lebih lanjut, Anda dapat menghasilkan token individu dengan merantai output mereka dengan entropi spesifik pengguna dan mengambil hash kuat dari seluruh struktur2.
+
+Dalam prakteknya, berikut adalah prinsip yang harus Anda ikuti saat menghasilkan dan memverifikasi token Anda2:
+
+Gunakan generator nomor acak yang mapan dengan entropi yang cukup
+Pastikan token tidak dapat digunakan kembali. Kedaluwarsa setelah waktu yang singkat
+Verifikasi token yang diterima sama dengan token yang diatur dengan cara yang aman, misalnya, bandingkan hash
+Jangan kirim token CSRF dalam permintaan HTTP GET. Ini akan memastikan mereka tidak langsung tersedia di URL dan mereka tidak bocor dalam header Referer dengan informasi pengarah lainnya2.
+Learn more:
+
+1. stackoverflow.com
+2. brightsec.com
+3. geeksforgeeks.org
+4. oboloo.com
+5. mybank.com
+6. mybank.com
++3 more
+Kadaluarsa setelah waktu yng singkat itu seminggu termaksud singkat kan?
+Generating answers for you…
+
+Waktu kedaluwarsa token sangat bergantung pada kebutuhan aplikasi Anda. Namun, biasanya, token CSRF memiliki waktu kedaluwarsa yang jauh lebih pendek dibandingkan dengan seminggu. Dalam banyak kasus, token CSRF akan kedaluwarsa setelah beberapa menit atau beberapa jam.
+
+Hal ini dilakukan untuk meminimalkan risiko jika token jatuh ke tangan yang salah. Semakin cepat token kedaluwarsa, semakin sedikit waktu yang dimiliki penyerang untuk menggunakan token tersebut.
+
+Namun, Anda harus menyeimbangkan keamanan ini dengan kenyamanan pengguna. Jika token kedaluwarsa terlalu cepat, pengguna mungkin perlu melakukan login ulang atau memuat ulang halaman lebih sering, yang bisa mengganggu pengalaman pengguna.
+
+Jadi, Anda perlu menentukan waktu kedaluwarsa yang paling sesuai untuk aplikasi Anda berdasarkan tingkat risiko dan kenyamanan pengguna.
+
+Nah skrng aku ada 2 token nih token csrf dan token jwt lalu kan orng login kan biasa nya make token jwt nih token jwt yng ini kadaluarsa dlm waktu seminggu sedangkan token csrf kadaluarsa dlm waktu 5 menit jadi apakah aman itu jadi walaupun orng itu login dia refresh ttp kelogin dia
+Generating answers for you…
+
+Ya, penggunaan dua token tersebut (JWT dan CSRF) adalah praktik yang umum dan bisa meningkatkan keamanan aplikasi Anda.
+
+Token JWT biasanya digunakan untuk otentikasi dan otorisasi pengguna. Dengan token ini, server dapat memverifikasi identitas pengguna dan memberikan akses ke sumber daya yang sesuai. Token JWT biasanya memiliki waktu kedaluwarsa yang lebih panjang (misalnya, seminggu) karena mereka digunakan untuk menjaga pengguna tetap masuk log (logged in) selama periode waktu tersebut.
+
+Di sisi lain, token CSRF digunakan untuk mencegah serangan CSRF, di mana penyerang mencoba untuk memanfaatkan kepercayaan yang dimiliki situs web terhadap browser pengguna. Token CSRF biasanya memiliki waktu kedaluwarsa yang lebih pendek (misalnya, 5 menit) karena mereka hanya perlu bertahan selama satu sesi atau transaksi.
+
+Jadi, jika pengguna melakukan refresh halaman, mereka masih akan tetap masuk log selama token JWT mereka belum kedaluwarsa. Namun, mereka mungkin perlu mendapatkan token CSRF baru jika token lama mereka telah kedaluwarsa.
+
+Perlu diingat bahwa meskipun penggunaan dua token ini bisa meningkatkan keamanan, tidak ada sistem yang 100% aman. Oleh karena itu, selalu penting untuk memperhatikan praktik keamanan terbaik lainnya.
+
+Apa itu serangan CSRF?
+Searching for: what is CSRF attack
+
+Generating answers for you…
+
+Serangan CSRF (Cross-Site Request Forgery) adalah jenis serangan yang memanfaatkan kepercayaan situs web terhadap browser pengguna1. Dalam serangan ini, penyerang dapat memaksa pengguna untuk melakukan aksi yang tidak mereka inginkan di aplikasi web tempat mereka sedang login2.
+
+Misalnya, penyerang bisa memaksa pengguna untuk mengubah alamat email atau kata sandi mereka, atau melakukan transfer dana2. Jika pengguna yang diserang memiliki peran istimewa dalam aplikasi, penyerang mungkin bisa mengambil alih semua data dan fungsi aplikasi2.
+
+Untuk serangan CSRF bisa terjadi, ada tiga kondisi kunci yang harus ada2:
+
+Ada aksi dalam aplikasi yang penyerang ingin paksa.
+Melakukan aksi tersebut melibatkan satu atau lebih permintaan HTTP, dan aplikasi hanya mengandalkan cookie sesi untuk mengidentifikasi pengguna yang membuat permintaan.
+Permintaan yang melakukan aksi tidak mengandung parameter apa pun yang nilainya tidak bisa ditentukan atau ditebak oleh penyerang2.
+Untuk mencegah serangan CSRF, Anda bisa menggunakan token CSRF. Token ini adalah nilai unik dan rahasia yang dihasilkan oleh aplikasi server-side untuk melindungi sumber daya yang rentan terhadap CSRF1.
+
+Learn more:
+
+1. owasp.org
+2. portswigger.net
+3. imperva.com
+4. en.wikipedia.org
+5. ipwithease.com
+Apa itu serangan XSS?
+Searching for: what is XSS attack
+
+Generating answers for you…
+
+Serangan Cross-Site Scripting (XSS) adalah jenis serangan di mana penyerang dapat memasukkan skrip jahat ke dalam situs web yang seharusnya aman1. Serangan XSS terjadi ketika penyerang menggunakan aplikasi web untuk mengirimkan kode jahat, biasanya dalam bentuk skrip sisi browser, ke pengguna lain1.
+
+Ada tiga jenis utama serangan XSS2:
+
+Reflected XSS: Serangan ini terjadi ketika skrip jahat dipantulkan dari server web, seperti dalam pesan kesalahan, hasil pencarian, atau respons lain yang mencakup beberapa atau semua input yang dikirim ke server sebagai bagian dari permintaan1.
+Stored XSS: Dalam serangan ini, skrip jahat disimpan di server dan kemudian disajikan kepada pengguna dalam konten web1.
+DOM-based XSS: Dalam serangan ini, kerentanan ada dalam kode sisi klien daripada kode sisi server2.
+Dalam semua kasus ini, skrip jahat dapat mengakses cookie apa pun, token sesi, atau informasi sensitif lainnya yang ditahan oleh browser dan digunakan dengan situs tersebut1. Skrip ini bahkan dapat menulis ulang konten halaman HTML1.
+
+Learn more:
+
+1. owasp.org
+2. portswigger.net
+3. cloudflare.com
+Penyebab terjadi serangan xss?
+Searching for: causes of XSS attack
+
+Generating answers for you…
+
+Serangan Cross-Site Scripting (XSS) terjadi ketika data memasuki aplikasi web melalui sumber yang tidak dapat dipercaya, biasanya permintaan web1. Data tersebut dimasukkan dalam konten dinamis yang dikirim ke pengguna web tanpa divalidasi untuk konten berbahaya1.
+
+Berikut adalah beberapa cara yang dapat memicu serangan XSS2:
+
+Pengguna dapat memicu eksekusi secara otomatis saat mereka memuat halaman atau mengarahkan kursor ke elemen halaman tertentu, termasuk hyperlink2.
+Penyerang dapat melakukan XSS secara langsung, misalnya, dalam pesan email yang berisi tautan berbahaya2.
+Beberapa serangan XSS tidak memiliki target tertentu. Sebaliknya, penyerang mengeksploitasi kerentanan di situs atau aplikasi yang menargetkan korban secara acak2.
+Ada tiga jenis utama serangan XSS34:
+
+Reflected XSS: Serangan ini terjadi ketika skrip jahat dipantulkan dari server web, seperti dalam pesan kesalahan, hasil pencarian, atau respons lain yang mencakup beberapa atau semua input yang dikirim ke server sebagai bagian dari permintaan1.
+Stored XSS: Dalam serangan ini, skrip jahat disimpan di server dan kemudian disajikan kepada pengguna dalam konten web1.
+DOM-based XSS: Dalam serangan ini, kerentanan ada dalam kode sisi klien daripada kode sisi server34.
+Dalam semua kasus ini, skrip jahat dapat mengakses cookie apa pun, token sesi, atau informasi sensitif lainnya yang ditahan oleh browser dan digunakan dengan situs tersebut1. Skrip ini bahkan dapat menulis ulang konten halaman HTML1.
+
+Learn more:
+
+1. owasp.org
+2. brightsec.com
+3. portswigger.net
+4. getastra.com
+Bagaimana cara menghindari serangan XSS?
+Searching for: how to prevent XSS attacks
+
+Generating answers for you…
+
+Berikut adalah beberapa cara yang dapat Anda lakukan untuk mencegah serangan XSS:
+
+Validasi Input: Anda harus memvalidasi semua data input dan memastikan bahwa hanya data yang diizinkan yang dapat masuk12. Anda bisa menggunakan filter atau ekspresi reguler untuk memastikan bahwa data input sesuai dengan kriteria yang Anda inginkan3.
+
+Pengkodean Output: Saat Anda menampilkan konten dinamis, pastikan untuk melakukan pengkodean output13. Ini berarti Anda mengganti markup HTML dengan representasi alternatif yang disebut entitas1. Dengan melakukan ini, Anda dapat mencegah skrip jahat dari dieksekusi13.
+
+Sanitasi HTML: Sanitasi HTML melibatkan pembersihan string input untuk menghapus semua tag dan atribut HTML yang berpotensi berbahaya1. Ini bisa mencegah penyerang dari menyisipkan skrip jahat ke dalam konten web1.
+
+Keamanan Kerangka Kerja: Kerangka kerja web modern dapat membantu mencegah serangan XSS dengan mengarahkan pengembang ke arah praktik keamanan yang baik1. Kerangka kerja ini biasanya memiliki fitur seperti templating dan auto-escaping yang dapat membantu mencegah serangan XSS1.
+
+Pemahaman: Pahami bagaimana kerangka kerja Anda mencegah XSS dan di mana celah keamanannya1. Ada kalanya Anda perlu melakukan sesuatu di luar perlindungan yang disediakan oleh kerangka kerja Anda. Di sinilah Pengkodean Output dan Sanitasi HTML sangat penting1.
+
+Ingatlah bahwa tidak ada metode yang 100% aman. Oleh karena itu, selalu lakukan langkah-langkah keamanan tambahan dan jangan menyimpan data yang sangat sensitif di client-side.
+
+Learn more:
+
+1. cheatsheetseries.owasp.org
+2. ibm.com
+3. esecurityplanet.com
+4. portswigger.net
+Btw walaupun gw dh makai asp.net entity framework core dan Angular 16 yng terkini ttp hrus ya bikin CSRF token klo mau website ku aman?
+Searching for: do I need CSRF token with asp.net core and Angular
+
+Generating answers for you…
+
+Ya, meskipun Anda menggunakan ASP.NET Core Entity Framework dan Angular 16, disarankan untuk tetap menggunakan token CSRF untuk meningkatkan keamanan aplikasi Anda12345.
+
+Token CSRF dapat membantu mencegah serangan Cross-Site Request Forgery (CSRF), di mana penyerang dapat memanfaatkan kepercayaan situs web terhadap browser pengguna12345. Dengan menggunakan token CSRF, Anda dapat memastikan bahwa permintaan yang dibuat ke server berasal dari situs web yang sah dan bukan dari situs web jahat12345.
+
+Jadi, meskipun Anda sudah menggunakan teknologi terkini, selalu penting untuk memperhatikan keamanan dan menerapkan langkah-langkah perlindungan tambahan seperti penggunaan token CSRF12345.
+
+Learn more:
+
+1. c-sharpcorner.com
+2. learn.microsoft.com
+3. learn.microsoft.com
+4. learn.microsoft.com
+5. dotnetcoretutorials.com
+6. vulnerable-bank.com
+7. vulnerable-bank.com
+8. good-banking-site.com
++4 more
+token csrf bikin nya di server side kan?
+Generating answers for you…
+
+Ya, benar. Token CSRF biasanya dibuat di server-side. Ketika pengguna mengakses aplikasi web, server akan menghasilkan token CSRF dan mengirimkannya ke client. Token ini kemudian disimpan di client-side (misalnya, dalam form web atau cookie) dan dikirim kembali ke server dalam setiap permintaan yang memerlukan validasi CSRF.
+
+Ketika server menerima permintaan dari client, server akan memeriksa token CSRF dan membandingkannya dengan nilai yang disimpan di server-side. Jika token tidak cocok atau hilang, server akan menolak permintaan tersebut.
+
+Dengan cara ini, server dapat memastikan bahwa permintaan yang dibuat ke server berasal dari situs web yang sah dan bukan dari situs web jahat.
+
+Brarti token csrf ini buatnya untuk kek ambil http get,put dan post gitu gituan ?
+Searching for: when to use CSRF token
+
+Generating answers for you…
+
+Ya, benar. Token CSRF biasanya digunakan dalam permintaan HTTP yang dapat mengubah status aplikasi, seperti permintaan POST, PUT, PATCH, DELETE, dan kadang-kadang GET1234.
+
+Token CSRF digunakan untuk memverifikasi bahwa permintaan yang dibuat ke server berasal dari situs web yang sah dan bukan dari situs web jahat1234. Dengan menggunakan token CSRF, Anda dapat mencegah serangan Cross-Site Request Forgery (CSRF), di mana penyerang dapat memanfaatkan kepercayaan situs web terhadap browser pengguna1234.
+
+Namun, perlu diingat bahwa tidak semua permintaan GET aman dari serangan CSRF. Meskipun permintaan GET seharusnya tidak mengubah status aplikasi, beberapa aplikasi web mungkin tidak mengikuti aturan ini dan memungkinkan perubahan status melalui permintaan GET. Dalam kasus seperti itu, Anda juga harus menggunakan token CSRF untuk permintaan GET1234.
+
+Learn more:
+
+1. stackoverflow.com
+2. brightsec.com
+3. geeksforgeeks.org
+4. laravel.com
+5. mybank.com
+6. mybank.com
++2 more
+Cara save percakapan ini kek mana?
+Searching for: how to save a chat conversation
+
+Generating answers for you…
+
+Untuk menyimpan percakapan ini, Anda bisa mencoba beberapa metode berikut:
+
+Copy-Paste: Anda bisa menyalin teks percakapan dan menempelkannya ke dalam dokumen atau aplikasi catatan1.
+Screenshot: Anda bisa mengambil screenshot percakapan dan menyimpannya sebagai gambar1.
+Export Chat History: Beberapa aplikasi chat memungkinkan Anda untuk mengekspor riwayat percakapan. Misalnya, di WhatsApp, Anda bisa membuka chat, lalu pilih “More” > "Export chat"2. Di Microsoft Teams, Anda bisa klik tiga titik di pojok kanan atas jendela chat, lalu pilih "Export chat history"3.
+Perlu diingat bahwa metode yang tepat untuk menyimpan percakapan tergantung pada platform chat yang Anda gunakan. Jika Anda menggunakan platform chat khusus, Anda mungkin perlu merujuk ke dokumentasi atau pusat bantuan platform tersebut untuk petunjuk lebih lanjut.
+
+
+const environment = {
+            production: false,
+            firebase: {
+                apiKey: "AIzaSyCWnUzctzKuAzwZtQPfI3QmV_WVWpp7CXU",
+                authDomain: "inforsys-co-id.firebaseapp.com",
+                databaseURL: "https://inforsys-co-id.firebaseio.com",
+                projectId: "inforsys-co-id",
+                storageBucket: "inforsys-co-id.appspot.com",
+                messagingSenderId: "657404439750",
+                appId: "1:657404439750:web:6feb3cf2e3eedc54",
+                measurementId: "G-GYST0PG9D7"
+            },
+            recaptcha: {
+                siteKey: '6LcO-CghAAAAAF1bTs8ZyPzjOIP_CCL2ga19emLW',
+            },
+        };

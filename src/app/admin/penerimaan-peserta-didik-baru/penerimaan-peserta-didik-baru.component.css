@@ -1,0 +1,118 @@
+@media (min-width: 833px) {
+  .striped-table .start {
+    background: #deefff;
+  }
+  .striped-table th {
+    background: #deefff;
+  }
+  .striped-table .end {
+    background: #deefff;
+  }
+  .striped-table tr:nth-child(even) {
+    background: #deefff;
+  }
+}
+
+tr th {
+  color: #000;
+  font-family: Rubik;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+tr td {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  color: #4d4848;
+  font-family: Rubik;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.btn-delete {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-delete > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.padding {
+  border-radius: 0.625rem;
+  background: #fff;
+  box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02),
+    0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03);
+}
+
+.text-input {
+  color: #000;
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+}
+
+textarea {
+  border: 1px solid #c1bfbf;
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+.input-link {
+  border: 1px solid #c1bfbf;
+  background-color: #f1f1f1;
+  outline: none;
+  border-radius: 0;
+}
+
+.btn-simpan-perubahan {
+  margin-right: 32px;
+  border-radius: 0;
+}
+
+.btn-upload {
+  margin-right: 32px;
+  border-radius: 0;
+}
+
+.btn-simpan-perubahan > span {
+  color: #fff;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.line {
+  width: 1070px;
+  height: 1px;
+  background-color: #c1bfbf;
+}

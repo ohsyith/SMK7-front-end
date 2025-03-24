@@ -1,0 +1,37 @@
+.Link-Profil{
+    height: 100vh;
+}
+.Link-Profil h1{
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Link-Profil .background {
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+}
+.Link-Profil h2 {
+    color: #000;
+    font-size: 1.125rem;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.Link-Profil input {
+    width: 15.9375rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border: 1px solid var(--Warna-Line---2, #C1BFBF);
+    background: #F1F1F1;
+}
+.info{
+    font-family: Rubik;
+    background-color: rgb(255, 255, 0);
+    padding: 20px;
+    border-radius: 20px;
+}

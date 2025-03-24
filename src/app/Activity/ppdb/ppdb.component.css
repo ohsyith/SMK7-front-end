@@ -1,0 +1,266 @@
+.appnav {
+  z-index: 11;
+  height: 0px; /* Awalnya tinggi 0 */
+}
+
+.header_change {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  object-fit: cover;
+  width: 100vw;
+  height: 5.7em;
+  transition: height 0.3s;
+  border-radius: 0 0 50px 50px;
+}
+
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  height: 6.7em;
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+  box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05),
+    0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04),
+    0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03),
+    0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03),
+    0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02),
+    0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02),
+    0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.ppdb th {
+  font-size: 0.6rem;
+}
+
+.ppdb td {
+  font-size: 0.6rem;
+}
+
+.ppdb h1 {
+  color: var(--Warna-Kuning-Text-Title, #fdab08);
+  font-family: Rubik;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ppdb h5 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ppdb .note h2 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.ppdb .note i {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.ppdb .information h3 {
+  color: #d22222;
+  font-family: Rubik;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.ppdb .information p {
+  color: #d22222;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.ppdb .info {
+  border-radius: 0.625rem;
+  background: #fff;
+  box-shadow: 0px 2.30969px 3.62304px 0px rgba(0, 0, 0, 0.02),
+    0px 6.38599px 10.01724px 0px rgba(0, 0, 0, 0.04),
+    0px 15.37501px 24.11766px 0px rgba(0, 0, 0, 0.05);
+}
+
+.ppdb .info h4 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ppdb .info p {
+  color: #000;
+  font-family: Rubik;
+  font-size: 12.5px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.ppdb img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.ppdb .line::before {
+  position: absolute;
+  width: 60%;
+  height: 0.125rem;
+  background-color: #737782;
+  content: "";
+  margin-top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.input {
+  border-radius: 20px;
+  width: 250px;
+}
+.striped-table {
+  overflow-x: scroll;
+}
+
+
+
+.form-daftar nz-tag span {
+  font-weight: bold;
+  font-family: Rubik;
+  color: #fefefe;
+}
+
+.form-daftar nz-tag:hover {
+  cursor: pointer;
+}
+
+.form-daftar nz-tag span:hover {
+  cursor: pointer;
+}
+
+
+
+
+@media (min-width: 300px) {
+  .NORMAL {
+    margin-left: -52px;
+  }
+
+  .ppdb h5 {
+    font-size: 16px;
+  }
+
+  .ppdb .information p {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 442px) {
+  .striped-table {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .ppdb th {
+    font-size: 0.8rem;
+  }
+  .ppdb td {
+    font-size: 0.8rem;
+  }
+  .ppdb .line::before {
+    position: absolute;
+    width: 20%;
+    height: 0.125rem;
+    background-color: #737782;
+    content: "";
+    margin-top: -30px;
+    left: 99px;
+    transform: translateX(0%);
+  }
+}
+
+@media (min-width: 833px) {
+  .striped-table .start {
+    background: #deefff; /* Warna latar belakang selang-seling */
+    border-radius: 20px 0 0 0;
+  }
+  .striped-table th {
+    background: #deefff; /* Warna latar belakang selang-seling */
+  }
+  .striped-table .end {
+    background: #deefff; /* Warna latar belakang selang-seling */
+    border-radius: 0 20px 0 0;
+  }
+  .striped-table tr:nth-child(even) {
+    background: #deefff; /* Warna latar belakang selang-seling */
+  }
+  .striped-table {
+    border-radius: 1.3125rem;
+    padding: 6px;
+    border: 1px solid #c5bcbc;
+  }
+}
+
+@media (min-width: 1000px) {
+  .ppdb h1 {
+    font-size: 1.7rem;
+  }
+  .ppdb h5 {
+    font-size: 1.2rem;
+  }
+  .ppdb .information h3 {
+    font-size: 1rem;
+  }
+  .ppdb .information p {
+    font-size: 16px;
+  }
+  .ppdb .note h2 {
+    font-size: 1rem;
+  }
+
+  .ppdb .note h2 i {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1114px) {
+  .NORMAL {
+    display: none;
+  }
+
+  .STICKY {
+    display: block;
+  }
+}
+
+@media (max-width: 1114px) {
+  .STICKY {
+    display: none;
+  }
+
+  .NORMAL {
+    display: block;
+  }
+}

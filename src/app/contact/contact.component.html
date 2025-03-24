@@ -1,0 +1,119 @@
+<div class="appnav" [class.header_change]="isScrolled" #appnav>
+  <app-nav></app-nav>
+</div>
+
+<div class="contact">
+  <div class="photo"></div>
+  <div class="container">
+    <div class="row" *ngIf="con[0]">
+      <div
+        class="col-12 call d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="text-center">HUBUNGI KAMI</h1>
+        <h5 class="text-center">{{ con[0].telp }}</h5>
+      </div>
+
+      <div
+        class="col-12 social-media d-flex justify-content-center align-items-center mb-mt-5"
+      >
+        <a target="_blank" href="{{ con[0].facebook }}">
+          <i class="ri-facebook-circle-fill"></i>
+        </a>
+        <br />
+        <a target="_blank" href="{{ con[0].instagram }}">
+          <i class="ri-instagram-fill"></i>
+        </a>
+        <br />
+
+        <a
+          target="_blank"
+          href="https://www.tiktok.com/@adminsmknegeri7ba?_t=8n6KL2FzfDs&_r=1"
+        >
+          <i class="ri-tiktok-fill"></i>
+        </a>
+      </div>
+
+      <div class="col-12 Email">
+        <div class="row" style="position: relative" [formGroup]="Emails">
+          <div class="col-12 col-md-7">
+            <h2 class="mb-md-3">
+              Kirim Email <i class="ri-send-plane-fill"></i>
+            </h2>
+
+            <input
+              type="text"
+              placeholder="Email*"
+              formControlName="fromEmail"
+            />
+            <mat-error
+              *ngIf="
+                Emails.get('fromEmail')?.hasError('email') &&
+                Emails.get('fromEmail')?.touched
+              "
+              class="mb-3"
+            >
+              Invalid Email!
+            </mat-error>
+            <mat-error
+              *ngIf="
+                Emails.get('fromEmail')?.hasError('required') &&
+                Emails.get('fromEmail')?.touched
+              "
+              class="mb-3"
+            >
+              Email is required
+            </mat-error>
+
+            <input
+              type="text"
+              placeholder="Subjek*"
+              formControlName="subject"
+            />
+            <mat-error
+              *ngIf="
+                Emails.get('subject')?.hasError('required') &&
+                Emails.get('fromEmail')?.touched
+              "
+              class="mb-3"
+            >
+              Subject is required
+            </mat-error>
+
+            <input
+              type="text"
+              placeholder="Pesan/Komentar*"
+              formControlName="body"
+            />
+            <mat-error
+              *ngIf="
+                Emails.get('body')?.hasError('required') &&
+                Emails.get('fromEmail')?.touched
+              "
+              class="mb-3"
+            >
+              Body is required
+            </mat-error>
+
+            <button
+              class="mt-5 btn btn-primary"
+              type="submit"
+              (click)="SendEmail()"
+              [ngStyle]="getButtonStyle()"
+              (mouseenter)="toggleHover()"
+              (mouseleave)="toggleHover()"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="col-12 col-md-5 img d-flex align-items-center">
+            <img src="../.././assets/photo_2023-11-10_13-48-33.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>

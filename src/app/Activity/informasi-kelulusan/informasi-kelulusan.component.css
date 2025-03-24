@@ -1,0 +1,287 @@
+.appnav {
+  z-index: 11;
+  height: 0px;
+}
+
+.header_change {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  object-fit: cover;
+  width: 100vw;
+  height: 5.7em;
+  transition: height 0.3s;
+  border-radius: 0 0 50px 50px;
+}
+
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  height: 6.7em;
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+  box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05),
+    0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04),
+    0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03),
+    0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03),
+    0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02),
+    0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02),
+    0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.literacy h1 {
+  color: var(--Warna-Kuning-Text-Title, #fdab08);
+  font-family: Rubik;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.literacy h2 {
+  color: var(--Warna-Abu-Text-Isi---1, #4d4848);
+  font-family: Rubik;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.literacy h1::before {
+  position: absolute;
+  width: 60%;
+  height: 0.125rem;
+  background-color: #737782;
+  content: "";
+  border-radius: 10px;
+  margin-top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.literacy .cek-kelulusan {
+  display: flex;
+  flex-direction: row;
+  background-color: #23235c;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.literacy .form-check label {
+  font-weight: bold;
+  color: white;
+}
+
+.literacy .hasil-lulus {
+  margin-top: 100px;
+}
+
+.literacy .hasil-lulus .text-kelulusan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.literacy .hasil-lulus .text-kelulusan h5 {
+  font-size: 9px;
+}
+
+.literacy .hasil-lulus .text-kelulusan .des-lulus {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 8px;
+}
+
+.literacy .hasil-lulus .text-kelulusan h6 {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.literacy .hasil-lulus .text-kelulusan h3 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.literacy .hasil-lulus .ttd {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hasil-lulus .ttd img {
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .literacy h1 {
+    font-size: 2rem;
+  }
+
+  .literacy h2 {
+    font-size: 1.2rem;
+  }
+
+  .literacy h1::before {
+    width: 40% !important;
+    margin-top: 90px !important;
+    left: 0%;
+    transform: translateX(0%);
+  }
+
+  .literacy .cek-kelulusan {
+    margin-left: 10px;
+  }
+
+  .literacy .hasil-lulus {
+    margin-left: 10px;
+  }
+
+  .literacy .cek-kelulusan .form-check {
+    margin-top: 0px !important;
+  }
+
+  /* ############ */
+  .literacy .hasil-lulus .text-kelulusan h5 {
+    font-size: 18px !important;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan .des-lulus {
+    font-size: 16px !important;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h6 {
+    font-size: 20px !important;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h3 {
+    font-size: 45px !important;
+  }
+
+  .hasil-lulus .ttd img {
+    width: 120px !important;
+  }
+  /* ############ */
+}
+
+@media (min-width: 1000px) {
+  .literacy h1 {
+    font-size: 2rem;
+  }
+  .literacy h2 {
+    font-size: 1.2rem;
+  }
+
+  .literacy h1::before {
+    width: 25% !important;
+    margin-top: 52px !important;
+    left: 0%;
+    transform: translateX(0%);
+  }
+
+  .literacy .cek-kelulusan {
+    margin-left: 10px;
+  }
+
+  .literacy .cek-kelulusan {
+    margin-left: 10px;
+  }
+
+  .literacy .hasil-lulus {
+    margin-left: 10px;
+  }
+
+  .literacy .img-utama img {
+    width: 40% !important;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h5 {
+    font-size: 24px !important;
+    width: 85%;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan .des-lulus {
+    font-size: 20px !important;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h6 {
+    font-size: 26px !important;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h3 {
+    font-size: 60px !important;
+  }
+
+  .hasil-lulus .ttd img {
+    width: 200px !important;
+  }
+}
+
+@media (min-width: 414px) {
+  .literacy .cek-kelulusan {
+    margin-left: 15px;
+  }
+
+  .literacy .img-utama img {
+    width: 80%;
+  }
+
+  .literacy h1::before {
+    width: 46%;
+    margin-top: 55px;
+  }
+
+  /* ############ */
+  .literacy .hasil-lulus .text-kelulusan h5 {
+    font-size: 13px;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan .des-lulus {
+    font-size: 12px;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h6 {
+    font-size: 15px;
+  }
+
+  .literacy .hasil-lulus .text-kelulusan h3 {
+    font-size: 30px;
+  }
+
+  .hasil-lulus .ttd img {
+    width: 72px;
+  }
+  /* ############ */
+}
+
+@media (min-width: 350px) {
+  .literacy h1::before {
+    width: 54%;
+    margin-top: 55px;
+  }
+}
+
+@media (min-width: 320px) {
+  .literacy .cek-kelulusan {
+    margin-left: 15px;
+  }
+
+  .literacy .cek-kelulusan .form-check {
+    margin-top: 20px;
+  }
+
+  .literacy .img-utama img {
+    width: 60%;
+  }
+
+  .literacy .hasil-lulus {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,274 @@
+<div
+  class="appnav"
+  [class.header_change]="isScrolled"
+  [class.header]="!isScrolled"
+  #appnav
+>
+  <app-nav></app-nav>
+</div>
+
+<div class="gtk">
+  <div class="row mt-5 px-md-5">
+    <div class="col-12 px-md-5 mt-5">
+      <div class="mt-3 text-center">
+        <h1>INFORMASI GURU DAN TENAGA KEPENDIDIKAN</h1>
+        <h2>SMK NEGERI 7 BATAM</h2>
+      </div>
+    </div>
+
+    <div class="headmaster px-md-5 mt-md-5">
+      <div *ngFor="let kepsek of positionData['Kepala Sekolah']" class="row">
+        <div class="col-12 col-md-6 mt-4 px-5 ps-md-5">
+          <img class="p-3 p-md-0" [src]="kepsek.foto" alt="Kepala Sekolah" />
+        </div>
+        <div
+          class="col-12 col-md-6 mt-4 px-5 text-center text-md-end d-flex flex-column align-items-center"
+        >
+          <div class="my-auto">
+            <h4 class="mb-0">KEPALA SEKOLAH SMK NEGERI 7 BATAM</h4>
+            <h3 class="mt-md-3">{{ kepsek.nama }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal line mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">WAKIL KEPALA SEKOLAH</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <!-- <div *ngFor="let wakil of positionData['Wakil Kepala Sekolah']" class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4">
+                    <img class="p-3 p-md-3" [src]="wakil.foto" alt="Wakil Kepala Sekolah">
+                    <p class="mt-2">{{wakil.nama}}</p>
+                  </div> -->
+            <div class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4">
+              <img
+                class="p-3 p-md-3"
+                src="https://res.cloudinary.com/dmyxj5yfs/image/upload/v1710560804/SMK7/Guru/owcnagroj3widvowxqwx.jpg"
+                alt="Wakil Kepala Sekolah"
+              />
+              <p class="mt-2"><strong>Wakasek Bidang Kurikulum</strong></p>
+              <p class="mt-2">Adam Kriszal, S.Kom, Gr., S.Pd., M.M.</p>
+            </div>
+
+            <div class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4">
+              <img
+                class="p-3 p-md-3"
+                src="https://res.cloudinary.com/dmyxj5yfs/image/upload/v1701257012/SMK7/Guru/wrgnxbrwj6qe3f1oplwh.jpg"
+                alt="Wakil Kepala Sekolah"
+              />
+              <p class="mt-2"><strong>Wakasek Bidang Kesiswaan</strong></p>
+              <p class="mt-2">Edo Pramudia, S.Pd.</p>
+            </div>
+            
+            <div class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4">
+              <img
+                class="p-3 p-md-3"
+                src="https://res.cloudinary.com/dmyxj5yfs/image/upload/v1701257156/SMK7/Guru/zcyd6xo3vvov1jsgu1kk.jpg"
+                alt="Wakil Kepala Sekolah"
+              />
+              <p class="mt-2">
+                <strong>Wakasek Bidang Sarana Prasarana</strong>
+              </p>
+              <p class="mt-2">Drs. Akbar Haskim</p>
+            </div>
+            <div
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img
+                class="p-3 p-md-3"
+                src="https://res.cloudinary.com/dmyxj5yfs/image/upload/v1710560680/SMK7/Guru/diih8hjaelviwrw7rjwg.jpg"
+                alt="Wakil Kepala Sekolah"
+              />
+              <p class="mt-2"><strong>Wakasek Bidang Humas</strong></p>
+              <p class="mt-2">Enjang Suhaedin, S.Pd., Gr., M.M.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">KETUA KONSENTRASI KEAHLIAN</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let kajur of positionData['Ketua Program Studi']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="kajur.foto" alt="kajur" />
+              <p class="mt-2">{{ kajur.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">KEPALA PERPUSTAKAAN</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let kepur of positionData['Kepala Perpustakaan']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="kepur.foto" alt="kepur" />
+              <p class="mt-2">{{ kepur.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">GURU MULTIMEDIA</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let gurumm of positionData['Guru Multimedia']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="gurumm.foto" alt="gurumm" />
+              <p class="mt-2">{{ gurumm.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">GURU REKAYASA PERANGKAT LUNAK</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let gururpl of positionData['Guru RPL']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="gururpl.foto" alt="gururpl" />
+              <p class="mt-2">{{ gururpl.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">GURU TEKNIK INSTALASI TENAGA LISTRIK</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let gurutitl of positionData['Guru TITL']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="gurutitl.foto" alt="gurutitl" />
+              <p class="mt-2">{{ gurutitl.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">GURU TEKNIK JARINGAN AKSES TELEKOMUNIKASI</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let gurutjat of positionData['Guru TJAT']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="gurutjat.foto" alt="gurutjat" />
+              <p class="mt-2">{{ gurutjat.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">GURU TEKNIK KOMPUTER DAN JARINGAN</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let gurutkj of positionData['Guru TKJ']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="gurutkj.foto" alt="gurutkj" />
+              <p class="mt-2">{{ gurutkj.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">BIMBINGAN KONSELING</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="let bk of positionData['Guru BK']"
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img class="p-3 p-md-3" [src]="bk.foto" alt="bk" />
+              <p class="mt-2">{{ bk.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vice-principal mt-4">
+      <div class="row">
+        <div class="col-12 mt-5 px-4 ms-lg-4 text-center text-md-start">
+          <h5 class="ps-lg-3">TENAGA KEPENDIDIKAN</h5>
+        </div>
+        <div class="col-12 mx-lg-5">
+          <div class="row">
+            <div
+              *ngFor="
+                let tenagakependidikan of positionData['Tenaga Kependidikan']
+              "
+              class="col-12 col-md-3 col-lg-2 px-5 px-md-0 mt-3 pb-2 text-center me-lg-4"
+            >
+              <img
+                class="p-3 p-md-3"
+                [src]="tenagakependidikan.foto"
+                alt="tenagakependidikan"
+              />
+              <p class="mt-2">{{ tenagakependidikan.nama }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>

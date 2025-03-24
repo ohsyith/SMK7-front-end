@@ -1,0 +1,181 @@
+.appnav {
+    z-index: 11;
+    height: 0px; /* Awalnya tinggi 0 */
+}
+
+
+.header_change {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:white;
+    object-fit: cover;
+    width: 100vw;
+    height: 5.7em; 
+    transition: height 0.3s; 
+    border-radius: 0 0 50px 50px;
+}
+
+.header{
+    overflow-x: hidden;
+    width: 100%;
+    height: 6.7em; 
+    position: absolute;
+    top: 0;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+    box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05), 0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04), 0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03), 0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03), 0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02), 0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02), 0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.student h1 {
+    color: #FDAB08;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.student h5 {
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 0.80rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.student h3 {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.student h4 {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.89rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.student p {
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.jurusan img{
+    width: 70%;
+}
+.jurusan p{
+    background-color: #E9D119;;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.student .row .jurusan {
+    border-radius: 1.25rem;
+    background: var(--Warna-Background---Dropdown, #F2F2F2);
+    box-shadow: 0px 2.91966px 1.58005px 0px rgba(0, 0, 0, 0.07), 0px 7.38404px 3.99607px 0px rgba(0, 0, 0, 0.05), 0px 15.06274px 8.1516px 0px rgba(0, 0, 0, 0.04), 0px 31.0264px 16.79076px 0px rgba(0, 0, 0, 0.03), 0px 85px 46px 0px rgba(0, 0, 0, 0.02);
+}
+.student .line::before {
+    position: absolute;
+    width: 40%;
+    height: 0.125rem;
+    background-color: #737782;
+    content: "";
+    margin-top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.student .lin::before {
+    position: absolute;
+    width: 20%;
+    height: 0.125rem;
+    background-color: #737782;
+    content: "";
+    margin-top: 29px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media(min-width: 400px){
+    .student h1 {
+        font-size: 1.5rem;
+    }
+    .student h5 {
+        font-size: 0.9rem;
+    }
+    .student h3 {
+        font-size: 1.4rem;
+    }
+    .student h4 {
+        font-size: 1rem;
+    }
+    .student p {
+        font-size: 1rem;
+    }
+    .jurusan img{
+        width: 60%;
+    }
+}
+@media(min-width: 768px){
+    .student h1 {
+        font-size: 1.7rem;
+    }
+    .student h5 {
+        font-size: 1.02rem;
+    }
+    .student h3 {
+        font-size: 1.5rem;
+    }
+    .student h4 {
+        font-size: 1.1rem;
+    }
+    .student p {
+        font-size: 1.1rem;
+    }
+    .jurusan img{
+        width: 60%;
+    }
+    .student .line::before {
+        position: absolute;
+        width: 20%;
+        height: 0.125rem;
+        background-color: #737782;;
+        content: "";
+        margin-top: -30px;
+        left: 94px;
+        transform: translateX(0%);
+    }
+}
+@media(min-width: 1000px){
+    .student h1 {
+        font-size: 1.9rem;
+    }
+    .student h5 {
+        font-size: 1.1rem;
+    }
+    .student h3 {
+        font-size: 1.3rem;
+    }
+    .student h4 {
+        font-size: 0.8rem;
+    }
+    .student p {
+        font-size: 1rem;
+    }
+    .jurusan img{
+        width: 60%;
+    }
+}

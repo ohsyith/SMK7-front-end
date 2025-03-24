@@ -1,0 +1,111 @@
+<div class="appnav" [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+  <app-navbar></app-navbar>
+</div>
+
+<div class="container mt-5 pt-2">
+    <div class="row mt-5 pt-5">
+        <div class="col-5">
+        <h1>Edit Profil</h1>
+    </div>
+
+    <div class="col-7 text-end">
+      <button type="button" class="btn btn-outline-danger mx-2" routerLink="/Blogger/Home">Batal</button>
+      <button type="button" class="btn btn-outline-primary" (click)="saveProfile()">Simpan</button>
+    </div>
+
+    <!-- Picture-Change -->
+    <div class="row gap-4">
+      <div class="col-12 text-center">
+        <img
+          width="250"
+          height="250"
+          style="object-fit: cover; border-radius: 50%"
+          src="{{ selectedImage || profileData.picture }}"
+          alt=""
+        />
+      </div>
+
+      <div class="col-12 text-center">
+        <input
+          #filePicture
+          type="file"
+          style="display: none"
+          (change)="onFileSelected($event)"
+        />
+        <p (click)="filePicture.click()" class="text-picture" style="cursor: pointer;">Ubah Gambar</p>
+      </div>
+    </div>
+
+    <!-- Form-Input -->
+    <div class="col-12 mt-4">
+      <h2>Detail Pengguna</h2>
+    </div>
+
+    <div class="background mb-5">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="my-2">Nama Lengkap</h3>
+          </div>
+          <div class="col-12">
+            <input placeholder="Cristiano Ronaldo" type="text" [(ngModel)]="profileData.username"/>
+          </div>
+         
+         
+          <div class="col-12 mt-md-3">
+            <h3 class="my-2">Jurusan</h3>
+          </div>
+          <div class="col-12">
+            <input placeholder="RPL" type="text" [(ngModel)]="profileData.jurusan">
+          </div>
+        </div>
+      </div>
+
+    <div class="col-12">
+      <h2>Media Sosial</h2>
+    </div>
+
+    <div class="background mb-5">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="my-2">Instagram</h3>
+          </div>
+  
+          <div class="col-12">
+            <input
+              placeholder="https://www.instagram.com/cristiano/"
+              type="text"
+              [(ngModel)]="profileData.instagram"
+            />
+          </div>
+  
+          <div class="col-12 mt-md-3">
+            <h3 class="my-2">Facebook</h3>
+          </div>
+  
+          <div class="col-12">
+            <input
+              placeholder="https://www.facebook.com/Cristiano/"
+              type="text"
+              [(ngModel)]="profileData.facebook"
+            />
+          </div>
+  
+          <div class="col-12 mt-md-3">
+            <h3 class="my-2">Twitter</h3>
+          </div>
+  
+          <div class="col-12">
+            <input placeholder="https://twitter.com/Cristiano/" type="text" [(ngModel)]="profileData.x"/>
+          </div>
+  
+          <div class="col-12 mt-md-3">
+            <h3 class="my-2">Tiktok</h3>
+          </div>
+  
+          <div class="col-12">
+            <input placeholder="https://tiktok.com/Cristiano/" type="text" [(ngModel)]="profileData.tikTok"/>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

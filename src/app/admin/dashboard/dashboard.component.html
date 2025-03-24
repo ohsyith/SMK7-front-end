@@ -1,0 +1,261 @@
+<div class="container dashboard">
+  <div class="row mt-3">
+    <div class="col-6 text-start">
+      <h1>Dashboard</h1>
+    </div>
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px" class="fa fa-home"></i>
+      </a>
+    </div>
+    <div class="col-9">
+      <div class="12">
+        <div class="row">
+          <div class="col-4 total p-3">
+            <div class="row p-3">
+              <div class="col-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                  fill="none"
+                >
+                  <rect width="70" height="70" rx="5" fill="#FCA11C" />
+                  <path
+                    d="M35.3891 40.8959C38.6865 40.8959 41.3595 38.2229 41.3595 34.9255C41.3595 31.6281 38.6865 28.9551 35.3891 28.9551C32.0917 28.9551 29.4187 31.6281 29.4187 34.9255C29.4187 38.2229 32.0917 40.8959 35.3891 40.8959Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M48.3393 24.2147C44.2607 21.418 39.8958 20 35.3667 20C31.2909 20 27.3178 21.2127 23.5574 23.5897C19.7652 25.9919 16.0477 30.3549 13 34.926C15.4647 39.0307 18.8361 43.251 22.3474 45.6709C26.3756 48.4453 30.7555 49.8521 35.3667 49.8521C39.9378 49.8521 44.3083 48.4462 48.3617 45.6737C51.9299 43.2287 55.3256 39.0139 57.7781 34.926C55.3172 30.8746 51.9103 26.6645 48.3393 24.2147ZM35.3891 43.8817C33.6178 43.8817 31.8863 43.3564 30.4136 42.3724C28.9408 41.3883 27.793 39.9896 27.1151 38.3532C26.4373 36.7168 26.26 34.9161 26.6055 33.1789C26.9511 31.4417 27.804 29.8459 29.0565 28.5935C30.309 27.341 31.9047 26.4881 33.6419 26.1425C35.3791 25.7969 37.1798 25.9743 38.8162 26.6521C40.4527 27.33 41.8513 28.4778 42.8354 29.9506C43.8195 31.4233 44.3447 33.1548 44.3447 34.926C44.342 37.3004 43.3976 39.5767 41.7187 41.2556C40.0397 42.9346 37.7634 43.879 35.3891 43.8817Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="col-8 text-center">
+                <h2>Total Visit</h2>
+                <h3>{{ visitor.count }}</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 total p-3">
+            <div class="row p-3">
+              <div class="col-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                  fill="none"
+                >
+                  <rect width="70" height="70" rx="5" fill="#58AE5A" />
+                  <path
+                    d="M42.8744 24.4997C42.5682 28.63 39.437 31.9994 35.9997 31.9994C32.5623 31.9994 29.4257 28.6308 29.1249 24.4997C28.8125 20.203 31.8592 17 35.9997 17C40.1401 17 43.1869 20.2811 42.8744 24.4997Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="4.99844"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M35.9996 37C29.203 37 22.3048 40.7499 21.0283 47.8277C20.8744 48.6808 21.3572 49.4995 22.2501 49.4995H49.7491C50.6428 49.4995 51.1256 48.6808 50.9717 47.8277C49.6944 40.7499 42.7962 37 35.9996 37Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="4.99844"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </div>
+              <div class="col-8 text-center">
+                <h2>Total User</h2>
+                <h3>{{ totalVisit }}</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 total p-3">
+            <div class="row p-3">
+              <div class="col-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                  fill="none"
+                >
+                  <rect width="70" height="70" rx="5" fill="#22B6CA" />
+                  <path
+                    d="M22.8472 43.9423C22.9337 43.6264 22.7441 43.1872 22.563 42.8706C22.5069 42.7761 22.4458 42.6846 22.3799 42.5966C20.8274 40.2422 20 37.484 20.0001 34.6639C19.9741 26.569 26.6866 20 34.9871 20C42.226 20 48.2692 25.0149 49.6805 31.6718C49.8923 32.6588 49.9994 33.6653 50 34.6747C50 42.7812 43.5464 49.4533 35.246 49.4533C33.9255 49.4533 32.145 49.1216 31.1736 48.8497C30.2022 48.5778 29.2323 48.2172 28.982 48.1206C28.7258 48.0222 28.4538 47.9716 28.1794 47.9713C27.8801 47.9703 27.5838 48.0299 27.3082 48.1466L22.4159 49.9119C22.309 49.9582 22.1957 49.9878 22.0799 49.9999C21.9883 49.9997 21.8976 49.9812 21.8132 49.9457C21.7287 49.9101 21.6521 49.8582 21.5879 49.7929C21.5236 49.7276 21.473 49.6501 21.4388 49.5651C21.4047 49.4801 21.3878 49.3891 21.389 49.2975C21.395 49.2171 21.4095 49.1376 21.4323 49.0603L22.8472 43.9423Z"
+                    stroke="white"
+                    stroke-width="4.33"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M28.077 37.3068C29.3515 37.3068 30.3847 36.2736 30.3847 34.9991C30.3847 33.7246 29.3515 32.6914 28.077 32.6914C26.8025 32.6914 25.7693 33.7246 25.7693 34.9991C25.7693 36.2736 26.8025 37.3068 28.077 37.3068Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M35.0001 37.3068C36.2746 37.3068 37.3078 36.2736 37.3078 34.9991C37.3078 33.7246 36.2746 32.6914 35.0001 32.6914C33.7256 32.6914 32.6924 33.7246 32.6924 34.9991C32.6924 36.2736 33.7256 37.3068 35.0001 37.3068Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M41.923 37.3068C43.1975 37.3068 44.2307 36.2736 44.2307 34.9991C44.2307 33.7246 43.1975 32.6914 41.923 32.6914C40.6485 32.6914 39.6154 33.7246 39.6154 34.9991C39.6154 36.2736 40.6485 37.3068 41.923 37.3068Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="col-8 text-center">
+                <h2>Total Comment</h2>
+                <h3>{{ totalKomen }}</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3 base p-2 background1">
+            <div class="pading py-3">
+              <div class="row">
+                <div class="col-9 text-center">
+                  <h2>Informasi Jumlah</h2>
+                </div>
+                <div class="col-2 pt-2">
+                  <a>
+                    <i
+                      style="font-size: 20px"
+                      class="fa fa-edit"
+                      [routerLink]="'/admin/Informasi-Jumlah'"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 text-center mt-3">
+                <h3>{{ guruList.length }}</h3>
+                <h4>GTK</h4>
+                <h3>{{ rombel }}</h3>
+                <h4>Rombel</h4>
+                <h3>{{ jumlahJurusan }}</h3>
+                <h4>Konsentrasi Keahlian</h4>
+                <h3>{{ totalSiswa }}</h3>
+                <h4>Peserta DIdik</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9 base1 p-3">
+            <div class="row background2">
+              <div class="col-6 p-2">
+                <div class="pading p-2">
+                  <h2>
+                    Banner Slogan
+                    <a>
+                      <i
+                        style="font-size: 20px"
+                        class="fa fa-edit"
+                        routerLink="/admin/Banner-Slogan"
+                      ></i>
+                    </a>
+                  </h2>
+                  <div class="row" *ngIf="fotoHome">
+                    <div class="col-4">
+                      <img
+                        style="object-fit: cover"
+                        [src]="fotoHome[0].foto"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        style="object-fit: cover"
+                        [src]="fotoHome[1].foto"
+                        alt=""
+                      />
+                    </div>
+                    <!-- <div class="col-4">
+                      <img
+                        style="object-fit: cover"
+                        [src]="fotoHome[2].foto"
+                        alt=""
+                      />
+                    </div> -->
+                  </div>
+                </div>
+                <div class="pading p-2">
+                  <h2>
+                    Link Profil/Program
+                    <a>
+                      <i
+                        style="font-size: 20px"
+                        class="fa fa-edit"
+                        [routerLink]="'/admin/Link-Profil'"
+                      ></i>
+                    </a>
+                  </h2>
+                </div>
+              </div>
+
+              <div class="col-6 headmaster text-center p-2">
+                <div class="pading p-3">
+                  <h3>
+                    Kepala Sekolah
+                    <a>
+                      <i
+                        style="font-size: 20px"
+                        class="fa fa-edit"
+                        [routerLink]="'/admin/Informasi-Kepala-Sekolah'"
+                      ></i>
+                    </a>
+                  </h3>
+                  <h4 *ngIf="data">
+                    {{ data.nama }}
+                  </h4>
+                </div>
+              </div>
+
+              <div class="col-12 jurusan p-4">
+                <div class="row py-3 text-center">
+                  <div class="col-2 mx-2" *ngFor="let item of apiData">
+                    <h2>{{ item.jumlahSiswa }}</h2>
+                    <h3>{{ item.namaJurusan }}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 p-3 news">
+      <div class="row p-2">
+        <h2>
+          Berita
+          <a>
+            <i
+              style="font-size: 20px"
+              class="fa fa-edit"
+              routerLink="/admin/Berita-Sekolah"
+            ></i>
+          </a>
+        </h2>
+        <div>
+          <p *ngFor="let data of listOfDataBerita.slice(0, 3)">
+            {{ data.judul }}
+          </p>
+        </div>
+        <h2>
+          Pengumuman
+          <a>
+            <i
+              style="font-size: 20px"
+              class="fa fa-edit"
+              routerLink="/admin/Pengumuman"
+            ></i>
+          </a>
+        </h2>
+        <div>
+          <p *ngFor="let data2 of listOfDataPengumuman.slice(0, 3)">
+            {{ data2.judul }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

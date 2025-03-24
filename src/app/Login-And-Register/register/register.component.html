@@ -1,0 +1,57 @@
+<div class="row"  [formGroup]="registerforms">
+    <a routerLink="/" class="a" href="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+        <line x1="1.69156" y1="2.15918" x2="38.6916" y2="36.1592" stroke="white" stroke-width="5" />
+        <line x1="38.7434" y1="1.79181" x2="1.74339" y2="37.7918" stroke="white" stroke-width="5" />
+      </svg>
+    </a>
+  
+    <div class="col-lg-7 col-sm-12 col-md-12">
+      <img
+        src="https://th.bing.com/th/id/R.a4b3859373b2076ed1dc57d9ebfba2d9?rik=6twwpN4fcuikNw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-7sKEjmuvgnQ%2fVNonXJDt1LI%2fAAAAAAAABLk%2fJrhPhYTGb2U%2fs1600%2fpustaka.JPG&ehk=JjcURbbpljJ4RmGGexAU2baQyXCSg98sa3HXCx7GiD4%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        alt="" class="img-responsive">
+    </div>
+  
+    <div class="col-lg-4 col-sm-12 col-md-12">
+      <div class="row up justify-content-end">
+        <h2 class="sign col-7">SIGN UP</h2>
+      </div>
+  
+      <div class="row asd">
+        <div class="col-md-12 hbd">
+         
+            <mat-error *ngIf="registerforms.get('Username')?.hasError('required') && registerforms.get('Username')?.touched">
+                Username is required
+            </mat-error>
+          <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Username" formControlName="Username" aria-label="Username">
+
+          <mat-error *ngIf="registerforms.get('Email')?.hasError('required') && registerforms.get('Email')?.touched" >
+            Email is required
+        </mat-error>
+        <mat-error *ngIf="registerforms.get('Email')?.hasError('email') && registerforms.get('Email')?.touched">
+            Invalid Emails!!
+        </mat-error>
+
+          <input type="text" class="form-control mb-lg-3 mb-md-3 mb-2" placeholder="Email" formControlName="Email" aria-label="Email">
+
+
+
+          <mat-error *ngIf="registerforms.get('Password')?.hasError('required') && registerforms.get('Password')?.touched">
+            Password is required
+        </mat-error>
+        <mat-error *ngIf="registerforms.get('Password')?.hasError('minlength') && registerforms.get('Password')?.touched">
+            Password Too short!!
+        </mat-error>
+        <input type="password" class="form-control mb-lg-3 mb-md-3 mb-2" formControlName="Password" placeholder="password" aria-label="password">
+        
+        </div>
+  
+        <div class="col-md-12 mt-4 qwe ">
+          <div class="container">
+            <button type="bottom-right" class="btn btn-primary " (click)="register()" [ngStyle]="getButtonStyle()" (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">SUBMIT</button>
+            <h5 class="col-12">Already have an account ? <a routerLink="/login">Login</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

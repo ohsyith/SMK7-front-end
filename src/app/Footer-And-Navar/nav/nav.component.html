@@ -1,0 +1,391 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+  <div class="container">
+    <a class="navbar-brand fs-4" routerLink="/"
+      ><img
+        src="../../assets/Logo-Skaju 1.png"
+        alt=""
+        [class.img]="isScrolled" /><i
+        class="garis"
+        [class.gariss]="isScrolled"
+      ></i
+    ></a>
+
+    <button
+      [class.toggle]="isScrolled"
+      style="
+        background-color: rgba(195, 195, 195, 0.477);
+        transition: margin-right 0.4s ease;
+      "
+      class="navbar-toggler shadow-none border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="sidebar offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header text-white border-bottom">
+        <h5
+          style="color: white"
+          class="offcanvas-title"
+          id="offcanvasNavbarLabel"
+        >
+          SMK NEGERI 7 BATAM
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white shadow-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div
+        class="offcanvas-body d-flex flex-column flex-column flex-lg-row p-4 p-lg-0"
+      >
+        <ul
+          class="navbar-nav justify-content-center align-items-start fa-5 flex-grow-1 pe-3"
+        >
+          <li class="nav-item mt-2 mt-lg-0">
+            <a [class.item-nav]="isScrolled" class="nav-link" routerLink="/home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown align-items-center">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Profil
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/sejarah">Sejarah</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" routerLink="/visi-misi"
+                  >Visi dan Misi</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/profil-pimpinan"
+                  >Kepala Sekolah SMK Negeri 7 Batam</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/struktur-organisasi"
+                  >Stuktur SMK Negeri 7 Batam</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="https://dapo.kemdikbud.go.id/sekolah/C7CEC28F33ADBC383B95"
+                  >Dapo Dikdasmen SMKN7 Batam</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Program
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/program-kerja"
+                  >Program Kerja</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/hubungan-industri"
+                  >Hubungan Industri</a
+                >
+              </li>
+              <li class="dropend"> 
+                <a class="dropdown-item" data-bs-toggle="dropdown"> 
+                  Kelas Industri 
+                </a> 
+ 
+                <ul class="dropdown-menu animate-menu slideIn-menu"> 
+                  <li> 
+                    <a class="dropdown-item" routerLink="/axioo">Axioo</a> 
+                  </li> 
+ 
+                  <li> 
+                    <a class="dropdown-item" routerLink="/mikrotik">Mikrotik</a> 
+                  </li> 
+                </ul> 
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/tefa"
+                  >Teaching Factory dan Program Inovasi</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/program-bisnis"
+                  >Program Bussiness Center (Unit Produksi)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/program-pengembangan-sekolah"
+                  >Program Pengembangan Sekolah</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/program-kewirausahaan"
+                  >Program Kewirausahaan</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Konsentrasi Keahlian
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li>
+                <a
+                  class="dropdown-item"
+                  [routerLink]="['/jurusan', 'dkv']"
+                  >Desain Komunikasi Visual</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/jurusan', 'rpl']"
+                  >Rekayasa Perangkat Lunak</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/jurusan', 'titl']"
+                  >Teknik Instalasi Tenaga Listrik</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/jurusan', 'tjat']"
+                  >Teknik Jaringan Akses Telekomunikasi</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/jurusan', 'tkj']"
+                  >Teknik Komputer dan Jaringan</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              GTK dan Siswa
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/gtk"
+                  >Informasi GTK</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/informasi-siswa"
+                  >Informasi Siswa</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/peta-kelulusan"
+                  >Informasi Pemetaan Kelulusan</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="/prestasi"
+                  >Prestasi Peserta Didik</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link"
+              routerLink="/sarana-infrastruktur"
+              >SarPras</a
+            >
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Kegiatan
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li><a class="dropdown-item" routerLink="/kewirausahaan">PKK</a></li>
+              <li>
+                <a class="dropdown-item" routerLink="/bursa-kerja-khusus"
+                  >Bursa Kerja Khusus</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/ekstrakulikuler"
+                  >Ekstrakulikuler</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/ppdb"
+                  >Penerimaan Peserta Didik Baru (PPDB)</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/literasi"
+                  >Literasi Sekolah</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/informasi-kelulusan">Informasi Kelulusan</a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+            
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Galeri
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/foto"
+                  >Galeri Foto</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/video"
+                  >Galeri Video</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0 dropdown">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link dropdown-toggle"
+            
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Berita
+            </a>
+            <ul class="dropdown-menu animate-menu slideIn-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/berita">Berita Sekolah</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/pengumuman">Pengumuman</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a
+              [class.item-nav]="isScrolled"
+              *ngIf="!isUser"
+              class="nav-link"
+              routerLink="/blog"
+              >Blog</a
+            >
+            <a
+              [class.item-nav]="isScrolled"
+              *ngIf="isUser"
+              class="nav-link"
+              routerLink="/Blogger/Blog-Saya"
+              >Blog Saya</a
+            >
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a
+              [class.item-nav]="isScrolled"
+              class="nav-link"
+              routerLink="/kontak"
+              >Kontak</a
+            >
+          </li>
+         
+          <li class="nav-item mt-2 mt-lg-0">
+            <a
+              [class.item-nav]="isScrolled"
+              *ngIf="isAdmin"
+              class="nav-link"
+              routerLink="/admin/Dashboard"
+              >ADMIN</a
+            >
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a
+              [class.item-nav]="isScrolled"
+              *ngIf="!isLoggedIn; else loggedIn"
+              routerLink="/login"
+              class="nav-link"
+              >Login</a
+            >
+            <ng-template #loggedIn>
+              <a
+                [class.item-nav]="isScrolled"
+                (click)="logout()"
+                class="nav-link"
+                >Logout</a
+              >
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

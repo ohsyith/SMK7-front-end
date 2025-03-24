@@ -1,0 +1,199 @@
+<div
+  class="appnav"
+  [class.header_change]="isScrolled"
+  [class.header]="!isScrolled"
+  #appnav
+>
+  <app-nav></app-nav>
+</div>
+
+<div class="literacy">
+  <div class="container">
+    <div class="row mt-5 px-2">
+      <div
+        class="col-12 ms-md-3 px-4 px-md-0 mt-5 text-center text-md-start"
+        style="position: relative"
+      >
+        <h1 class="mt-4 pt-md-4">
+          PENGUMUMAN KELULUSAN SISWA/I SMK NEGERI 7 BATAM
+        </h1>
+      </div>
+
+      <div
+        class="col-12 ms-md-3 px-4 px-md-0 mt-4 mb-md-3 text-center text-md-start"
+      >
+        <h2 class="">CEK DATA ANDA DI BAWAH INI!</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12 text-center img-utama">
+          <img src="../../../assets/school.jpg" alt="" />
+        </div>
+
+        <div class="row mt-5 cek-kelulusan">
+          <div class="card col-12 col-sm-6">
+            <div class="card-body">
+              <h4 class="card-title">Cek Kelulusan</h4>
+
+              <p class="card-text text-body-secondary mt-4">
+                Hai Teman! Ayo periksa hasil kelulusan anda di SMK Negeri 7
+                Batam. Isi kolom form di samping untuk mendapatkan hasil
+                kelulusan!
+              </p>
+
+              <ul class="card-text text-body-secondary mt-4">
+                <li>Masukkan Nama Anda</li>
+                <li>Masukkan NIS Anda</li>
+                <li>Masukkan Kelas Anda</li>
+                <li>Klik Cek Hasil</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 form-check">
+            <form [formGroup]="validateForm" (ngSubmit)="getSiswaLulus()">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Masukan Nama Anda"
+                  formControlName="nama_lengkap"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >NIS (Nomor Induk Siswa)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Masukan NIS Anda"
+                  formControlName="nis"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label"
+                  >Kelas</label
+                >
+                <select class="form-select" formControlName="kelas">
+                  <option value="" disabled selected hidden>Pilih...</option>
+                  <option value="XII RPL 1">XII RPL 1</option>
+                  <option value="XII RPL 2">XII RPL 2</option>
+                  <option value="XII RPL 3">XII RPL 3</option>
+                  <option value="XII MM 1">XII MM 1</option>
+                  <option value="XII MM 2">XII MM 2</option>
+                  <option value="XII MM 3">XII MM 3</option>
+                  <option value="XII MM 4">XII MM 4</option>
+                  <option value="XII TKJ 1">XII TKJ 1</option>
+                  <option value="XII TKJ 2">XII TKJ 2</option>
+                  <option value="XII TKJ 3">XII TKJ 3</option>
+                  <option value="XII TKJ 4">XII TKJ 4</option>
+                  <option value="XII TKJ 5">XII TKJ 5</option>
+                  <option value="XII TITL 1">XII TITL 1</option>
+                  <option value="XII TITL 2">XII TITL 2</option>
+                  <option value="XII TITL 3">XII TITL 3</option>
+                  <option value="XII TJAT 1">XII TJAT 1</option>
+                  <option value="XII TJAT 2">XII TJAT 2</option>
+                  <option value="XII TJAT 3">XII TJAT 3</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Cek Hasil</button>
+            </form>
+          </div>
+        </div>
+
+        <ng-container *ngIf="getData">
+          <div class="row hasil-lulus">
+            <div class="col-12">
+              <nz-card
+                nzHoverable
+                [nzBorderless]="false"
+                [nzCover]="coverTemplate"
+              >
+                <div class="text-kelulusan">
+                  <h5 class="text-center">
+                    Berdasarkan hasil rapat majelis guru tentang kelulusan
+                    peserta didik. Maka siswa yang di sebutkan dibawah ini :
+                  </h5>
+
+                  <div class="row mt-4 ms-0 ms-md-5 des-lulus">
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-5 text-end">Nama :</div>
+
+                        <div class="col-7 text-start">
+                          {{ getData.nama }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-5 text-end">NIS :</div>
+
+                        <div class="col-7 text-start">
+                          {{ getData.nis }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-5 text-end">Kelas :</div>
+
+                        <div class="col-7 text-start">
+                          {{ getData.kelas }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6 class="mt-4 text-center">Dinyatakan</h6>
+
+                  <h3 class="text-center">
+                    {{ getData.keteranganLulus }}
+                  </h3>
+                </div>
+
+                <div class="ttd mt-4">
+                  <img
+                  src="../../../assets/putih.jpeg"
+                  alt=""
+                  />
+                  <img
+                  
+
+                    src="../../../assets/ttd-Wakaku-removebg-preview.png"
+                    alt=""
+                  />
+                </div>
+              </nz-card>
+
+              <ng-template #coverTemplate>
+                <img
+                  alt="example"
+                  src="../../../assets/cop-surat-removebg-pre.png"
+                />
+              </ng-template>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>

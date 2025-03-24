@@ -1,0 +1,402 @@
+.appnav {
+  z-index: 11;
+  height: 0px; /* Awalnya tinggi 0 */
+}
+
+.header_change {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  object-fit: cover;
+  width: 100vw;
+  height: 5.7em;
+  transition: height 0.3s;
+  border-radius: 0 0 50px 50px;
+}
+
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  height: 6.7em;
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+  box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05),
+    0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04),
+    0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03),
+    0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03),
+    0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02),
+    0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02),
+    0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.news h1 {
+  color: var(--Warna-Kuning-Text-Title, #fdab08);
+  font-family: Rubik;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Details .image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.Details p {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.Details h5 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+.Details .row img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.point h2 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 120% */
+}
+.point ul li ul li {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.point h4 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 171.429% */
+}
+.point .border {
+  border-radius: 0.625rem;
+  background: #fff;
+  box-shadow: 0px 2.30969px 3.62304px 0px rgba(0, 0, 0, 0.02),
+    0px 6.38599px 10.01724px 0px rgba(0, 0, 0, 0.04),
+    0px 15.37501px 24.11766px 0px rgba(0, 0, 0, 0.05);
+}
+.point ul li {
+  border: none;
+}
+.point .cover {
+  position: relative;
+}
+.point ul .line {
+  border-bottom: 1px solid #000;
+}
+
+.comment .user {
+  border-radius: 0.625rem;
+  background: #176d81;
+  height: 180px;
+}
+.comment .user h2 {
+  color: #fff;
+  font-family: Rubik Mono One;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.comment .user p {
+  color: #fff;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 0.675rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.04375rem;
+}
+
+.commented h2 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 1.175rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.commented input {
+  border: 1px solid var(--Warna-Line---2, #c1bfbf);
+  background: #fafafa;
+  padding-left: 10px;
+}
+.commented .input-1 {
+  width: 100%;
+  height: 50px;
+}
+.commented .input-2 {
+  width: 50%;
+  height: 30px;
+}
+.commented .input-3 {
+  width: 48.5%;
+  height: 30px;
+}
+.commented button {
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .news h1 {
+    font-size: 1.3rem;
+  }
+  .Details .image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .Details p {
+    font-size: 0.7rem;
+  }
+  .Details .row img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .Details h5 {
+    font-size: 0.9rem;
+  }
+
+  .point h2 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 120% */
+  }
+  .point ul li ul li {
+    font-size: 0.7rem;
+  }
+  .point h4 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2rem; /* 171.429% */
+  }
+  .point .border {
+    border-radius: 0.625rem;
+    background: #fff;
+    box-shadow: 0px 2.30969px 3.62304px 0px rgba(0, 0, 0, 0.02),
+      0px 6.38599px 10.01724px 0px rgba(0, 0, 0, 0.04),
+      0px 15.37501px 24.11766px 0px rgba(0, 0, 0, 0.05);
+  }
+  .point ul li {
+    border: none;
+  }
+  .point .cover {
+    position: relative;
+  }
+  .point ul .line {
+    border-bottom: 1px solid #000;
+  }
+
+  .comment .user {
+    border-radius: 0.625rem;
+    background: #176d81;
+    height: 150px;
+  }
+  .comment .user h2 {
+    font-size: 0.7rem;
+  }
+  .comment .user p {
+    color: #fff;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.04375rem;
+  }
+
+  .commented h2 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .commented input {
+    border: 1px solid var(--Warna-Line---2, #c1bfbf);
+    background: #fafafa;
+    padding-left: 10px;
+  }
+  .commented .input-1 {
+    width: 100%;
+    height: 50px;
+  }
+  .commented .input-2 {
+    width: 30%;
+    height: 30px;
+  }
+  .commented .input-3 {
+    width: 30%;
+    height: 30px;
+  }
+  .commented button {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .news h1 {
+    font-size: 1.5rem;
+  }
+  .Details .image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .Details p {
+    font-size: 0.85rem;
+  }
+  .Details .row img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .Details h5 {
+    font-size: 0.9rem;
+  }
+
+  .point h2 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 120% */
+  }
+  .point ul li ul li {
+    font-size: 0.7rem;
+  }
+  .point h4 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2rem; /* 171.429% */
+  }
+  .point .border {
+    border-radius: 0.625rem;
+    background: #fff;
+    box-shadow: 0px 2.30969px 3.62304px 0px rgba(0, 0, 0, 0.02),
+      0px 6.38599px 10.01724px 0px rgba(0, 0, 0, 0.04),
+      0px 15.37501px 24.11766px 0px rgba(0, 0, 0, 0.05);
+  }
+  .point ul li {
+    border: none;
+  }
+  .point .cover {
+    position: relative;
+  }
+  .point ul .line {
+    border-bottom: 1px solid #000;
+  }
+
+  .comment .user {
+    border-radius: 0.625rem;
+    background: #176d81;
+  }
+  .comment .user h2 {
+    font-size: 0.9rem;
+  }
+  .comment .user p {
+    color: #fff;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.04375rem;
+  }
+
+  .commented h2 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .commented input {
+    border: 1px solid var(--Warna-Line---2, #c1bfbf);
+    background: #fafafa;
+    padding-left: 10px;
+  }
+  .commented .input-1 {
+    width: 100%;
+    height: 50px;
+  }
+  .commented .input-2 {
+    width: 30%;
+    height: 30px;
+  }
+  .commented .input-3 {
+    width: 30%;
+    height: 30px;
+  }
+  .commented button {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1114px) {
+  .NORMAL {
+    display: none;
+  }
+
+  .STICKY {
+    display: block;
+  }
+}
+
+@media (max-width: 1114px) {
+  .STICKY {
+    display: none;
+  }
+
+  .NORMAL {
+    display: block;
+  }
+}
+
+@media (max-width: 1080px) {
+  .respon-berita {
+    display: flex;
+    flex-direction: column;
+  }
+}

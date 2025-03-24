@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Pemetaan Kelulusan Alumni</h1>
+    </div>
+
+    <!-- Header-Logo -->
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten -->
+    <div class="background p-2">
+      <div class="padding p-3">
+        <div style="position: relative">
+          <!-- Item-1 -->
+          <div class="row mt-3">
+            <div class="col-7 mb-3 text-end text-md-end mt-md-2">
+              <h2>ARSIP KELULUSAN</h2>
+            </div>
+
+            <div class="col-5 mb-3 text-end text-md-end mt-md-2">
+              <button
+                class="btn btn-outline-info"
+                [routerLink]="'/admin/Tambah-Pemetaan-Kelulusan-Alumni'"
+              >
+                Tambah Arsip Kelulusan
+                <span>
+                  <i
+                    class="fa fa-plus"
+                    [routerLink]="'/admin/Tambah-Pemetaan-Kelulusan-Alumni'"
+                  ></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Item-2 -->
+          <div class="row mt-4 row-item-2">
+            <div class="col-2" *ngFor="let item of list">
+              <div
+                [routerLink]="
+                  '/admin/edit-pemetaan-kelulusan-alumni/' + item.id
+                "
+                class="card justify-content-center align-items-center mb-4"
+              >
+                <p>{{ item.tahun }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

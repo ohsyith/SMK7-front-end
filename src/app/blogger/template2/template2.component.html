@@ -1,0 +1,115 @@
+<div class="appnav" [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+    <app-navbar></app-navbar>
+</div>
+
+<div class="container" [formGroup]="blogForm">
+    <div class="row mt-5 pt-5">
+        <div class="col-7 mb-4 mb-md-5 mb-md-5 mt-md-4">
+            <h1>POST BLOG</h1>
+        </div>
+        <div class="col-5 mb-4 mb-md-5 text-center">
+            <h2>Pilih Tema :</h2>
+            <p class="text-center mt-3">
+                <button routerLink="/Blogger/Template-1" class="b1">1</button>
+                <b class="b2">2</b>
+            </p>
+        </div>
+        <div class="col-12 mb-4 mb-md-5">
+            <h3>Tambah Judul</h3>
+            <mat-error *ngIf="blogForm.get('judul')?.hasError('required')" class="mb-3">
+                Judul harus di isi!
+            </mat-error>
+            <input placeholder="Masukan judul blog" formControlName="judul" type="text">
+        </div>
+        <div class="col-12 mb-4 mb-md-5">
+            <h3>Category</h3>
+            <mat-error *ngIf="blogForm.get('category')?.hasError('required')" class="mb-3">
+                Kategori harus di pilih!
+            </mat-error>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="category">
+              <option value="" disabled selected>Pilih Kategori</option>
+              <option *ngFor="let category of uniqueCategories" [value]="category.id">{{ category.categoryBlog }}</option>
+        </select>
+        </div>
+        <div class="col-12 mb-4 mb-md-5">
+            <h3>Tambah Diskripsi Singkat</h3>
+            <mat-error *ngIf="blogForm.get('Quotes')?.hasError('required')" class="mb-3">
+                Deskripsi singkat harus di isi!
+            </mat-error>
+            <input placeholder="Masukan diskripsi blog" formControlName="Quotes" type="text">
+        </div>
+        <div class="col-12 col-lg-5 col-lg-5">
+            <div class="row">
+                <div class="col-12 col-md-12 mb-4 mb-md-5 text">
+                    <h3>Tambah Konten Blog</h3>
+                    <mat-error *ngIf="blogForm.get('isi')?.hasError('required')" class="mb-3">
+                        Konten blog harus di isi!
+                    </mat-error>
+                    <textarea placeholder="Masukan isi blog..." formControlName="isi"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7">
+            <div class="row">
+                <div class="col-12 mb-4 mb-md-5">
+                    <h3>Unggah Foto Utama</h3>
+                </div>
+                <div class="col-12 mb-4 mb-md-5 button">
+                    <mat-error *ngIf="blogForm.get('foto1')?.hasError('fileRequired')" class="mb-3">
+                        Foto utama harus di isi!
+                    </mat-error>
+                    <input #fileInput type="file" formControlName="foto1" (change)="onFileSelected($event,0)" style="display:none">
+                    <img *ngIf="selectedImage[0]" class="mt-4 col-12" [src]="selectedImage[0]" alt="" (click)="fileInput.click()">
+                    <button *ngIf="!selectedImage[0]" (click)="fileInput.click()">
+                        +
+                    </button>
+                </div>
+                <div class="col-12 col-md-16 mb-4 mb-md-5 btn">
+                    <h3>Unggah Foto Pendukung</h3>
+                    <div class="row">
+                        <div class="col-6 mb-4 mb-md-5">
+                            <a *ngIf="selectedImage[1]" (click)="clearSelectedImage(1)" type="button" class="btn btn-outline-danger my-1"><i class=" fa fa-circle-xmark ">X</i>
+                            </a>
+                            <input #fileInput1 type="file" (change)="onFileSelected($event,1)" style="display:none">
+                            <img *ngIf="selectedImage[1]" class="mt-1 col-12" [src]="selectedImage[1]" alt="" (click)="fileInput1.click()">
+                            <button *ngIf="!selectedImage[1]" (click)="fileInput1.click()">
+                                +
+                            </button>
+                        </div>
+                        <div class="col-6 mb-4 mb-md-5">
+                            <a *ngIf="selectedImage[2]" (click)="clearSelectedImage(2)" type="button" class="btn btn-outline-danger my-1"><i class=" fa fa-circle-xmark ">X</i>
+                            </a>
+                            <input #fileInput2 type="file" (change)="onFileSelected($event, 2)" style="display:none">
+                            <img *ngIf="selectedImage[2]" class="mt-1 col-12" [src]="selectedImage[2]" (click)="fileInput2.click()" alt="">
+                            <button *ngIf="!selectedImage[2]" (click)="fileInput2.click()">
+                              +
+                          </button>
+                        </div>
+                        <div class="col-6 mb-4 mb-md-5">
+                            <a *ngIf="selectedImage[3]" (click)="clearSelectedImage(3)" type="button" class="btn btn-outline-danger my-1"><i class=" fa fa-circle-xmark ">X</i>
+                            </a>
+                            <input #fileInput3 type="file" (change)="onFileSelected($event,3)" style="display:none">
+                            <img *ngIf="selectedImage[3]" class="mt-1 col-12" [src]="selectedImage[3]"  alt="" (click)="fileInput3.click()">
+                            <button *ngIf="!selectedImage[3]" (click)="fileInput3.click()">
+                                +
+                            </button>
+                        </div>
+                        <div class="col-6 mb-4 mb-md-5">
+                            <a *ngIf="selectedImage[4]" (click)="clearSelectedImage(4)" type="button" class="btn btn-outline-danger my-1"><i class=" fa fa-circle-xmark ">X</i>
+                            </a>
+                            <input #fileInput4 type="file" (change)="onFileSelected($event,4)" style="display:none">
+                            <img *ngIf="selectedImage[4]" class="mt-1 col-12" [src]="selectedImage[4]" alt="" (click)="fileInput4.click()">
+                            <button *ngIf="!selectedImage[4]" (click)="fileInput4.click()">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mt-5 text-end post">
+            <button type="submit" class="btn me-2" (click)="createBlog()" [ngStyle]="getButtonStyle()" (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">POST</button>
+            <button type="button" routerLink="/Blogger" class="btn btn-danger">Batal</button>
+        </div>
+    </div>
+</div>

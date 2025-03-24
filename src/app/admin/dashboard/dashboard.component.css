@@ -1,0 +1,148 @@
+.dashboard h1 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dashboard .total h2{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.dashboard .total h3{
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.dashboard .total .row{
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+}
+
+.dashboard .base .pading{
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+}
+.dashboard .base h2{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    text-align: right;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.dashboard .base h3{
+    color: var(--Warna-Kuning-Text-Title, #FDAB08);
+    font-family: Rubik;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.dashboard .base h4{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.dashboard .base1 h2{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.dashboard .base1 h2 i{
+    color: #000;
+}
+.dashboard .base1 img{
+    width: 70px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.dashboard .headmaster h3 {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.dashboard .headmaster h4 {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.dashboard .jurusan h2 {
+    color: var(--Warna-Kuning-Text-Title, #FDAB08);
+    font-family: Rubik;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.dashboard .jurusan h3 {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.dashboard .news h2{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.dashboard .news p{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    text-align: justify;
+    font-family: Rubik;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dashboard .news .row{
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+}
+
+i{
+    font-size: 12px;
+    color: #000;
+}
+
+.dashboard .background2{
+    border-radius: 0.625rem;
+background: #FFF;
+box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+}

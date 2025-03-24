@@ -1,0 +1,97 @@
+z<div class="appnav"  [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+    <app-nav ></app-nav>
+</div>
+
+<div class="multimedia px-lg-5">
+    <div class="row mt-5 px-2 px-lg-5">
+        <div class="col-12 mt-3 text-center">
+            <h1 class="mt-4 ms-2 pt-md-4">{{ data?.namaJurusan }}</h1>
+        </div>
+        <div class="px-3">
+            <div class="px-0">
+                <div class="row">
+                    <div class="col-12 col-md-4 px-4 mt-5 text-center line">
+                        <img [src]="data?.fotoJurusan" alt="Foto Jurusan">
+                        <div class="mt-2 col-12 Graduate p-4 text-start">
+                            <h2>Lulusan Alumni Konsentrasi Keahlian {{ data?.singkatan }}</h2>
+                            <div class="col-12 mt-3">
+                                <h3 style="white-space: pre-line;">{{ data?.lulusanKeahlian}} </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    <div  class="col-11 col-md-7 mx-auto p-4 mt-4 vision">
+                        <h4>Visi</h4>
+                        <p style="white-space: pre-line;" class="mt-4">{{ data?.visi}}</p>
+                        <h4 class="mt-5">Misi</h4>
+                        <p style="white-space: pre-line;" class="mt-4" >{{ data?.misi}}</p>
+                    </div>
+                </div>
+                <div class="col-12 mt-5 Production-units">
+                    <h5 class="my-4">Hasil Unit Produksi</h5>
+                    <div class="row">
+                        <div class="col-12 col-md-3 mb-3" *ngFor="let unit of data?.fotoUnitProduksi">
+                            <img [src]="unit.url" alt="">
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="col-12 mt-3 room">
+                    <h5 class="mb-3">Ruangan {{ data?.singkatan}}</h5>
+                    
+                    <div class="row" *ngIf="data.fotoRuanganJurusan">
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 mb-4 col-lg-10 room-1 mx-lg-auto">
+                                <img [src]="data?.fotoRuanganJurusan[0].url" alt="Ruangan 1">
+                            </div>
+                            <div class="col-12 mb-4 col-lg-10 room-1 mx-lg-auto">
+                                <img [src]="data?.fotoRuanganJurusan[1].url" alt="Ruangan 1">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 mb-4 room-2">
+                                <img [src]="data?.fotoRuanganJurusan[2].url" alt="Ruangan 1">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 mb-4 col-lg-10 room-1 mx-lg-auto">
+                                <img [src]="data?.fotoRuanganJurusan[3].url" alt="Ruangan 1">
+                            </div>
+                            <div class="col-12 mb-4 col-lg-10 room-1 mx-lg-auto">
+                                <img [src]="data?.fotoRuanganJurusan[4].url" alt="Ruangan 1">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 mb-4 room-2">
+                                <img [src]="data?.fotoRuanganJurusan[5].url" alt="Ruangan 1">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-12 p-4 cooperation mb-4">
+                    <div class="row">
+                        <div class="col-12 mb-3 h2">
+                            <h2>Kerja Sama DU/DI</h2>
+                        </div>
+                      <ng-container *ngFor="let item of data?.kerjaSama; let i = index">
+                        <div class="col-12 col-md-4 my-2 my-md-3">
+                           <p>{{ item.kerjasama }}</p>
+                        </div>
+                      </ng-container>
+                    </div>
+                </div>
+                  
+                  
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+    <app-footer></app-footer>
+</div>

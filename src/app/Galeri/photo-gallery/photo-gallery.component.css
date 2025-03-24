@@ -1,0 +1,197 @@
+.appnav {
+    z-index: -20;
+    height: 0px; /* Awalnya tinggi 0 */
+}
+
+
+.header_change {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:white;
+    object-fit: cover;
+    width: 100vw;
+    height: 5.7em; 
+    z-index: 3;
+    transition: height 0.3s; 
+    border-radius: 0 0 50px 50px;
+}
+
+.foto .photo{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+    box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05), 0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04), 0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03), 0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03), 0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02), 0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02), 0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+.foto h1 {
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #646161;
+    font-size: 18px;
+    font-weight: 600;
+}
+.tab_box .tab_btn{
+    font-size: 7px;
+    font-weight: 600;
+    color: #ffffff;
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+}
+.tab_box .tab_btn.active{
+    color:#ffffff;
+}
+.content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving{
+    from{transform: translatex(50px);opacity: 0;}
+    from{transform: translatex(0px);opacity: 1;}
+}
+.content_box .content.active{
+    display: block;
+}
+
+.line{
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: #FDAB08;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.content img {
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    height: 120px;
+}
+
+.foto h1::before {
+    position: absolute;
+    width: 20%;
+    border-radius: 10px;
+    height: 0.3rem;
+    background-color: #ffffff;
+    content: "";
+    margin-top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media(min-width: 360px){
+    .foto h1 {
+        color: #FFF;
+        font-family: Rubik;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .tab_box .tab_btn{
+        font-size: 8px;
+        font-weight: 600;
+        color: #ffffff;
+        background: none;
+        border: none;
+        padding: 18px;
+        cursor: pointer;
+    }
+}
+@media(min-width: 768px){
+    .foto h1 {
+        color: #FFF;
+        font-family: Rubik;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .foto h1::before {
+        position: absolute;
+        width: 20%;
+        border-radius: 10px;
+        height: 0.3rem;
+        background-color: #ffffff;
+        content: "";
+        margin-top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tab_box .tab_btn{
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        background: none;
+        border: none;
+        padding: 18px;
+        cursor: pointer;
+    }
+
+    .content img {
+        width: 100%;
+        object-fit: cover;
+        padding-bottom: 4px;
+        padding-left: 2px;
+        padding-right: 2px;
+        height: 220px;
+    }
+}
+@media(min-width: 1000px){
+    .foto h1 {
+        color: #FFF;
+        font-family: Rubik;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .tab_box .tab_btn{
+        font-size: 17px;
+        font-weight: 600;
+        color: #ffffff;
+        background: none;
+        border: none;
+        padding: 18px;
+        cursor: pointer;
+    }
+
+    .content img {
+        width: 100%;
+        object-fit: cover;
+        padding-bottom: 4px;
+        padding-left: 2px;
+        padding-right: 2px;
+        height: 250px;
+    }
+}

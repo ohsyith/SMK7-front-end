@@ -1,0 +1,113 @@
+.Informasi-Kepala-Sekolah h1{
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Informasi-Kepala-Sekolah .background{
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+}
+.Informasi-Kepala-Sekolah .input img{
+    width: 12.5rem;
+    height: 15.75rem;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.Informasi-Kepala-Sekolah .input .choose{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid var(--Warna-Line, #C1BFBF);
+    background: #EDEDED;
+    width: 6.25rem;
+    height: 2rem;
+    flex-shrink: 0;
+}
+.Informasi-Kepala-Sekolah h2 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.Informasi-Kepala-Sekolah textarea {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 228.571% */
+    width: 46.125rem;
+    height: 20.6875rem;
+    flex-shrink: 0;
+    border: 1px solid var(--Warna-Line---2, #C1BFBF);
+    background: #F1F1F1;
+}
+.Informasi-Kepala-Sekolah h3 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+button {
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Informasi-Kepala-Sekolah .name img{
+    width: 11rem;
+    height: 14.75rem;
+    flex-shrink: 0;
+}
+.Informasi-Kepala-Sekolah .name h4{
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.Informasi-Kepala-Sekolah .name h5{
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Informasi-Kepala-Sekolah .name p{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Informasi-Kepala-Sekolah .name button{
+    border: none;
+    background-color: transparent;
+}
+.Informasi-Kepala-Sekolah .img{
+    width: 25rem;
+    height: 20.55663rem;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.tahun{
+    border: solid 2px rgb(198, 197, 197);
+    padding: 1px;
+    background-color: #ebebeb;
+}

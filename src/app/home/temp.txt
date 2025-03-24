@@ -1,0 +1,407 @@
+<div class="appnav"  [class.header_change]="isScrolled" #appnav>
+  <app-nav ></app-nav>
+</div>
+<div class="background">
+  <div class="row mx-4 mx-lg-5">
+    <div class="col-12 mx-lg-5 mt-5 pt-5 smkn-7-batam">
+      <h4 class="mt-5 pt-0 pt-lg-4">SELAMAT DATANG di</h4>
+      <h1 class="mt-4">SMK NEGERI 7 BATAM</h1>
+      <p class="mt-3">
+        Smk Negeri 7 Batam Mewujudkan Peserta Didik yang Beriman, <br />Bertaqwa
+        kepada TUHAN YANG MAHA ESA dan Berakhlak Mulia, Terampil, Unggul,
+        <br />dan Berdaya Saing Global di Era Teknologi Digital.
+      </p>
+      <svg width="11" height="192" viewBox="0 0 11 192" fill="none">
+        <circle cx="6" cy="5" r="5" fill="#FFFF00" />
+        <circle cx="6" cy="187" r="5" fill="#FFFF00" />
+        <line
+          x1="5.5"
+          y1="18"
+          x2="5.5"
+          y2="171"
+          stroke="#FFFF00"
+          stroke-width="3"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="col-12 px-0 px-md-5 mt-4 mb-5">
+  <div class="row details text-center p-1 p-md-5">
+    <div class="col-12 col-md-3 mt-3">
+      <h1
+        [countUp]="guruList.length"
+        [options]="{ enableScrollSpy: false }"
+      ></h1>
+      <h5>GURU DAN TENAGA KEPENDIDIKAN</h5>
+    </div>
+    <div class="col-12 col-md-3 mt-4 mt-md-3">
+      <h1 [countUp]="rombel" [options]="{ enableScrollSpy: false }"></h1>
+      <h5>ROMBEL</h5>
+    </div>
+    <div class="col-12 col-md-3 mt-4 mt-md-3">
+      <h1 [countUp]="jumlahJurusan" [options]="{ enableScrollSpy: false }"></h1>
+      <h5>KOMPETENSI KEAHLIAN</h5>
+    </div>
+    <div class="col-12 col-md-3 mt-4 mt-md-3">
+      <h1 [countUp]="totalSiswa" [options]="{ enableScrollSpy: false }"></h1>
+      <h5>PESERTA DIDIK</h5>
+    </div>
+  </div>
+</div>
+<div class="headmaster">
+  <div class="row px-3">
+    <div class="col-12 text-center my-5">
+      <h2>KATA SAMBUTAN</h2>
+      <h1>KEPALA SMK NEGERI 7 BATAM</h1>
+    </div>
+    <div class="col-12 col-md-5 text-center">
+      <img [src]="fotoKepala" alt="" />
+      <h3 class="mt-3 mb-3">
+        Kepala SMK Negeri 7 Batam <br />
+        {{ namaKepala }}
+      </h3>
+    </div>
+    <div class="col-12 col-md-7 px-md-5">
+      <h5>
+        {{ kata }}
+      </h5>
+    </div>
+  </div>
+</div>
+
+<div class="school-identity my-4 px-4 mt-5 px-md-5">
+  <div class="row">
+    <div class="col-12">
+      <h1>IDENTITAS SEKOLAH</h1>
+    </div>
+    <div class="part-1 col-12 col-md-6 mt-2">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="tab1-tab"
+            data-toggle="tab"
+            href="#tab1"
+            role="tab"
+            aria-controls="tab1"
+            aria-selected="true"
+            >Identitas Sekolah</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="tab2-tab"
+            data-toggle="tab"
+            href="#tab2"
+            role="tab"
+            aria-controls="tab2"
+            aria-selected="false"
+            >Kontak</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="tab3-tab"
+            data-toggle="tab"
+            href="#tab3"
+            role="tab"
+            aria-controls="tab3"
+            aria-selected="false"
+            >Ketersediaan</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content mt-4 mb-4 mb-md-0" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="tab1"
+          role="tabpanel"
+          aria-labelledby="tab1-tab"
+        >
+          <p>
+            NPSN : <i>69774885</i><br />
+            Status : <i>Negeri</i> <br />
+            Bentuk Pendidikan : <i>SMK</i> <br />
+            Status Kepemilikan : <i>Pemerintah Daerah</i><br />
+            SK Pendirian Sekolah : <i>KPTS.367/HK/IX/2014</i><br />
+            Tanggal SK Pendirian : <i>05 September 2014</i><br />
+            SK Izin Operasional : <i>KPTS.367/HK/IX/2014</i> <br />
+            Tanggal SK Izin Operasional : <i>05 September 2014</i> <br />
+          </p>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="tab2"
+          role="tabpanel"
+          aria-labelledby="tab2-tab"
+        >
+          <p>
+            Alamat : <i>Perum Sekawan Pemko</i><br />
+            RT / RW : <i>3 / 41</i><br />
+            Dusun : <i>Belian</i><br />
+            Desa / Kelurahan : <i>Belian</i><br />
+            Kecamatan : <i>Batam Kota</i><br />
+            Kabupaten / Kota : <i>Batam</i><br />
+            Provinsi : <i>Kepulauan Riau</i><br />
+            Kode Pos : <i>29463</i><br />
+            Lintang / Bujur : <i></i><br />
+            No. Telp : <i>(0778) 4805790</i><br />
+            Email : <i>smknegeri7batam@gmail.com</i><br />
+          </p>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="tab3"
+          role="tabpanel"
+          aria-labelledby="tab3-tab"
+        >
+          <p>
+            Sumber Listrik : <i>PLN</i><br />
+            Daya Listrik : <i>33000</i><br />
+            Akses Internet : <i>Ada</i><br />
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 col-md-6 py-md-4 d-flex align-items-center justify-content-center mb-5"
+    >
+      <iframe
+        src="https://www.youtube.com/embed/sYFcrkOxFU8"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="achievement px-3 px-md-5 py-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="row left">
+        <div
+          class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center order-md-2"
+        >
+          <h1>BERPRESTASI</h1>
+          <h5>Our Best achievements</h5>
+        </div>
+        <div class="col-12 col-md-6 mb-4 order-md-1">
+          <img [src]="images[0].foto" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 col-md-6 mt-5 text-center d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1>BERKARAKTER</h1>
+      <h5>Discipline, Independence, Responsibility</h5>
+    </div>
+    <div class="col-12 col-md-6 mb-4">
+      <img [src]="images[1].foto" alt="" />
+    </div>
+    <div class="col-12">
+      <div class="row left">
+        <div
+          class="col-12 col-md-6 mt-5 d-flex flex-column justify-content-center align-items-center order-md-2"
+        >
+          <h1>BERBUDAYA</h1>
+          <h5>Diverse Ethnicities and Religions</h5>
+        </div>
+        <div class="col-12 col-md-6 order-md-1">
+          <img [src]="images[2].foto" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="expertise">
+  <div class="row px-4 py-4">
+    <div class="col-12 px-2 ps-md-5 ms-md-5 text-md-start text-center mb-3">
+      <h1>KOMPENTENSI KEAHLIAN</h1>
+    </div>
+    <div class="col-12 col-md-6 ps-md-5 mt-0">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 d-flex flex-column justify-content-md-between align-items-md-end align-items-center text-center"
+        >
+          <a
+            class="mt-3 p-4 p-md-0 mt-md-0"
+            [routerLink]="['/jurusan', jurusan[0].singkatan]"
+          >
+            <h1>{{ jurusan[0].singkatan }}</h1>
+            <img class="mt-3 mt-3" [src]="jurusan[0].fotoJurusan" alt="" />
+            <p class="mt-4">{{ jurusan[0].namaJurusan }}<br /><br /></p>
+          </a>
+          <a
+            class="mt-3 p-4 p-md-0 mt-md-0"
+            [routerLink]="['/jurusan', jurusan[1].singkatan]"
+          >
+            <h1>{{ jurusan[1].singkatan }}</h1>
+            <img class="mt-3 mt-3" [src]="jurusan[1].fotoJurusan" alt="" />
+            <p class="mt-4">{{ jurusan[1].namaJurusan }}<br /><br /></p>
+          </a>
+          <a
+            class="mt-3 p-4 p-md-0 mt-md-0"
+            [routerLink]="['/jurusan', jurusan[2].singkatan]"
+          >
+            <h1>{{ jurusan[2].singkatan }}</h1>
+            <img class="mt-3 mt-3" [src]="jurusan[2].fotoJurusan" alt="" />
+            <p class="mt-4">{{ jurusan[2].namaJurusan }}<br /><br /></p>
+          </a>
+        </div>
+        <div
+          class="col-12 col-md-6 d-flex flex-column flex-md-column justify-content-md-center align-items-center align-items-md-start text-center"
+        >
+          <a
+            class="mt-3 p-4 p-md-0 mt-md-0"
+            [routerLink]="['/jurusan', jurusan[3].singkatan]"
+          >
+            <h1>{{ jurusan[3].singkatan }}</h1>
+            <img class="mt-3 mt-0" [src]="jurusan[3].fotoJurusan" alt="" />
+            <p class="mt-4">{{ jurusan[3].namaJurusan }}<br /></p>
+          </a>
+          <a
+            class="mt-3 p-4 p-md-0 mt-md-0"
+            [routerLink]="['/jurusan', jurusan[4].singkatan]"
+          >
+            <h1>{{ jurusan[4].singkatan }}</h1>
+            <img class="mt-3 mt-0" [src]="jurusan[4].fotoJurusan" alt="" />
+            <p class="mt-4">{{ jurusan[4].namaJurusan }}<br /></p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="Competency-Leading col-12 col-md-6 mt-5 my-auto mt-md-5">
+      <h2 class="unggulan text-center text-md-start mt-md-3">
+        Kompetensi Unggulan <br />
+        Smk Negeri 7 Batam
+      </h2>
+      <p class="mt-4">
+        <ng-container *ngFor="let jur of jurusan; let i = index">
+          {{ i + 1 }}. {{ jur.namaJurusan }}<br />
+        </ng-container>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="vocational-program py-5">
+  <div class="row px-3">
+    <div
+      class="col-12 col-md-6 pb-2 py-md-4 d-flex flex-column align-items-center justify-content-md-center ps-md-5"
+    >
+      <div class="col-12">
+        <h1>Rencana Aksi Program SMK Pusat Keunggulan</h1>
+      </div>
+      <div class="col-12 p-5">
+        <h4>SMK Negeri 7 Batam, SMK Pusat Keunggulan</h4>
+      </div>
+      <div class="col-12 ps-4">
+        <p>Mengembangkan kerjasama dengan DUDIKA</p>
+        <p>Memiliki kelas industri untuk semua kompetensi keahlian</p>
+        <p>Memiliki Lembaga Sertifikasi Profesi P1</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6" style="position: relative">
+      <div class="iframee">
+        <div class="col-12 pt-3 iframe">
+          <iframe
+            src="https://www.youtube.com/embed/bz9h7xtm5iA?si=LXKTg37VWhYV4Bs2"
+            style="width: 100%; height: 250px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-12 pt-3 iframe">
+          <iframe
+            src="https://www.youtube.com/embed/TBk66-Ach2k?si=gi3G54N5ijBE6Wlc"
+            style="width: 100%; height: 250px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-12 pt-3 iframe">
+          <iframe
+            src="https://www.youtube.com/embed/kzmtQJPJtSA?si=d9dIm5VB6lUTh3Dp"
+            style="width: 100%; height: 250px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="news px-3 py-5 mb-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="row text-center">
+        <div class="col-12">
+          <h4>SMK NEGERI 7 BATAM</h4>
+        </div>
+        <div class="col-12">
+          <h1>Berita Terbaru</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mb-3 mt-4">
+      <div class="row">
+        <div class="col-12 col-md-12 text-md-end text-end">
+          <button type="button" class="btn btn-outline-primary">
+            &lt;&lt; Selengkapnya
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mt-3" *ngFor="let berita of beritaList.slice(0, 6)">
+          <div class="card" style="width: 100%">
+            <img [src]="getMainFoto(berita.foto)" class="card-img-top" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ berita.judul | slice : 0 : 50
+                }}{{ berita.judul.length > 50 ? "..." : "" }}
+              </h5>
+              <p class="card-text mt-4">
+                {{ berita.isi | slice : 0 : 300
+                }}{{ berita.isi.length > 300 ? "..." : "" }}
+              </p>
+
+              <div class="d-flex flex-column time">
+                <i class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M13.2925 2.95399H12.554V2.21552C12.554 2.01967 12.4762 1.83183 12.3377 1.69334C12.1992 1.55485 12.0114 1.47705 11.8155 1.47705C11.6197 1.47705 11.4318 1.55485 11.2933 1.69334C11.1549 1.83183 11.0771 2.01967 11.0771 2.21552V2.95399H6.64623V2.21552C6.64623 2.01967 6.56843 1.83183 6.42994 1.69334C6.29145 1.55485 6.10361 1.47705 5.90776 1.47705C5.7119 1.47705 5.52407 1.55485 5.38558 1.69334C5.24709 1.83183 5.16929 2.01967 5.16929 2.21552V2.95399H4.43082C3.84326 2.95399 3.27976 3.1874 2.86429 3.60287C2.44882 4.01834 2.21541 4.58184 2.21541 5.1694V14.031C2.21541 14.6186 2.44882 15.1821 2.86429 15.5976C3.27976 16.013 3.84326 16.2465 4.43082 16.2465H13.2925C13.88 16.2465 14.4435 16.013 14.859 15.5976C15.2745 15.1821 15.5079 14.6186 15.5079 14.031V5.1694C15.5079 4.58184 15.2745 4.01834 14.859 3.60287C14.4435 3.1874 13.88 2.95399 13.2925 2.95399ZM5.90776 12.5541C5.7617 12.5541 5.61893 12.5108 5.49749 12.4296C5.37605 12.3485 5.28139 12.2332 5.2255 12.0982C5.16961 11.9633 5.15498 11.8148 5.18348 11.6716C5.21197 11.5283 5.28231 11.3967 5.38558 11.2935C5.48886 11.1902 5.62044 11.1198 5.76369 11.0914C5.90694 11.0629 6.05542 11.0775 6.19036 11.1334C6.3253 11.1893 6.44063 11.2839 6.52177 11.4054C6.60292 11.5268 6.64623 11.6696 6.64623 11.8156C6.64623 12.0115 6.56843 12.1993 6.42994 12.3378C6.29145 12.4763 6.10361 12.5541 5.90776 12.5541ZM11.8155 12.5541H8.86164C8.66579 12.5541 8.47795 12.4763 8.33946 12.3378C8.20097 12.1993 8.12317 12.0115 8.12317 11.8156C8.12317 11.6198 8.20097 11.4319 8.33946 11.2935C8.47795 11.155 8.66579 11.0772 8.86164 11.0772H11.8155C12.0114 11.0772 12.1992 11.155 12.3377 11.2935C12.4762 11.4319 12.554 11.6198 12.554 11.8156C12.554 12.0115 12.4762 12.1993 12.3377 12.3378C12.1992 12.4763 12.0114 12.5541 11.8155 12.5541ZM14.0309 8.12328H3.69235V5.1694C3.69235 4.97355 3.77015 4.78571 3.90864 4.64722C4.04713 4.50873 4.23496 4.43093 4.43082 4.43093H5.16929V5.1694C5.16929 5.36526 5.24709 5.55309 5.38558 5.69158C5.52407 5.83007 5.7119 5.90787 5.90776 5.90787C6.10361 5.90787 6.29145 5.83007 6.42994 5.69158C6.56843 5.55309 6.64623 5.36526 6.64623 5.1694V4.43093H11.0771V5.1694C11.0771 5.36526 11.1549 5.55309 11.2933 5.69158C11.4318 5.83007 11.6197 5.90787 11.8155 5.90787C12.0114 5.90787 12.1992 5.83007 12.3377 5.69158C12.4762 5.55309 12.554 5.36526 12.554 5.1694V4.43093H13.2925C13.4883 4.43093 13.6761 4.50873 13.8146 4.64722C13.9531 4.78571 14.0309 4.97355 14.0309 5.1694V8.12328Z"
+                      fill="#4D4848"
+                    />
+                  </svg>
+                  {{ berita.tanggal }}
+                </i>
+                <a href="#" class="col-5 btn btn-outline-warning mt-2"
+                  >Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <app-footer></app-footer>
+</div>

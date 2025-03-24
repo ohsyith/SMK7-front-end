@@ -1,0 +1,45 @@
+@media(min-width: 833px){
+    .striped-table .start{
+        background: #DEEFFF;
+    }
+    .striped-table th{
+        background: #DEEFFF;
+    }
+    .striped-table .end{
+        background: #DEEFFF;
+    }
+    .striped-table tr:nth-child(even) {
+        background: #DEEFFF;
+    }
+}
+
+h1{
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+tr th {
+    color: #000;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+tr td{
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.padding{
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02), 0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03), 0px 2.48092px 11.16415px 0px rgba(0, 0, 0, 0.04), 0px 5.11023px 22.99604px 0px rgba(0, 0, 0, 0.05), 0px 14px 63px 0px rgba(0, 0, 0, 0.07);
+            
+}

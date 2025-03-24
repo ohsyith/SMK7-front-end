@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.notyf {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+/* Gaya umum untuk setiap toast */
+
+.notyf__toast {
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+}
+
+
+/* Gaya untuk notifikasi sukses */
+
+.notyf__toast--success {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+
+/* Gaya untuk notifikasi error */
+
+.notyf__toast--error {
+    background-color: #f44336;
+    color: #fff;
+}
+
+
+/* Gaya untuk tombol penutup (jika dismissible: true) */
+
+.notyf__toast__close-button {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* Animasi untuk muncul dan menghilang */
+
+.notyf__toast--dismissible {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.notyf__toast--visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notyf__toast--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}

@@ -1,0 +1,184 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Galeri Foto dan Video</h1>
+    </div>
+
+    <!-- Header-Logo -->
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten-1 -->
+    <ng-container *ngIf="!q">
+      <div class="background p-2">
+        <div class="padding p-3">
+          <div style="position: relative">
+            <!-- Item-1-->
+            <div class="row mt-4 align-items-center">
+              <div class="col-4 text-start">
+                <mat-form-field>
+                  <mat-label>Kategori</mat-label>
+                  <mat-select
+                    [(ngModel)]="kategori"
+                    (ngModelChange)="performSearch()"
+                  >
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <div class="col-4 text-center">
+                <ng-container *ngIf="p">
+                  <button class="btn btn-primary btn-change" (click)="test()">
+                    Foto
+                  </button>
+                </ng-container>
+
+                <ng-container *ngIf="!p">
+                  <button class="btn btn-primary btn-change" (click)="test()">
+                    Video
+                  </button>
+                </ng-container>
+              </div>
+
+              <div class="col-4 text-end">
+                <button
+                  type="button"
+                  class="btn btn-outline-info"
+                  routerLink="/admin/Tambah-Foto-Galeri-Sekolah"
+                >
+                  Tambah Foto
+                  <span>
+                    <i class="fa fa-plus"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Item-2 -->
+            <div class="row mt-2">
+              <div class="col-12">
+                <div class="line"></div>
+
+                <div class="row mt-5 p-3">
+                  <!-- Image -->
+                  <div
+                    class="col-1 align-items-center d-flex flex-column mb-3 me-4"
+                    *ngFor="let oke of filteredPrestasiList"
+                  >
+                    <div class="mb-3">
+                      <img
+                        nz-image
+                        width="90px"
+                        height="90px"
+                        style="object-fit: cover"
+                        nzSrc="{{ oke.img }}"
+                        alt=""
+                      />
+                    </div>
+                    <button
+                      class="btn btn-danger btn-delete"
+                      (click)="deleteFoto(oke.id)"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Isi-Konten-2 -->
+    <ng-container *ngIf="q">
+      <div class="background p-2">
+        <div class="padding p-3">
+          <div style="position: relative">
+            <!-- Item-1-->
+            <div class="row mt-5 align-items-center">
+              <div class="col-12 text-center">
+                <ng-container *ngIf="p">
+                  <button class="btn btn-primary btn-change" (click)="test()">
+                    Foto
+                  </button>
+                </ng-container>
+
+                <ng-container *ngIf="!p">
+                  <button class="btn btn-primary btn-change" (click)="test()">
+                    Video
+                  </button>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-12">
+                <div class="line"></div>
+
+                <!-- Item-2 -->
+                <div class="row mt-4 mb-2">
+                  <div class="col-12">
+                    <div class="row justify-content-end align-items-end">
+                      <div class="col-4">
+                        <p class="text-input">Tambah link Youtube</p>
+                        <input
+                          class="form-control input-link"
+                          type="text"
+                          [(ngModel)]="newVideoUrl"
+                          placeholder="Masukan Link Youtube"
+                        />
+                      </div>
+                      <div class="col-5">
+                        <button
+                          class="btn btn-primary btn-upload"
+                          (click)="addVideo(newVideoUrl)"
+                        >
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item-3 -->
+                <div class="row mt-5 p-3">
+                  <!-- Image -->
+                  <div
+                    class="col-6 align-items-center d-flex flex-column mb-3"
+                    *ngFor="let video of prestasiList2"
+                  >
+                    <div class="mb-3">
+                      <iframe
+                        style="border-radius: 20px"
+                        width="400"
+                        height="225"
+                        [src]="video.urlVideo"
+                        allow="accelerometer; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+
+                    <button
+                      class="btn btn-danger btn-delete"
+                      (click)="testDeleteVideo(video.id)"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,213 @@
+img{
+    width: 2em;
+    transition: width 0.3s ease-in-out, margin-left 0.4s ease-in-out;
+}
+.navbar-brand{
+    position: relative;
+}
+
+.garis {
+    width: 3px;
+    height: 50px;
+    top: 10px;
+    left: 2.6em;
+    background-color: rgb(255, 247, 0);
+    content: "";
+    position: absolute;
+    z-index: 100000000000000000;
+    border-radius: 20px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out, height 0.5s ease; /* Add height transition */
+}
+
+
+
+
+
+.nav-link{
+    transition: width 0.3s ease-in-out ;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: color 0.3s ease, font-size 0.4s ease; 
+}
+
+
+@media(min-width: 991px){
+    .nav-link{
+        transition: width 10s ease-in-out ;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.3s ease, font-size 0.4s ease; 
+    }
+}
+
+@media(min-width: 1200px){
+    .nav-link{
+        transition: width 0.3s ease-in-out ;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.3s ease, font-size 0.4s ease; 
+    }
+}
+
+
+@media (min-width: 992px) {
+    .animate-menu {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.7s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+@keyframes slideIn-menu {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    100% {
+        transform:translateY(0rem);
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes slideIn-menu {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+.slideIn-menu {
+    -webkit-animation-name: slideIn-menu;
+    animation-name: slideIn-menu;
+}
+
+
+
+
+.dropdown-menu.animate-menu.slideIn-menu li a:hover {
+    background-color: rgb(255, 255, 244); 
+}
+
+
+.dropdown-menu.animate-menu.slideIn-menu li a:active {
+    background-color: rgb(255, 255, 255); 
+    color: #fff;
+}
+
+.item-nav {
+    font-size:0.8em;
+    color: black;
+    transition: color 1s ease, font-size 0.4s ease; 
+}
+
+.img {
+    width: 1.7em;
+    transition: width 0.3s ease-in-out ; 
+}
+
+.gariss{
+    width: 3px;
+    height: 45px;
+    top: 7.7px;
+    left: 2.2em;
+    border-radius: 20px;
+    transition: width 0.4s ease, left 0.4s ease, height 0.5s ease;
+}
+
+
+.imagee{
+    width: 2.875rem;
+    height: 2.875rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 100%;
+    display: inline;
+}
+@media(min-width: 991px){
+    .profil{
+        display: none;
+    }
+    .image{
+        width: 2.875rem;
+        height: 2.875rem;
+        margin-top: -4px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 100%;
+        display: inline;
+    }
+}
+@media(max-width: 991px){
+    .image{
+        display: none;
+    }
+    .sidebar{
+        background-color: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+    }
+    
+    .garis{
+        width: 46px;
+        height: 3px;
+        top: 3.4em;
+        left: 0;
+        background-color: rgb(255, 247, 0);
+        content: "";
+        position: absolute;
+        z-index: 10;
+        border-radius: 20px;
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out, height 0.5s ease; /* Add height transition */
+    }
+
+    .gariss{
+        width: 40px;
+        height: 3px;
+        top: 2.7em;
+        left: 1.4em;
+        background-color: rgb(255, 247, 0);
+        content: "";
+        position: absolute;
+        z-index: 10;
+        border-radius: 20px;
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out, height 0.5s ease; /* Add height transition */
+    }
+
+    .item-nav {
+        font-size:0.8em;
+        color: white;
+        transition: color 1s ease, font-size 0.3s ease; 
+    }
+    .img {
+        margin-left: 1.4em;
+        width: 1.8em;
+        transition: width 0.3s ease-in-out, margin-left 0.4s ease-in-out;
+    }
+    
+    .toggle{
+        margin-right: 1.3em;
+        transition: margin-right 0.4s ease;
+    }
+
+}

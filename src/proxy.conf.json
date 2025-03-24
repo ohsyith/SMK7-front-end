@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "https://smknegeri7batam-001-site1.ctempurl.com",
+      "secure": false,
+      "changeOrigin": true
+    }
+}

@@ -1,0 +1,146 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Bursa Kerja Khusus</h1>
+    </div>
+
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten -->
+    <div class="background p-2">
+      <div class="padding p-3">
+        <div style="position: relative">
+          <div class="row mt-4 row-item-2">
+            <!-- Item-1-Left -->
+            <div
+              class="col-4 d-flex justify-content-center align-items-center gap-5"
+            >
+              <div class="d-flex flex-column align-items-center">
+                <div class="mb-3">
+                  <img
+                    alt=""
+                    width="230px;"
+                    height="262.66px;"
+                    style="object-fit: cover"
+                    [src]="selectedImage"
+                  />
+                </div>
+
+                <br />
+
+                <div class="col-12">
+                  <h2 class="mb-3">Tahun</h2>
+                  <input
+                    type="text"
+                    [(ngModel)]="tahun"
+                    placeholder="Masukan Tahun"
+                    class="mb-5 tahun"
+                  />
+                </div>
+
+                <button
+                  class="btn btn-info btn-unggah"
+                  (click)="inputFile.click()"
+                >
+                  Update Foto
+                </button>
+
+                <input
+                  #inputFile
+                  type="file"
+                  id="formFile"
+                  style="display: none"
+                  (change)="onFileSelected($event)"
+                />
+
+                <div>
+                  <button
+                    class="btn btn-primary btn-save mt-2"
+                    (click)="saveChange()"
+                  >
+                    Simpan
+                  </button>
+                </div>
+              </div>
+
+              <div class="line"></div>
+            </div>
+
+            <!-- Item-2-Right -->
+            <div class="col-8 col-item-2">
+              <div class="row mt-3">
+                <div class="col-7 mb-3 mt-md-2 p-0">
+                  <nz-input-group
+                    class="input"
+                    [nzSuffix]="suffixTemplateInfo"
+                    [nzPrefix]="prefixTemplateUser"
+                  >
+                    <input
+                      type="text"
+                      nz-input
+                      placeholder="Masukkan Nama Kegiatan"
+                      [(ngModel)]="searchText"
+                      (input)="performSearch()"
+                    />
+                  </nz-input-group>
+                  <ng-template #prefixTemplateUser>
+                    <span nz-icon nzType="search"></span>
+                  </ng-template>
+                  <ng-template #suffixTemplateInfo>
+                    <span
+                      nz-icon
+                      nz-tooltip
+                      nzTooltipTitle="Extra information"
+                      nzType="info-circle"
+                    ></span>
+                  </ng-template>
+                </div>
+
+                <div class="col-5 mb-3 text-end text-md-end mt-md-2">
+                  <button
+                    class="btn btn-outline-info btn-add"
+                    [routerLink]="'/admin/Tambah-Bursa-Kerja-Khusus'"
+                  >
+                    Tambah BKK
+                    <span>
+                      <i class="fa fa-plus"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="row mt-3" *ngFor="let data of filteredData">
+                <div class="col-12 card">
+                  <p>{{ data.Judul }}</p>
+                  <div class="btn-grup">
+                    <button
+                      class="btn btn-outline-primary btn-aksi me-1"
+                      [routerLink]="'/admin/Edit-Bursa-Kerja-Khusus/' + data.Id"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      nz-button
+                      nz-popconfirm
+                      nzOkText="Yes"
+                      nzCancelText="No"
+                      nzPopconfirmTitle="Are you sure to delete this task?"
+                      class="btn btn-outline-danger ms-2"
+                      (nzOnConfirm)="deleteData(data.Id)"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

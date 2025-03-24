@@ -1,0 +1,39 @@
+<div class="appnav"  [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+    <app-nav ></app-nav>
+</div>
+
+<div class="Achievement">
+    <div class="row mt-5 px-2">
+        <div class="col-12 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start">
+            <h1 class="mt-4 ms-2 pt-md-4">PRESTASI PESERTA DIDIK SMK NEGERI 7 BATAM</h1>
+        </div>
+        <div class="line col-12 mt-4 px-4 ms-md-5 px-md-5 text-md-start mb-3 mb-md-5">
+          <h5 class="ms-2">Daftar Prestasi yang Diraih Oleh Peserta Didik SMK Negeri 7 Batam</h5>
+        </div>
+        <div class="px-md-5">
+            <div class="px-md-5" >
+                <div class="col-12">
+                    <nz-table #basicTable [nzData]="data" class="striped-table">
+                        <thead>
+                          <tr>
+                            <th>KETERANGAN</th>
+                            <th>TAHUN</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let data of basicTable.data">
+                            <td>{{ data.keterangan }}</td>
+                            <td>{{ data.tahun }}</td>
+                          </tr>
+                        </tbody>
+                    </nz-table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+    <app-footer></app-footer>
+</div>

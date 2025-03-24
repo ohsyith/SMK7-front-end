@@ -1,0 +1,43 @@
+.Tambah-Profil-Kepala-Sekolah h1{
+    color: #000;
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Tambah-Profil-Kepala-Sekolah h2{
+    color: #000;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.Tambah-Profil-Kepala-Sekolah img{
+    width: 11rem;
+    height: 14.75rem;
+    flex-shrink: 0;
+}
+.Tambah-Profil-Kepala-Sekolah .input input{
+    border-top: 1px solid var(--Warna-Line, #C1BFBF);
+    border-right: 1px solid var(--Warna-Line, #C1BFBF);
+    border-bottom: 1px solid var(--Warna-Line, #C1BFBF);
+    width: 15.0625rem;
+    height: 2.48rem;
+    flex-shrink: 0;
+    border-radius: 0 10px 10px 0;
+}
+.Tambah-Profil-Kepala-Sekolah input{
+    border: 1px solid var(--Warna-Line---2, #C1BFBF);
+    background: #F1F1F1;
+    width: 15.9375rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Rubik;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 228.571% */
+}

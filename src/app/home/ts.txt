@@ -1,0 +1,109 @@
+import {Component, HostListener, OnInit} from '@angular/core';
+import { getdataService } from '../_service/getdata.service';
+
+interface ImageDatas {
+  id:number;
+  title:number,
+  foto:string;
+}
+
+interface Jurusan{
+  id: number;
+  namaJurusan: string;
+  singkatan: string;
+  fotoJurusan: string;
+}
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
+
+})
+export class HomeComponent implements OnInit{
+  isScrolled = false;
+  
+  guruList: any[] = []; 
+  jurusanList: any[] = [];
+  rombel : any;
+  namaKepala: any;
+  fotoKepala: any;
+  kata: any;
+
+  images: ImageDatas[] = [];
+  jurusan: Jurusan[] = [];
+  beritaList: any[] = [];
+  totalSiswa: number = 0;
+  jumlahJurusan: number = 0;
+  
+  constructor(private dataService:  getdataService) {}
+
+
+
+  ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData(){
+
+    //jumlahguru
+    this.dataService.getJumlahGuru().subscribe((data: any) => {
+      this.guruList = data;
+    });
+  
+    //jumlahrombel
+    this.dataService.loadDataJumlah().subscribe((data: any) => {
+      this.rombel = data.rombel;
+    });
+
+    //SambutanKepsek
+    this.dataService.loadDataSambutan().subscribe((data: any) => {
+      this.kata = data.isi;
+      this.namaKepala = data.nama;
+      this.fotoKepala = data.foto; 
+    });
+
+    //3 Foto di Home
+    this.dataService.loadFotoHome().subscribe((data: ImageDatas[]) => {
+      this.images = data;
+    });
+
+    //Jurusan
+    this.dataService.loadJurusan().subscribe((data: Jurusan[]) => {
+      this.jurusan = data;
+      this.jurusanList = data; // Isi variabel jurusanList dengan data dari API
+      
+      this.jumlahJurusan = this.jurusanList.length; // Hitung panjang data jurusan
+
+   
+      this.totalSiswa = 0;
+      this.jurusanList.forEach(jurusan => {
+        this.totalSiswa += jurusan.jumlahSiswa;
+    });
+  });
+
+  
+
+  //berita
+  this.dataService.loadBerita().subscribe(data => {
+    this.beritaList = data;
+  });  
+  }
+
+  getMainFoto(fotoArray: any[]): string {
+    const mainFoto = fotoArray.find(foto => foto.isMain);
+    return mainFoto ? mainFoto.url : ''; // Return URL foto utama jika ada
+  }
+
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.isScrolled = window.scrollY > 0 || document.documentElement.scrollTop > 0;
+  }
+}
+
+
+  
+
+
+

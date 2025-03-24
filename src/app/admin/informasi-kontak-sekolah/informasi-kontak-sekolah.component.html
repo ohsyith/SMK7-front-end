@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Informasi Kontak/Sekolah</h1>
+    </div>
+
+    <!-- Header-Logo -->
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten -->
+    <div class="background p-2">
+      <div class="padding p-3">
+        <!-- Item-1 -->
+        <div style="position: relative" *ngIf="kontak">
+          <div class="row mt-5">
+            <div class="col-5">
+              <p class="title-input">No. Telp</p>
+
+              <input
+                class="form-control mb-4 input-link"
+                type="text"
+                name="telepon"
+                [(ngModel)]="kontak.telp"
+                placeholder="Masukan No. Telp"
+              />
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-4 me-2">
+              <p class="title-input">Link Instagram</p>
+
+              <input
+                class="form-control mb-4 input-link"
+                type="text"
+                name="instagram"
+                [(ngModel)]="kontak.instagram"
+                placeholder="Masukan Link Instagram"
+              />
+            </div>
+
+            <div class="col-4">
+              <p class="title-input">Link Facebook</p>
+
+              <input
+                class="form-control mb-4 input-link"
+                type="text"
+                name="facebook"
+                [(ngModel)]="kontak.facebook"
+                placeholder="Masukan Link Facebook"
+              />
+            </div>
+
+            <!-- <div class="col-4">
+              <p class="title-input">Tik Tok</p>
+
+              <input
+                class="form-control mb-4 input-link"
+                type="text"
+                name="facebook"
+                [(ngModel)]="kontak.tiktok"
+                placeholder="Masukan Link Facebook"
+              />
+            </div> -->
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-4">
+              <button
+                class="btn btn-primary btn-upload"
+                (click)="postKontak()"
+                type="submit"
+              >
+                Simpan Perubahan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container Informasi-Jumlah">
+    <div class="row mt-4 px-1">
+        <div class="col-6 text-start">
+            <h1>Edit GTK</h1>
+        </div>
+        <div class="col-6 text-end">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none">
+                    <path d="M13.6845 1.5663C12.7489 0.556235 11.4422 0 9.99997 0C8.55001 0 7.23899 0.552869 6.30776 1.55669C5.36644 2.57156 4.9078 3.95085 5.01549 5.44023C5.22895 8.37862 7.46494 10.7689 9.99997 10.7689C12.535 10.7689 14.7671 8.3791 14.984 5.4412C15.0931 3.96527 14.6316 2.58887 13.6845 1.5663Z" fill="black"/>
+                    <path d="M18.4613 21.5372H1.53869C1.31719 21.54 1.09783 21.4935 0.896579 21.4009C0.695324 21.3084 0.517233 21.1721 0.375265 21.0021C0.0627732 20.6285 -0.0631848 20.1184 0.0300818 19.6026C0.43584 17.3517 1.70215 15.4609 3.69248 14.1335C5.4607 12.9552 7.70054 12.3066 10 12.3066C12.2995 12.3066 14.5393 12.9557 16.3075 14.1335C18.2978 15.4604 19.5642 17.3512 19.9699 19.6021C20.0632 20.118 19.9372 20.628 19.6247 21.0016C19.4828 21.1717 19.3047 21.3081 19.1035 21.4007C18.9022 21.4934 18.6828 21.54 18.4613 21.5372Z" fill="black"/>
+                </svg>
+        </div>
+        <div class="col-12 mt-5 background p-3"> 
+            <a routerLink="/admin/Informasi-Guru-dan-Tenaga-Kependidikan">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                    <path d="M31.875 20.625H17.6438L23.8313 14.4563C24.1844 14.1032 24.3827 13.6243 24.3827 13.125C24.3827 12.6257 24.1844 12.1468 23.8313 11.7938C23.4782 11.4407 22.9994 11.2423 22.5 11.2423C22.0007 11.2423 21.5219 11.4407 21.1688 11.7938L11.7938 21.1688C11.6231 21.3471 11.4893 21.5573 11.4 21.7875C11.2125 22.244 11.2125 22.756 11.4 23.2125C11.4893 23.4427 11.6231 23.6529 11.7938 23.8313L21.1688 33.2062C21.3431 33.382 21.5505 33.5215 21.779 33.6167C22.0075 33.7119 22.2525 33.7609 22.5 33.7609C22.7476 33.7609 22.9926 33.7119 23.2211 33.6167C23.4496 33.5215 23.657 33.382 23.8313 33.2062C24.007 33.0319 24.1465 32.8246 24.2417 32.5961C24.3369 32.3676 24.3859 32.1225 24.3859 31.875C24.3859 31.6275 24.3369 31.3824 24.2417 31.1539C24.1465 30.9254 24.007 30.7181 23.8313 30.5438L17.6438 24.375H31.875C32.3723 24.375 32.8492 24.1775 33.2009 23.8258C33.5525 23.4742 33.75 22.9973 33.75 22.5C33.75 22.0027 33.5525 21.5258 33.2009 21.1742C32.8492 20.8225 32.3723 20.625 31.875 20.625Z" fill="black"/>
+                </svg>
+            </a>
+                <div class="col-12  d-flex justify-content-center">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-6 input text-center">
+                                <h2 class="mb-3 text-start">Foto Guru</h2>
+                                <input #fileInput type="file" (change)="onFileSelected($event)" style="display:none">
+                                <img class="mt-4 col-12" style="width: 100%;" [src]="selectedImage" alt="">   
+                                <button type="button" class="btn btn-outline-secondary mt-4" (click)="fileInput.click()">
+                                    Choose File
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <h2 class="mb-3">Nama GTK</h2>
+                                <input type="text" placeholder="Masukan Kegiatan" class="mb-3" [(ngModel)]="nama" name="nama">
+                                <h2 class="mb-3">Jabatan</h2>
+                                <select class="form-select" aria-label="Default select example" [(ngModel)]="jabatan" name="jabatan">
+                                    <option selected>‎ </option>
+                                    <option value="Kepala Sekolah">Kepala Sekolah</option>
+                                    <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
+                                    <option value="Ketua Program Studi">Ketua Program Studi</option>
+                                    <option value="Kepala Perpustakaan">Kepala Perpustakaan</option>
+                                    <option value="Guru Multimedia">Guru Multimedia</option>
+                                    <option value="Guru RPL">Guru RPL</option>
+                                    <option value="Guru TITL">Guru TITL</option>
+                                    <option value="Guru TJAT">Guru TJAT</option>
+                                    <option value="Guru TKJ">Guru TKJ</option>
+                                    <option value="Guru BK">Guru BK</option>
+                                    <option value="Tenaga Kependidikan">Tenaga Kependidikan</option>
+                                </select>
+                                <button type="button" class="btn btn-outline-primary" (click)="saveChange()">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

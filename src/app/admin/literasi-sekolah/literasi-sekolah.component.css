@@ -1,0 +1,99 @@
+h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  color: #4d4848;
+  font-family: Rubik;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+button {
+  width: 203px;
+  height: 36.268px;
+  border-radius: 0px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.row-item-2 {
+  height: 440px;
+}
+
+.col-item-2 {
+  overflow-y: auto;
+  height: 430px;
+}
+
+.card {
+  width: 137px;
+  height: 59px;
+  border-radius: 5px;
+  border: 1px solid #c1bfbf;
+  background: rgba(250, 250, 250, 0.93);
+}
+
+.card:hover {
+  background-color: #fdab08;
+  cursor: pointer;
+}
+
+.card > p {
+  color: #000;
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 18px;
+}
+
+.padding {
+  border-radius: 0.625rem;
+  background: #fff;
+  box-shadow: 0px 0.48088px 2.16398px 0px rgba(0, 0, 0, 0.02),
+    0px 1.21619px 5.47287px 0px rgba(0, 0, 0, 0.03);
+}
+
+.judul-form {
+  color: #000;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.line {
+  width: 1px;
+  height: 431.005px;
+  background-color: #c1bfbf;
+}
+
+.btn-delete {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.btn > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+img:hover {
+  cursor: pointer;
+}

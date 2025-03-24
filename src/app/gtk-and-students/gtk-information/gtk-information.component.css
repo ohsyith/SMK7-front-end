@@ -1,0 +1,239 @@
+.appnav {
+    z-index: 11;
+    height: 0px; /* Awalnya tinggi 0 */
+}
+
+
+.header_change {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:white;
+    object-fit: cover;
+    width: 100vw;
+    height: 5.7em; 
+    transition: height 0.3s; 
+    border-radius: 0 0 50px 50px;
+}
+
+.header{
+    overflow-x: hidden;
+    width: 100%;
+    height: 6.7em; 
+    position: absolute;
+    top: 0;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+    box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05), 0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04), 0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03), 0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03), 0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02), 0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02), 0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.gtk h1{
+    color: #FDAB08;
+    font-family: Rubik;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.gtk h2{
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.gtk img {
+    width: 100%;
+    border-radius: 35px;
+}
+.gtk h4 {
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.gtk h3 {
+    color: #000;
+    font-family: Segoe Script;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+}
+.gtk h5 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.gtk p {
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 0.975rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.vice-principal.line::before {
+    position: absolute;
+    width: 80%;
+    height: 0.125rem;
+    background-color: #CEC8C8;
+    content: "";
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.headmaster img{
+    object-fit: cover;
+    height: 300px;
+}
+.vice-principal img{
+    object-fit: cover;
+    height: 300px;
+}
+@media(min-width: 360px){
+    .gtk h1{
+        font-size: 18px;
+    }
+    .gtk h2{
+        font-size: 15px;
+    }
+    .gtk h4 {
+        font-size: 0.85rem;
+    }
+    .gtk h3 {
+        font-size: 1.2rem;
+    }
+    .gtk h5 {
+        font-size: 1rem;
+    }
+    .gtk p {
+        font-size: 1rem;
+    }
+    .headmaster img{
+        object-fit: cover;
+        height: 350px;
+    }
+    .vice-principal img{
+        object-fit: cover;
+        height: 350px;
+    }
+}
+@media(min-width: 414px){
+    .headmaster img{
+        object-fit: cover;
+        height: 450px;
+    }
+    .vice-principal img{
+        object-fit: cover;
+        height: 450px;
+    }
+}
+@media(min-width: 420px){
+    .gtk h1{
+        font-size: 1.4rem;
+    }
+    .gtk h2{
+        font-size: 1.2rem;
+    }
+    .gtk h4 {
+        font-size: 0.99rem;
+    }
+    .gtk h3 {
+        font-size: 1.4rem;
+    }
+    .gtk h5 {
+        font-size: 1.3rem;
+    }
+    .gtk p {
+        font-size: 1.3rem;
+    }
+}
+@media(min-width: 700px){
+    .gtk h1{
+        font-size: 1.5rem;
+    }
+    .gtk h2{
+        font-size: 1.2rem;
+    }
+    .gtk h4 {
+        font-size: 1rem;
+    }
+    .gtk h3 {
+        font-size: 1.2rem;
+    }
+    .gtk h5 {
+        font-size: 1.1rem;
+    }
+    .gtk p {
+        font-size: 0.96rem;
+    }
+    .gtk img{
+        border-radius: 20px;
+    }
+}
+@media(min-width: 768px){
+    .headmaster img{
+        object-fit: cover;
+        height: 290px;
+    }
+    .vice-principal img{
+        object-fit: cover;
+        height: 230px;
+    }
+}
+@media(min-width: 1000px){
+    .headmaster img{
+        width: 80%;
+    }
+    .gtk h1{
+        font-size: 1.9rem;
+    }
+    .gtk h2{
+        font-size: 1.4rem;
+    }
+    .gtk h4 {
+        font-size: 1.2rem;
+    }
+    .gtk h3 {
+        font-size: 1.4rem;
+    }
+    .gtk h5 {
+        font-size: 1.2em;
+    }
+    .gtk p {
+        font-size: 0.96rem;
+    }
+    .gtk img{
+        border-radius: 20px;
+    }
+    .headmaster img{
+        object-fit: cover;
+        height: 420px;
+    }
+    .vice-principal img{
+        object-fit: cover;
+        height: 260px;
+        border-radius: 25px;
+    }
+}
+@media(min-width: 1000px){
+    .headmaster img{
+        object-fit: cover;
+        height: 470px;
+    }
+    .vice-principal img{
+        object-fit: cover;
+        height: 260px;
+    }
+}

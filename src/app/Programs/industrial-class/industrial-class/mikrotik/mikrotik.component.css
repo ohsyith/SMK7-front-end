@@ -1,0 +1,288 @@
+.appnav {
+  z-index: 11;
+  height: 0px; /* Awalnya tinggi 0 */
+}
+
+.header_change {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  object-fit: cover;
+  width: 100vw;
+  height: 5.7em;
+  transition: height 0.3s;
+  border-radius: 0 0 50px 50px;
+}
+
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  height: 6.7em;
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../../../assets/wall.jpg");
+  box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05),
+    0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04),
+    0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03),
+    0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03),
+    0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02),
+    0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02),
+    0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.mikrotik h1 {
+  color: #fdab08;
+  font-family: Rubik;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.mikrotik .h2 h2::after {
+  content: "";
+  width: 158.316px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #737782;
+  position: absolute;
+  margin-right: 10px;
+  text-align: center;
+  margin-top: -45px;
+  left: 50px;
+}
+
+.mikrotik h2 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.mikrotik p {
+  color: var(--Warna-Abu-Text-Isi---2, #6d6868);
+  font-family: Rubik;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.mikrotik {
+  position: relative;
+}
+
+.mikrotik::before {
+  content: "";
+  width: 3px;
+  height: 78%;
+  border-radius: 1px;
+  background-color: #efd507;
+  position: absolute;
+  top: 177px;
+  left: 30px;
+  transform: translateX(-50%);
+}
+
+h2::before {
+  content: "";
+  width: 15px; /* Lebar bulatan */
+  height: 15px; /* Tinggi bulatan */
+  border-radius: 50%; /* Untuk membuatnya bulat */
+  background-color: #efd507;
+  position: absolute;
+  margin-right: 10px;
+  color: #fff; /* Warna teks */
+  text-align: center;
+  margin-left: -29px;
+}
+
+.mikro p {
+  font-size: 16px !important;
+}
+
+@media (max-width: 320px) {
+  .mikrotik h1 {
+    font-size: 18px;
+  }
+
+  .mikrotik h2 {
+    font-size: 16px;
+  }
+
+  .mikrotik::before {
+    height: 78.5%;
+    top: 147px;
+    left: 30px;
+  }
+
+  .mikrotik .h2 h2::after {
+    width: 120.316px;
+    height: 2px;
+    margin-top: -18px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 357px) {
+  .mikrotik h1 {
+    font-size: 22px;
+  }
+
+  .mikrotik h2 {
+    font-size: 16px;
+  }
+
+  .mikrotik::before {
+    height: 74.5%;
+  }
+
+  .mikrotik::before {
+    height: 74.5%;
+    top: 160px;
+    left: 30px;
+  }
+
+  .mikrotik .h2 h2::after {
+    content: "";
+    width: 158.316px;
+    height: 2px;
+    margin-top: -18px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 360px) {
+  .mikrotik::before {
+    height: 76%;
+    top: 157px;
+  }
+}
+
+@media (min-width: 375px) {
+  .mikrotik::before {
+    height: 76.5%;
+  }
+}
+
+@media (min-width: 390px) {
+  .mikrotik::before {
+    height: 75.5%;
+  }
+}
+
+@media (min-width: 412px) {
+  .mikrotik::before {
+    height: 74.7%;
+  }
+
+  .mikrotik h2 {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 500px) {
+  .mikrotik::before {
+    height: 70%;
+  }
+
+  .mikrotik .h2 h2::after {
+    width: 120.316px;
+    height: 2px;
+    margin-top: -22px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mikrotik h1 {
+    font-size: 25px;
+  }
+
+  .mikrotik h2 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .mikrotik p {
+    font-size: 13zpx;
+  }
+
+  .mikrotik::before {
+    height: 67%;
+    top: 180px;
+    left: 62.4px;
+  }
+
+  .mikrotik .h2 h2::after {
+    width: 140.316px;
+    height: 2px;
+    margin-top: -35px;
+    left: 86px;
+  }
+}
+
+@media (min-width: 800px) {
+  .mikrotik::before {
+    height: 66%;
+    top: 180px;
+    left: 62.4px;
+  }
+}
+
+@media (min-width: 880px) {
+  .mikrotik::before {
+    height: 64%;
+    top: 180px;
+    left: 62.4px;
+  }
+
+  .mikrotik .h2 h2::after {
+    width: 140.316px;
+    height: 2px;
+    margin-top: -35px;
+    left: 86px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mikrotik::before {
+    height: 61%;
+    top: 180px;
+    left: 62.5px;
+  }
+
+  .mikrotik .h2 h2::after {
+    width: 140.316px;
+    height: 2px;
+    margin-top: -35px;
+    left: 86px;
+  }
+}
+
+@media (min-width: 1355px) {
+  .mikrotik::before {
+    height: 61%;
+    top: 180px;
+    left: 62.5px;
+  }
+
+  .mikrotik .h2 h2::after {
+    width: 140.316px;
+    height: 2px;
+    margin-top: -35px;
+    left: 86px;
+  }
+}

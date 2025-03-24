@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Prestasi Peserta Didik</h1>
+    </div>
+
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <div class="background p-2">
+      <div class="padding p-3">
+        <div style="position: relative">
+          <!-- Header-Konten -->
+          <div class="row mt-3">
+            <!-- Search-Data -->
+            <div class="col-5 mb-3 text-end text-md-end mt-md-2">
+              <nz-input-group
+                class="input"
+                [nzSuffix]="suffixTemplateInfo"
+                [nzPrefix]="prefixTemplateUser"
+              >
+                <input
+                  type="text"
+                  nz-input
+                  placeholder="Masukkan Nama Kamu"
+                  [(ngModel)]="searchText"
+                  (input)="performSearch()"
+                />
+              </nz-input-group>
+
+              <ng-template #prefixTemplateUser
+                ><span nz-icon nzType="search"></span
+              ></ng-template>
+              <ng-template #suffixTemplateInfo>
+                <span
+                  nz-icon
+                  nz-tooltip
+                  nzTooltipTitle="Extra information"
+                  nzType="info-circle"
+                ></span>
+              </ng-template>
+            </div>
+
+            <!-- Tambah-Prestasi-Siswa -->
+            <div class="col-7 mb-3 text-end text-md-end mt-md-2">
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                routerLink="/admin/Tambah-Prestasi-Peserta-Didik"
+              >
+                Tambah Prestasi
+                <span>
+                  <i class="fa fa-plus"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="col-12 mt-2">
+          <nz-table #basicTable [nzData]="filteredData" class="striped-table">
+            <thead>
+              <tr>
+                <th class="start"><b>Kegiatan</b></th>
+                <th><b>Tahun</b></th>
+                <th class="end"><b>Aksi</b></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let data of basicTable.data">
+                <td>{{ data.Keterangan }}</td>
+                <td>{{ data.Tahun }}</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    [routerLink]="
+                      '/admin/Edit-Prestasi-Peserta-Didik/' + data.Id
+                    "
+                  >
+                    Edit
+                  </button>
+                  <button
+                    nz-button
+                    nz-popconfirm
+                    nzOkText="Yes"
+                    nzCancelText="No"
+                    nzPopconfirmTitle="Are you sure to delete this task?"
+                    class="btn btn-outline-danger ms-2"
+                    (nzOnConfirm)="deleteData(data.Id)"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="appnav"  [class.header_change]="isScrolled" #appnav>
+    <app-nav ></app-nav>
+</div>
+
+<div class="foto" style="overflow: hidden;">
+    <div class="photo"></div>
+    <div class="container" >
+        <div class="row mt-5 px-md-2" style="color: white;">
+            <div class="col-12 ms-md-3 px-4 px-md-0 mt-5 text-center" style="position: relative;">
+                <h1 class="mt-5 pt-md-5 mb-lg-5">GALERY FOTO</h1>
+            </div>
+            <div class="col-12 mt-5" style="z-index: 1;">
+                <div class="tab_box" style="position: relative;">
+                    <button class="tab_btn active">Semua</button>
+                    <button class="tab_btn">Sekolah</button>
+                    <button class="tab_btn">Keagamaan</button>
+                    <button class="tab_btn">Upacara</button>
+                    <button class="tab_btn">Kerjasama Industri</button>
+                    <div class="line"></div>
+                </div>
+                <div class="content_box">   
+                    <div class="content active">
+                        <div class="row">
+                            <div class="col-4 px-0" *ngFor="let item of all">
+                                <a target="_blank" href="{{ item.foto[0].url }}">
+                                    <nz-image-group>
+                                        <img width="200px" src="{{ item.foto[0].url }}" alt="" />
+                                    </nz-image-group>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-4 px-0" *ngFor="let photo of sekolah">
+                                <a target="_blank" href="{{ photo.url }}">
+                                    <nz-image-group>
+                                        <img width="200px" src="{{ photo.url }}" alt="" />
+                                    </nz-image-group>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-4 px-0" *ngFor="let agama of keagamaan">
+                                <img [src]="agama.url" alt="Photo {{ agama.id }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-4 px-0" *ngFor="let upacara of upacara">
+                                <img [src]="upacara.url" alt="Photo {{ upacara.id }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-4 px-0" *ngFor="let industry of kerjasama">
+                                <img [src]="industry.url" alt="Photo {{ industry.id }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+    <app-footer></app-footer>
+</div>

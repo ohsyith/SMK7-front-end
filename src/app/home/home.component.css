@@ -1,0 +1,533 @@
+.appnav {
+  z-index: 11;
+  height: 0px; /* Awalnya tinggi 0 */
+}
+
+.header_change {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  object-fit: cover;
+  width: 100vw;
+  height: 5.7em;
+  transition: height 0.3s;
+  border-radius: 0 0 50px 50px;
+}
+
+.background {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../assets/wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.smkn-7-batam {
+  position: relative;
+}
+.smkn-7-batam h4 {
+  color: #fff;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.4px;
+}
+.smkn-7-batam h1 {
+  color: #ff0;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.smkn-7-batam p {
+  color: #fff;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.details {
+  margin-top: -70px;
+  background-color: #ff0;
+}
+
+@media (max-width: 766px) {
+  .details {
+    margin-top: -24px;
+    background-color: #ff0;
+  }
+}
+
+.details h1 {
+  color: var(--Warna-Biru-Angka, #1672a7);
+  font-family: Rubik;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 7.5px;
+}
+.details h5 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.headmaster h2 {
+  color: var(--Warna-Abu-Text-Isi---2, #6d6868);
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.headmaster h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.headmaster img {
+  width: 60%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+.headmaster h3 {
+  color: #000;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+.headmaster h5 {
+  color: #000;
+  text-align: justify;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 200% */
+  white-space: pre-line;
+}
+
+.school-identity h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.school-identity a {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.57em;
+  font-style: normal;
+  font-weight: 500;
+}
+.school-identity p {
+  color: #000;
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+.school-identity {
+  height: 550px;
+}
+.school-identity p i {
+  color: #000;
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+}
+.school-identity iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  border: none;
+}
+
+@media (min-width: 359px) {
+  .school-identity {
+    height: 780px;
+  }
+
+  .school-identity a {
+    font-size: 0em;
+  }
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  border-color: rgb(0, 0, 0);
+  border-bottom-color: transparent;
+}
+.nav-tabs {
+  border-color: rgb(0, 0, 0);
+}
+
+.achievement h1 {
+  color: var(--Warna-Abu-Text-Isi---2, #6d6868);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 100% */
+}
+.achievement h5 {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.achievement img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (min-width: 760px) {
+  .school-identity {
+    height: 490px;
+  }
+
+  .achievement img {
+    border-radius: 50% 0 0 50%;
+  }
+  .achievement .left img {
+    border-radius: 0 50% 50% 0;
+  }
+
+  .achievement h1::before {
+    content: "";
+    width: 160px;
+    height: 4.5px;
+    border-radius: 20px;
+    background: #e9d119;
+    position: absolute;
+    margin-top: 39px;
+  }
+}
+
+.expertise {
+  background-color: #f0f6ff;
+}
+.expertise h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.expertise h2 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.expertise p {
+  color: var(--Warna-Abu-Text-Isi---1, #4d4848);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+.expertise img {
+  width: 105px;
+}
+
+.expertise a h1,
+.expertise a p {
+  display: none;
+}
+.unggulan::before {
+  content: "";
+  width: 8px;
+  height: 300px;
+  border-radius: 20px;
+  background: #e9d119;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -70px;
+}
+
+@media (max-width: 766px) {
+  .expertise img {
+    width: 60%;
+  }
+  .expertise a h1,
+  .expertise a p {
+    display: block;
+  }
+  .expertise a {
+    text-decoration: none;
+    background-color: #f0f6ff;
+    border-radius: 20px;
+    width: 100%;
+  }
+  .expertise .Competency-Leading {
+    display: none;
+  }
+  .expertise {
+    background-color: transparent;
+  }
+}
+
+.vocational-program h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.vocational-program h4 {
+  color: #4b4f58;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+.vocational-program p {
+  color: #454951;
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px; /* 222.222% */
+}
+.vocational-program p::before {
+  content: "";
+  width: 10px; /* Lebar bulatan */
+  height: 10px; /* Tinggi bulatan */
+  border-radius: 50%; /* Untuk membuatnya bulat */
+  background-color: #bce138; /* Warna latar belakang */
+  position: absolute;
+  margin-right: 10px;
+  color: #fff; /* Warna teks */
+  text-align: center;
+  margin-top: 7px;
+  margin-left: -19px;
+}
+.vocational-program iframe {
+  border-radius: 10px;
+}
+
+@media (min-width: 760px) {
+  .vocational-program .iframee::before {
+    content: "";
+    width: 5px;
+    height: 550px;
+    border-radius: 10px; /* Untuk membuatnya bulat */
+    background-color: #efd507;
+    position: absolute;
+    margin-right: 10px;
+    color: #fff; /* Warna teks */
+    text-align: center;
+    margin-top: 155px;
+    margin-left: -24px;
+  }
+  .vocational-program .iframe::after {
+    content: "";
+    width: 20px; /* Lebar bulatan */
+    height: 20px; /* Tinggi bulatan */
+    border-radius: 50%; /* Untuk membuatnya bulat */
+    background-color: #efd507;
+    position: absolute;
+    margin-right: 10px;
+    color: #fff; /* Warna teks */
+    text-align: center;
+    margin-top: 135px;
+    margin-left: -20px;
+    left: 0;
+  }
+}
+
+.news {
+  background-color: #f0f6ff;
+}
+.news h4 {
+  color: var(--Warna-Abu-Text-Isi---2, #6d6868);
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px; /* 222.222% */
+}
+.news h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 105.263% */
+}
+.news img {
+  height: 200px;
+  object-fit: cover;
+}
+.news h5 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 137.5% */
+}
+.news i {
+  color: #4b4f58;
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 183.333% */
+}
+.news p {
+  color: #454951;
+  font-family: Rubik;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 169.231% */
+}
+.news button {
+  font-family: Rubik;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.news p::before {
+  content: "";
+  width: 90.006px;
+  height: 3.5px;
+  border-radius: 20px; /* Untuk membuatnya bulat */
+  background-color: #efd507;
+  position: absolute;
+  margin-right: 10px;
+  color: #fff; /* Warna teks */
+  text-align: center;
+  margin-top: -16px;
+}
+
+@media (min-width: 768px) {
+  .news .card {
+    height: 500px;
+    position: relative;
+  }
+
+  .news .time {
+    position: absolute;
+    bottom: 9px;
+    width: 100%;
+  }
+
+  .background .row{
+    padding-top: 140px;
+  }
+
+  .background h4{
+    font-size: 40px;
+  }
+
+  .background h1{
+    font-size: 50px;
+  }
+
+  .background p{
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .news .card {
+    height: 500px;
+    position: relative;
+  }
+
+  .news .time {
+    position: absolute;
+    bottom: 9px;
+    width: 100%;
+  }
+
+  .background .row{
+    padding-top: 0px;
+  }
+
+  .background h4{
+    font-size: 30px;
+  }
+
+  .background h1{
+    font-size: 40px;
+  }
+
+  .background p{
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news .card {
+    height: 500px;
+    position: relative;
+  }
+
+  .news .time {
+    position: absolute;
+    bottom: 9px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1500px){
+  .background .row{
+    padding-top: 100px;
+  }
+
+  .background h4{
+    font-size: 40px;
+  }
+
+  .background h1{
+    font-size: 55px;
+  }
+
+  .background p{
+    font-size: 22px;
+  }
+
+  .school-identity iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  .achievement img {
+    height: 600px;
+  }
+}

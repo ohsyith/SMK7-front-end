@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Kelulusan Siswa SMK Negeri 7 Batam</h1>
+    </div>
+
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <div class="background p-2">
+      <div class="padding p-3">
+        <div style="position: relative">
+          <!-- Header-Konten -->
+          <div class="row mt-3">
+            <!-- Search-Data -->
+            <div class="col-5 mb-3 text-end text-md-end mt-md-2">
+              <nz-input-group class="input" [nzPrefix]="prefixTemplateUser">
+                <input
+                  type="text"
+                  nz-input
+                  placeholder="Cari Data Siswa"
+                  [(ngModel)]="searchText"
+                  (input)="performSearch()"
+                />
+              </nz-input-group>
+
+              <ng-template #prefixTemplateUser
+                ><span nz-icon nzType="search"></span
+              ></ng-template>
+            </div>
+
+            <!-- Tambah-Prestasi-Siswa -->
+            <div class="col-7 mb-3 text-end text-md-end mt-md-2">
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                [routerLink]="
+                  '/admin/Tambah-Kelulusan-Siswa-SMK-Negeri-7-Batam'
+                "
+              >
+                Tambah Siswa
+                <span>
+                  <i class="fa fa-plus"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="col-12 mt-2">
+          <nz-table #basicTable [nzData]="filteredData" class="striped-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Siswa</th>
+                <th>NIS</th>
+                <th>Kelas</th>
+                <th>Keterangan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let data of basicTable.data">
+                <td>{{ data.NO }}</td>
+                <td>{{ data.NamaSiswa }}</td>
+                <td>{{ data.Nis }}</td>
+                <td>{{ data.Kelas }}</td>
+                <td>{{ data.KeteranganLulus }}</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    [routerLink]="
+                      '/admin/Edit-Kelulusan-Siswa-SMK-Negeri-7-Batam/' +
+                      data.Id
+                    "
+                  >
+                    Edit
+                  </button>
+                  <button
+                    nz-button
+                    nz-popconfirm
+                    nzOkText="Yes"
+                    nzCancelText="No"
+                    nzOkDanger="true"
+                    nzPopconfirmTitle="Apakah Anda yakin untuk menghapus data ini?"
+                    class="btn btn-outline-danger ms-2"
+                    (nzOnConfirm)="deleteData(data.Id)"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

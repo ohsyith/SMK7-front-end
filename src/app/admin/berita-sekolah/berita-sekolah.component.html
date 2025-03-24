@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Berita Sekolah</h1>
+    </div>
+
+    <!-- Header-Logo -->
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten -->
+    <div class="background p-2">
+      <div class="padding p-4">
+        <div style="position: relative">
+          <div class="row mt-4 row-item-2">
+            <!-- Item-1-->
+            <div class="col-12 col-item-2 me-2">
+              <div class="row mt-3">
+                <div class="col-7 mb-3 mt-md-2 p-0">
+                  <nz-input-group
+                    class="input"
+                    [nzSuffix]="suffixTemplateInfo"
+                    [nzPrefix]="prefixTemplateUser"
+                  >
+                    <input
+                      type="text"
+                      nz-input
+                      placeholder="Masukkan Judul Berita"
+                      [(ngModel)]="searchText"
+                      (input)="performSearch()"
+                    />
+                  </nz-input-group>
+                  <ng-template #prefixTemplateUser
+                    ><span nz-icon nzType="search"></span
+                  ></ng-template>
+                  <ng-template #suffixTemplateInfo>
+                    <span
+                      nz-icon
+                      nz-tooltip
+                      nzTooltipTitle="Extra information"
+                      nzType="info-circle"
+                    ></span>
+                  </ng-template>
+                </div>
+
+                <div class="col-5 mb-3 text-end text-md-end mt-md-2">
+                  <button
+                    class="btn btn-outline-info btn-add"
+                    [routerLink]="'/admin/Tambah-Berita-Sekolah'"
+                  >
+                    Tambah Berita
+                    <span>
+                      <i
+                        class="fa fa-plus"
+                        [routerLink]="'/admin/Tambah-Berita-Sekolah'"
+                      ></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card-Berita -->
+              <div class="row mt-3" *ngFor="let data of filteredData">
+                <div class="col-12 card">
+                  <p>
+                    {{ data.Judul }}
+                  </p>
+
+                  <div class="btn-grup">
+                    <button
+                      class="btn btn-primary btn-aksi me-2"
+                      [routerLink]="'/admin/Edit-Berita-Sekolah/' + data.Id"
+                    >
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button
+                      nz-button
+                      nz-popconfirm
+                      nzOkText="Yes"
+                      nzCancelText="No"
+                      nzOkDanger="true"
+                      nzPopconfirmTitle="Are you sure to delete this news?"
+                      class="btn btn-danger ms-2"
+                      (nzOnConfirm)="edit(data.Id)"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

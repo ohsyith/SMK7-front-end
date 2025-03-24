@@ -1,0 +1,22 @@
+<div class="appnav" [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+    <app-nav></app-nav>
+  </div>
+  
+  <div class="headmaster">
+    <div class="row mt-5 px-2">
+      <div class="col-12 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start">
+        <h1 class="mt-4 pt-md-4">STRUKTUR SMK NEGERI 7 BATAM</h1>
+      </div>
+  
+      <h2 class="mt-4 ms-2 pt-md-2 ms-md-5 px-md-5 text-center text-md-start">BAGAN STRUKTUR ORGANISASI SMK NEGERI 7 BATAM
+        TAHUN PELAJARAN {{ tahun }}</h2>
+      <div class="col-12 mt-4 text-center">
+        <img src="{{ strukturData[0]?.foto }}" alt="" class="mx-auto">
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="mt-4 mt-md-5">
+    <app-footer></app-footer>
+  </div>

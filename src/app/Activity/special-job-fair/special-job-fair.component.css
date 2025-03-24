@@ -1,0 +1,147 @@
+.appnav {
+  z-index: 11;
+  height: 0px; /* Awalnya tinggi 0 */
+}
+
+.header_change {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  object-fit: cover;
+  width: 100vw;
+  height: 5.6em; 
+  transition: height 0.3s;
+  border-radius: 0 0 50px 50px;
+}
+
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  height: 6.7em;
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+  box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05),
+    0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04),
+    0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03),
+    0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03),
+    0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02),
+    0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02),
+    0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.special-job h1 {
+  color: var(--Warna-Kuning-Text-Title, #fdab08);
+  font-family: Rubik;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.special-job h5 {
+  color: var(--Warna-Abu-Text-Isi---1, #4d4848);
+  font-family: Rubik;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.special-job .contents h2 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.special-job .contents img {
+  border-radius: 20px;
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.special-job .contents p {
+  color: #000;
+  font-family: Rubik;
+  font-size: 0.67rem;
+  font-style: normal;
+  font-weight: 400;
+  white-space: pre-line;
+}
+
+.special-job .line::before {
+  position: absolute;
+  width: 60%;
+  height: 0.125rem;
+  background-color: #737782;
+  content: "";
+  margin-top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Job-Market-Structure img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .special-job h1 {
+    font-size: 1.2rem;
+  }
+  .special-job h5 {
+    font-size: 0.8rem;
+  }
+  .special-job .contents h2 {
+    font-size: 1.2rem;
+  }
+  .Job-Market-Structure img {
+    width: 100%;
+  }
+  .special-job .contents .img img {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 200px;
+  }
+  .special-job .contents p {
+    font-size: 0.82rem;
+  }
+  .special-job .line::before {
+    position: absolute;
+    width: 20%;
+    height: 0.125rem;
+    background-color: #737782;
+    content: "";
+    margin-top: -30px;
+    left: 99px;
+    transform: translateX(0%);
+  }
+}
+
+@media (min-width: 1000px) {
+  .special-job h1 {
+    font-size: 2rem;
+  }
+  .special-job h5 {
+    font-size: 1.2rem;
+  }
+  .special-job .contents h2 {
+    font-size: 1.5rem;
+  }
+  .Job-Market-Structure img {
+    width: 100%;
+  }
+  .special-job .contents .img img {
+    height: 200px;
+  }
+  .special-job .contents p {
+    font-size: 1rem;
+  }
+}

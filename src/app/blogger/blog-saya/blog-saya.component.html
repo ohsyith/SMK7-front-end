@@ -1,0 +1,74 @@
+<div class="appnav" [class.header_change]="isScrolled" #appnav>
+  <app-navbar></app-navbar>
+</div>
+
+<div class="blog-saya">
+  <div class="col-12 profile d-flex justify-content-center">
+    <h1 class="my-auto h1">BLOG SAYA</h1>
+  </div>
+  <div class="container mt-5 pt-5">
+    <div class="row mt-5 pt-5">
+      <div class="col-12 mt-5 pt-5" style="z-index: 1">
+        <div class="tab_box" style="position: relative">
+          <div class="row px-2">
+            <div class="col-12 button">
+              <button class="tab_btn active" (click)="filterBlogs('Semua')">
+                Semua
+              </button>
+              <button
+                class="tab_btn"
+                *ngFor="let category of uniqueCategories"
+                (click)="filterBlogs(category)"
+              >
+                {{ category }}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="content_box mt-5">
+          <div class="content active">
+            <div class="row">
+              <div
+                class="col-12 col-md-6 px-1 px-md-3"
+                *ngFor="let blog of filteredBlogs"
+              >
+                <div
+                  class="card mb-4"
+                  *ngFor="let nonMainPhoto of getNonMainPhotos(blog.fotos)"
+                >
+                  <a
+                    [routerLink]="[
+                      '/Blog' + blog.templateId,
+                      blog.judul,
+                      blog.templateId
+                    ]"
+                  >
+                    <img [src]="nonMainPhoto" class="card-img-top" alt="..." />
+                  </a>
+                  <div class="card-body mb-2">
+                    <p>{{ blog.tanggal }}</p>
+                    <a
+                      [routerLink]="[
+                        '/Blog' + blog.templateId,
+                        blog.judul,
+                        blog.templateId
+                      ]"
+                    >
+                      <h5 class="card-text">{{ blog.judul }}</h5>
+                    </a>
+                    <button
+                      class="btn btn-danger"
+                      (click)="deleteBlog(blog.id)"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

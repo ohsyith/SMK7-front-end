@@ -1,0 +1,125 @@
+.appnav {
+    z-index: 11;
+    height: 0px; /* Awalnya tinggi 0 */
+}
+
+
+.header_change {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:white;
+    object-fit: cover;
+    width: 100vw;
+    height: 5.7em; 
+    transition: height 0.3s; 
+    border-radius: 0 0 50px 50px;
+}
+
+.header{
+    overflow-x: hidden;
+    width: 100%;
+    height: 6.7em; 
+    position: absolute;
+    top: 0;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+    box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05), 0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04), 0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03), 0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03), 0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02), 0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02), 0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.headmaster h1 {
+    color: #FDAB08;
+    font-family: Rubik;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.headmaster h2 {
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    font-family: Rubik;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+.headmaster p {
+    color: #000;
+    font-family: Rubik;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.headmaster h5 {
+    color: #4B4F58;
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+.headmaster img {
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    height: 180px;
+}
+.headmaster .card{
+    border-radius: 10px 10px 0px 0px;
+    background: #FFF;
+    box-shadow: 0px 2.91966px 1.58005px 0px rgba(0, 0, 0, 0.07), 0px 7.38404px 3.99607px 0px rgba(0, 0, 0, 0.05), 0px 15.06274px 8.1516px 0px rgba(0, 0, 0, 0.04), 0px 31.0264px 16.79076px 0px rgba(0, 0, 0, 0.03), 0px 85px 46px 0px rgba(0, 0, 0, 0.02);
+}
+
+@media(min-width: 768px){
+    .headmaster h1 {
+        font-size: 29px;
+    }
+    .headmaster h2 {
+        font-size: 15px;
+    }
+    .headmaster h2::before {
+        content: "";
+        width: 158.316px;
+        height: 2px;
+        position: absolute;
+        background-color: #737782;
+        margin-top: -33px;
+        margin-left: 8px;
+    }
+    .headmaster img {
+        height: 150px;
+    }
+
+    .headmaster .card {
+        height: 400px;
+        position: relative;
+    }
+    .headmaster .time {
+        position: absolute; 
+        bottom: 9px; 
+        width: 100%;
+    }
+}
+
+@media(min-width: 800px){
+    .headmaster img {
+        height: 170px;
+    }
+    .headmaster p {
+        font-size: 15px;
+    }
+}
+@media(min-width: 950px){
+    .headmaster img {
+        height: 210px;
+    }
+}
+
+@media(min-width: 1200px){
+    .headmaster img {
+        height: 250px;
+    }
+}

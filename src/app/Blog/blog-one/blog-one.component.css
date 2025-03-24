@@ -1,0 +1,188 @@
+.appnav {
+    z-index: 11;
+    height: 0px; /* Awalnya tinggi 0 */
+}
+
+
+.header_change {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:white;
+    object-fit: cover;
+    width: 100vw;
+    height: 5.7em; 
+    transition: height 0.3s; 
+    border-radius: 0 0 50px 50px;
+}
+
+.header{
+    overflow-x: hidden;
+    width: 100%;
+    height: 6.7em; 
+    position: absolute;
+    top: 0;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+    box-shadow: 0px 1.18178px 1.50619px 0px rgba(0, 0, 0, 0.05), 0px 2.74774px 3.50202px 0px rgba(0, 0, 0, 0.04), 0px 4.9343px 6.28881px 0px rgba(0, 0, 0, 0.03), 0px 8.18911px 10.4371px 0px rgba(0, 0, 0, 0.03), 0px 13.49128px 17.19477px 0px rgba(0, 0, 0, 0.02), 0px 23.57885px 30.05147px 0px rgba(0, 0, 0, 0.02), 0px 51px 65px 0px rgba(0, 0, 0, 0.01);
+}
+
+.blog-one h1{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+}
+.blog-one h4{
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Inter;
+    font-size: 0.67rem;
+    font-style: normal;
+    font-weight: 500;
+}
+.blog-one h5{
+    color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+.blog-one .img img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+.blog-one .content p{
+    color: #000;
+    font-family: Inter;
+    text-align: justify;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+}
+.blog-one .image img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blog-one .writer img {
+    object-fit: cover;
+    width:  100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.blog-one .writer h2 {
+    color: #000;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+}
+.blog-one .writer h2 span {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Inter;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+.blog-one .writer h3 {
+    color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+    font-family: Inter;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+.blog-one .writer svg {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+@media (min-width:450px){
+    .blog-one .img img{
+        object-fit: cover;
+        width: 100%;
+        height: 230px;
+        border-radius: 20px;
+    }
+    .blog-one .image img{
+        object-fit: cover;
+        width: 100%;
+        height: 230px;
+        border-radius: 10px;
+    }
+}
+@media (min-width:768px){
+    .blog-one .img img{
+        object-fit: cover;
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+    }
+    .blog-one .image img{
+        object-fit: cover;
+        width: 100%;
+        height: 130px;
+        border-radius: 10px;
+    }
+    .blog-one .writer {
+        position: relative;
+    }
+    .blog-one .writer .line::before {
+        position: absolute;
+        width: 95%;
+        height: 0.125rem;
+        background-color: #EFD507;
+        content: "";
+        margin-top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width:1000px){
+    .blog-one h1{
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+    }
+    .blog-one h4{
+        color: var(--Warna-Abu-Text-Isi---2, #6D6868);
+        font-family: Inter;
+        font-size: 0.73rem;
+        font-style: normal;
+        font-weight: 500;
+    }
+    .blog-one h5{
+        color: var(--Warna-Abu-Text-Isi---1, #4D4848);
+        text-align: center;
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+    .blog-one .img img{
+        height: 400px;
+    }
+    .blog-one .content p{
+        font-size: 0.9rem;
+    }
+    .blog-one .image img{
+        object-fit: cover;
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+    }
+}

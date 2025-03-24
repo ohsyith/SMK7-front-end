@@ -1,0 +1,197 @@
+    <aside id="sidebar" class="sidebar col-2">
+        <div class="text-center admin mb-5">
+            <h1>ADMIN</h1>
+            <p>Smk Negeri 7 Batam</p>
+        </div>
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" routerLink="/admin/Dashboard">
+            <i class="bi bi-grid"></i>
+            <i class="fa fa-home"></i>
+            <span class="px-3"> 
+                Dashboard
+            </span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i>
+            <i class="fa fa-briefcase"></i>
+            <span class="px-3" >
+                Program
+            </span>
+            <i class="fa fa-caret-down"></i>
+            <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a routerLink="/admin/Hubungan-Industri">
+                    <i class="bi bi-circle"></i><span>Hubungan Industri</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Teaching-Factory">
+                    <i class="bi bi-circle"></i><span>Teaching Factory</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Program-Bussiness-Center-Admin">
+                    <i class="bi bi-circle"></i><span>Program Bussines Center</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Program-Kewirausahaan">
+                    <i class="bi bi-circle"></i><span>Kewirausahaan</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#jurusan" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i>
+            <i class="fa fa-address-book"></i>
+            <span class="px-3">Jurusan</span>
+            <i class="fa fa-caret-down"></i>
+            <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="jurusan" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a routerLink="/admin/Rekayasa-Perangkat-Lunak">
+                    <i class="bi bi-circle"></i><span>RPL</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Multimedia">
+                    <i class="bi bi-circle"></i><span>DKV</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Teknik-Instalasi-Tenaga-Listrik">
+                    <i class="bi bi-circle"></i><span>TITL</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Teknik-Komputer-dan-Jaringan">
+                    <i class="bi bi-circle"></i><span>TKJ</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Teknik-Jaringan-Akses-Telkomunikasi">
+                    <i class="bi bi-circle"></i><span>TJAT</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#GTK" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i>
+            <i class="fa fa-id-card"></i>
+            <span class="px-3">GTK & Siswa</span>
+            <i class="fa fa-caret-down"></i>
+            <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="GTK" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a routerLink="/admin/Informasi-Guru-dan-Tenaga-Kependidikan">
+                    <i class="bi bi-circle"></i><span>Informasi GTK</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Pemetaan-Kelulusan-Alumni">
+                    <i class="bi bi-circle"></i><span>Peta Kelulusan</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Prestasi-Peserta-Didik">
+                    <i class="bi bi-circle"></i><span>Prestasi Siswa</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" routerLink="/admin/Sarana-Prasarana">
+            <i class="bi bi-grid"></i>
+            <i class="fa fa-building"></i>
+            <span class="px-3">Sarana & Prasarana</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#PPDB" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i>
+            <i class="fa fa-sitemap"></i>
+            <span class="px-3">Kegiatan Sekolah</span>
+            <i class="fa fa-caret-down"></i>
+            <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="PPDB" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a routerLink="/admin/Kegiatan-Produk-Kreatif-dan-Kewirausahaan">
+                    <i class="bi bi-circle"></i><span>Kewirausahaan Siswa</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Bursa-Kerja-Khusus">
+                    <i class="bi bi-circle"></i><span>Bursa Kerja Khusus</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Penerimaan-Peserta-Didik-Baru">
+                    <i class="bi bi-circle"></i><span>PPDB</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Kelulusan-Siswa-SMK-Negeri-7-Batam">
+                      <i class="bi bi-circle"></i><span>Kelulusan Siswa</span>
+                    </a>
+                  </li>
+                <li>
+                    <a routerLink="/admin/Ekstrakulikuler">
+                    <i class="bi bi-circle"></i><span>Ekstrakulikuler</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Literasi-Sekolah">
+                    <i class="bi bi-circle"></i><span>Literasi Sekolah</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" routerLink="/admin/Galeri-Foto-dan-Video">
+            <i class="bi bi-grid"></i>
+            <i class="fa fa-camera-retro"></i>
+            <span class="px-3">Galeri Sekolah</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Berita" data-bs-toggle="collapse" >
+            <i class="bi bi-menu-button-wide"></i>
+            <i class="fa fa-envelope-open"></i>
+            <span class="px-3">Berita</span>
+            <i class="fa fa-caret-down"></i>
+            <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Berita" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a routerLink="/admin/Berita-Sekolah">
+                    <i class="bi bi-circle"></i><span>Berita Sekolah</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/admin/Pengumuman">
+                    <i class="bi bi-circle"></i><span>Pengumuman</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" routerLink="/admin/Kontak">
+            <i class="bi bi-grid"></i>
+            <i class="fa fa-phone"></i>
+            <span class="px-3">Kontak</span>
+            </a>
+        </li>
+    </ul>
+</aside>

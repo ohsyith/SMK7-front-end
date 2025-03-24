@@ -1,0 +1,121 @@
+.Bergabung{
+    color: var(--Warna-Merah-Text-Title, #DC143C);
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: normal;
+}
+
+.smk7 img {
+    width: 15em;
+}
+
+.col-lg-6 button {
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.img{
+    background-image: url(../../../assets/smkbg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0 10px 10px 0;
+
+}
+
+.img img{
+    height: 20em;
+    max-width: 100%; 
+    object-fit: cover;
+}
+
+.banner{
+    border-radius: 10px;
+    background: #F1F4FA;
+    z-index: 1;
+}
+
+@media(max-width: 350px){
+    .text-lg-start img{
+        width: 100%;
+    }
+}
+@media(max-width: 1000px){
+    .row .img {
+        display: none;
+    }
+}
+
+
+.footer {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../assets/wall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -100px;
+    padding-top: 300px;
+    z-index: -1;
+}
+
+
+h2{
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h5{
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.maps iframe{
+    padding: 20px;
+    width: 70%;
+    height: 291.542px;
+    flex-shrink: 0;
+    margin-bottom: 50px;
+    border-radius: 25px;
+}
+
+.hak-cipta{
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #202020;
+}
+
+.skaju img{
+    width: 70%;
+    width: 150px;
+}
+
+.sosmed{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sosmed a i{
+    font-size: 24px;
+    color: white;
+}

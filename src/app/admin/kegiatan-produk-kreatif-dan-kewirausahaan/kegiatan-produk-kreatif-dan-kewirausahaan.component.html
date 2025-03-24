@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Kegiatan Produk Kreatif dan Kewirausahaan</h1>
+    </div>
+
+    <!-- Header-Logo -->
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten -->
+    <div class="background p-2">
+      <div class="padding p-3">
+        <div style="position: relative">
+          <div class="row mt-4 row-item-2">
+            <!-- Item-1-Left -->
+            <div
+              class="col-5 d-flex justify-content-center align-items-center gap-5"
+            >
+              <div>
+                <ng-container *ngIf="selectedImage">
+                  <div class="mb-3">
+                    <img
+                      style="width: 200px; object-fit: cover"
+                      src="{{ selectedImage }}"
+                      alt=""
+                    />
+                  </div>
+                </ng-container>
+                <br />
+                <p class="judul-form">Upload Foto Kegiatan PKK</p>
+                <br />
+                <div class="mb-3">
+                  <input
+                    class="form-control mb-3"
+                    type="file"
+                    id="formFile"
+                    (change)="onFileSelected($event)"
+                  />
+
+                  <button class="btn btn-primary" (click)="tambahFoto()">
+                    Simpan
+                  </button>
+                </div>
+              </div>
+
+              <div class="line"></div>
+            </div>
+
+            <!-- Item-2-Right -->
+            <div class="col-7 col-item-2">
+              <div class="row">
+                <div
+                  class="col-6 align-items-center d-flex flex-column mb-3"
+                  *ngFor="let data of getImage"
+                >
+                  <div class="mb-1">
+                    <img
+                      nz-image
+                      width="250px"
+                      height="150px"
+                      style="object-fit: cover"
+                      nzSrc="{{ data.foto }}"
+                      alt=""
+                    />
+                  </div>
+
+                  <button
+                    class="btn btn-danger btn-delete mb-2"
+                    (click)="deleteFoto(data.id)"
+                  >
+                    <i class="fa fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

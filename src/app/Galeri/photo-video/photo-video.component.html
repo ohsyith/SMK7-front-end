@@ -1,0 +1,24 @@
+<p>photo-video works!</p>
+<div class="appnav"  [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+    <app-nav ></app-nav>
+</div>
+
+<div class="video">
+    <div class="container">
+        <div class="row mt-5 px-2">
+            <div class="col-12 my-3 text-center" style="position: relative;">
+                <h1 class="mt-4 pt-md-4">GALERI VIDEO</h1>
+            </div>
+            
+            <div class="col-12 col-md-6 my-2 mt-md-5 px-lg-4" *ngFor="let video of videos">
+                <iframe [src]="video.urlVideo" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+    <app-footer></app-footer>
+</div>

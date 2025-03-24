@@ -1,0 +1,235 @@
+<div
+  class="appnav"
+  [class.header_change]="isScrolled"
+  [class.header]="!isScrolled"
+  #appnav
+>
+  <app-nav></app-nav>
+</div>
+
+<div class="ppdb" *ngIf="getImage[0]">
+  <div class="row mt-5 px-2">
+    <!-- Item-1 -->
+    <div class="col-12 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start">
+      <h1 class="mt-4 pt-md-4">
+        PENERIMAAN PESERTA DIDIK BARU (PPDB) TAHUN {{ getImage[0].tahun }}
+      </h1>
+    </div>
+
+    <div #boundary class="col-12 mt-3 mb-2 mb-md-5 mb-lg-5">
+      <div class="row gap-lg-5 gap-2">
+        <div class="col-12 col-lg-7 col-md-11 col-sm-12">
+          <div class="row">
+            <div
+              class="col-12 line mt-4 px-4 ms-md-5 px-md-5 text-md-start mb-3 mb-md-5"
+            >
+              <h5 class="ms-2 mb-3 text-lg-start text-md-start text-center">
+                Diagram Alur Pendaftaran Penerimaan Peserta Didik Baru (PPDB)
+                Online Tahun {{ getImage[0].tahun }}
+              </h5>
+              <img
+                class="mt-4"
+                src="{{ strukturData[0]?.foto }}"
+                alt="Diagram PPDB"
+              />
+            </div>
+
+            <div
+              class="col-12 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start text-lg-start"
+            >
+              <h5 class="mb-3">Informasi Syarat Pendaftaran Online</h5>
+              <div class="row">
+                <div class="col-12" *ngFor="let syaratUrl of getImage">
+                  <img
+                    class="mt-4"
+                    src="{{ syaratUrl.foto }}"
+                    alt="Syarat Pendaftaran"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-lg-4 col-md-11 col-sm-12 STICKY"
+          stickyThing
+          [boundary]="boundary"
+        >
+          <div
+            class="info row pt-3 pb-3"
+            style="margin-top: 100px; width: 410px"
+          >
+            <div class="col-12">
+              <div class="mb-4">
+                <h4>Informasi PPDB</h4>
+                <p style="white-space: pre-line">{{ informasiPpdb }}</p>
+              </div>
+
+              <div>
+                <h4>Hubungi Kami</h4>
+                <p style="white-space: pre-line">{{ kontakPpdb }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 col-md-12 NORMAL">
+          <div
+            class="info row pt-3 pb-3"
+            style="margin-top: 20px; width: fit-content; margin-left: 90px"
+          >
+            <div class="col-12">
+              <div class="mb-4">
+                <h4>Informasi PPDB</h4>
+                <p>{{ informasiPpdb }}</p>
+              </div>
+
+              <div>
+                <h4>Hubungi Kami</h4>
+                <p>{{ kontakPpdb }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item-2 -->
+    <div class="col-12 ms-md-5 px-4 px-md-5 text-center text-md-start" *ngIf="getImage[0]">
+      <h5 class="mb-3 mt-5">
+        Daftar Peserta LULUS Penerimaan (PPDB) Tahun {{ getImage[0].tahun }} SMK Negeri 7 Batam
+      </h5>
+      <div class="" style="position: relative">
+        <div class="row">
+          <div class="col-12 col-md-6 text-end text-md-start">
+            <mat-form-field class="Jurusan">
+              <mat-label>Jurusan</mat-label>
+              <mat-select
+                [(ngModel)]="Jurusan"
+                (ngModelChange)="performSearch()"
+              >
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-md-5 text-end text-md-end mt-md-2 mb-md-2">
+            <nz-input-group
+              class="input"
+              [nzSuffix]="suffixTemplateInfo"
+              [nzPrefix]="prefixTemplateUser"
+            >
+              <input
+                type="text"
+                nz-input
+                placeholder="Masukkan Nama Kamu"
+                [(ngModel)]="searchText"
+                (input)="performSearch()"
+              />
+            </nz-input-group>
+            <ng-template #prefixTemplateUser
+              ><span nz-icon nzType="search"></span
+            ></ng-template>
+            <ng-template #suffixTemplateInfo>
+              <span
+                nz-icon
+                nz-tooltip
+                nzTooltipTitle="Extra information"
+                nzType="info-circle"
+              ></span>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-11">
+          <nz-table
+            #basicTable
+            [nzData]="filteredPrestasiList"
+            class="striped-table"
+          >
+            <thead>
+              <tr>
+                <th class="start"><b>No</b></th>
+                <th><b>NISN</b></th>
+                <th><b>NAMA</b></th>
+                <th><b>L/P</b></th>
+                <th><b>JURUSAN</b></th>
+                <th class="end"><b>ASAL SEKOLAH</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable.data">
+                <td>{{ data.NO }}</td>
+                <td>{{ data.NISN }}</td>
+                <td>{{ data.NAMA }}</td>
+                <td>{{ data.LP }}</td>
+                <td>{{ data.Jurusan }}</td>
+                <td>{{ data.SEKOLAHASAL }}</td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item-3 -->
+    <div
+      class="col-12 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start note"
+    >
+      <h2 class="text-start">
+        <b>NOTE: </b
+        ><i
+          >Link Informasi PPDB Bersama Grup Telegram
+          <a [attr.href]="linkTelegram" target="_blank">( Klik di sini )</a>
+          *Link di Buka Saat Perdaftaran PPDB Berlangsung</i
+        >
+      </h2>
+    </div>
+
+<!-- item 4 -->
+    <div class="col-12 mt-5 text-center form-daftar">
+      <nz-tag (click)="downloadPERSYARATAN()" nzColor="#55acee" class="p-1 p-md-1 p-lg-2 mb-2 mb-md-2 mb-lg-0">
+        <i class="fa fa-download me-2"></i>
+        <span>Persyaratan Daftar Ulang</span>
+      </nz-tag>
+      <nz-tag (click)="downloadFORMULIRDAFTAR()" nzColor="#cd201f" class="p-1 p-md-1 p-lg-2 mb-2 mb-md-2 mb-lg-0">
+        <i class="fa fa-download me-2"></i>
+        <span>Formulir Daftar Ulang</span>
+      </nz-tag>
+      <nz-tag (click)="downloadSURATPERNYATAAN()" nzColor="#3b5999" class="p-1 p-md-1 p-lg-2">
+        <i class="fa fa-download me-2"></i>
+        <span>Surat Pernyataan</span>
+      </nz-tag>
+      <nz-tag (click)="downloadFORMULIRDAPODIK()" nzColor="#55acee" class="p-1 p-md-1 p-lg-2">
+        <i class="fa fa-download me-2"></i>
+        <span>Form Isian Dapodik</span>
+      </nz-tag>
+    </div>
+
+    <!-- Item-5 -->
+    <div
+      class="col-12 col-md-10 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start information"
+    >
+      <h5 class=""><b>Informasi Terkait</b></h5>
+      <h3 class="text-start mt-4"><b>WASPADALAH..!</b></h3>
+      <p class="text-start mb-3">
+        Segera Laporkan Kepada Panitia PPDB SMK Negeri 7 Batam Apabila Ada
+        Pihak-pihak yang Memanfaatkan Ajang PPDB Ini Untuk Meraup Keuntungan.
+        Laporkan Via DM/IG dan Kontak SMK Negeri 7 Batam
+      </p>
+      <img
+        style="width: 100%"
+        src="../../../assets/Kegiatan/PPDB/PPDB-NO-PUNGLI-80-scaled.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>

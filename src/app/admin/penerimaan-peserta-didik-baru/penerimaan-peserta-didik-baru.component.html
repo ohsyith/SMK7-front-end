@@ -1,0 +1,408 @@
+<div class="container">
+  <div class="row mt-3 mt-2">
+    <div class="col-6 mb-4 text-start">
+      <h1>Penerimaan Peserta Didik Baru</h1>
+    </div>
+
+    <!-- Header-Logo -->
+    <div class="col-6 text-end">
+      <a routerLink="/home">
+        <i style="font-size: 30px; color: #000" class="fa fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Isi-Konten -->
+    <div class="background p-2">
+      <div class="padding p-3">
+        <div style="position: relative">
+          <!-- Item-1-->
+          <div class="row mt-4">
+            <!-- Textarea-1 -->
+            <div class="col-6">
+              <div class="row" style="margin-left: 25px">
+                <div class="col-12">
+                  <p class="text-input">Informasi PPDB</p>
+                </div>
+                <div class="col-12">
+                  <textarea
+                    [(ngModel)]="info.informasi"
+                    placeholder="Masukan Informasi PPDB..."
+                    class="p-3"
+                    name=""
+                    id=""
+                    cols="60"
+                    rows="8"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Textarea-2 -->
+            <div class="col-6">
+              <div class="row" style="margin-left: 25px">
+                <div class="col-12">
+                  <p class="text-input">Hubungi Kami</p>
+                </div>
+                <div class="col-12">
+                  <textarea
+                    [(ngModel)]="kontak.contact"
+                    placeholder="Masukan Informasi Kontak..."
+                    class="p-3"
+                    name=""
+                    id=""
+                    cols="60"
+                    rows="8"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Btn-Simpan-Perubahan-1 -->
+            <div class="row mt-4">
+              <div class="col-12 text-end">
+                <button
+                  (click)="UpdateInfo()"
+                  class="btn btn-primary btn-simpan-perubahan"
+                >
+                  <span>Simpan Perubahan</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item-2 -->
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="line"></div>
+
+              <div class="row mt-5">
+                <div class="col-12">
+                  <p class="text-input">Diagram Alur PPDB</p>
+                </div>
+
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-9">
+                      <button
+                        class="btn btn-primary btn-upload"
+                        (click)="Upload()"
+                      >
+                        Unggah Foto
+                      </button>
+                      <input
+                        #m1asd
+                        type="file"
+                        (change)="diagramInput($event)"
+                        style="display: none"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Image -->
+                <div class="col-12 mt-3">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        alt=""
+                        nz-image
+                        width="300px"
+                        height="168.75px"
+                        style="object-fit: cover; border-radius: 20px"
+                        nzSrc="{{ diagram.foto }}"
+                      />
+                    </div>
+
+                    <div class="col-8 d-flex align-items-center">
+                      <button class="btn btn-primary" (click)="m1asd.click()">
+                        <i class="fa fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item-3 -->
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="line"></div>
+
+              <div class="row mt-5">
+                <div class="col-12">
+                  <p class="text-input">Syarat Pendaftaran Online</p>
+                </div>
+
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-9">
+                      <button
+                        (click)="updatesyarat()"
+                        class="btn btn-primary btn-upload"
+                      >
+                        Unggah Foto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Image -->
+                <div class="row mt-3">
+                  <div class="col-3 d-flex flex-column align-items-center">
+                    <img
+                      alt=""
+                      nz-image
+                      width="200px"
+                      style="object-fit: cover; border-radius: 20px"
+                      nzSrc="{{ fotosyarat[0].foto }}"
+                    />
+                    <input
+                      #m1as11
+                      type="file"
+                      (change)="syaratInput($event, 0)"
+                      style="display: none"
+                    />
+                    <button
+                      class="btn btn-primary btn-delete mt-3"
+                      (click)="m1as11.click()"
+                    >
+                      <i class="fa fa-edit"></i>
+                    </button>
+                  </div>
+                  <div class="col-3 d-flex flex-column align-items-center">
+                    <img
+                      nz-image
+                      width="200px"
+                      style="object-fit: cover; border-radius: 20px"
+                      nzSrc="{{ fotosyarat[1].foto }}"
+                    />
+                    <input
+                      #m1a11
+                      type="file"
+                      (change)="syaratInput($event, 1)"
+                      style="display: none"
+                    />
+                    <button
+                      class="btn btn-primary btn-delete mt-3"
+                      (click)="m1a11.click()"
+                    >
+                      <i class="fa fa-edit"></i>
+                    </button>
+                  </div>
+                  <div class="col-3 d-flex flex-column align-items-center">
+                    <img
+                      nz-image
+                      width="200px"
+                      style="object-fit: cover; border-radius: 20px"
+                      nzSrc="{{ fotosyarat[2].foto }}"
+                    />
+                    <input
+                      #m111
+                      type="file"
+                      (change)="syaratInput($event, 2)"
+                      style="display: none"
+                    />
+                    <button
+                      class="btn btn-primary btn-delete mt-3"
+                      (click)="m111.click()"
+                    >
+                      <i class="fa fa-edit"></i>
+                    </button>
+                  </div>
+                  <div class="col-3 d-flex flex-column align-items-center">
+                    <img
+                      nz-image
+                      width="200px"
+                      style="object-fit: cover; border-radius: 20px"
+                      nzSrc="{{ fotosyarat[3].foto }}"
+                    />
+                    <input
+                      #m112
+                      type="file"
+                      (change)="syaratInput($event, 3)"
+                      style="display: none"
+                    />
+                    <button
+                      class="btn btn-primary btn-delete mt-3"
+                      (click)="m112.click()"
+                    >
+                      <i class="fa fa-edit"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item-4 -->
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="line"></div>
+
+              <div class="row mt-5">
+                <div class="col-12">
+                  <p class="text-input">Daftar Peserta Lulus Penerimaan PPDB</p>
+                </div>
+
+                <div style="position: relative">
+                  <!-- Header-Konten -->
+                  <div class="row mt-3 d-flex justify-content-end">
+                    <!-- Search-Data -->
+                    <div class="col-3 text-end text-md-end mt-md-2">
+                      <nz-input-group
+                        class="input"
+                        [nzSuffix]="suffixTemplateInfo"
+                        [nzPrefix]="prefixTemplateUser"
+                      >
+                        <input
+                          type="text"
+                          nz-input
+                          placeholder="Masukkan Nama Kamu"
+                          [(ngModel)]="searchText"
+                          (input)="performSearch()"
+                        />
+                      </nz-input-group>
+
+                      <ng-template #prefixTemplateUser
+                        ><span nz-icon nzType="search"></span
+                      ></ng-template>
+                      <ng-template #suffixTemplateInfo>
+                        <span
+                          nz-icon
+                          nz-tooltip
+                          nzTooltipTitle="Extra information"
+                          nzType="info-circle"
+                        ></span>
+                      </ng-template>
+                    </div>
+
+                    <!-- Dropdown Filter Jurusan -->
+                    <div class="col-3 text-end text-md-end mt-md-2">
+                      <mat-form-field class="Jurusan">
+                        <mat-label>Jurusan</mat-label>
+                        <mat-select
+                          [(ngModel)]="jurusan"
+                          (ngModelChange)="performSearch()"
+                        >
+                          <mat-option
+                            *ngFor="let food of foods"
+                            [value]="food.value"
+                          >
+                            {{ food.viewValue }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+
+                    <!-- Tambah-Peserta-PPDB -->
+                    <div
+                      class="col-6 text-end text-md-end mt-md-2 d-flex justify-content-end align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-info me-2"
+                        routerLink="/admin/Tambah-Daftar-Peserta-Lulus-PPDB"
+                      >
+                        Tambah Peserta
+                        <span>
+                          <i class="fa fa-plus"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <div class="col-12 mt-2">
+                  <nz-table
+                    #basicTable
+                    [nzData]="filteredPrestasiList"
+                    class="striped-table"
+                  >
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>NISN</th>
+                        <th>Nama Peserta</th>
+                        <th>L/P</th>
+                        <th>Sekolah Asal</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr *ngFor="let data of basicTable.data">
+                        <td>
+                          {{ data.NO }}
+                        </td>
+                        <td>{{ data.Nisn }}</td>
+                        <td>{{ data.Nama }}</td>
+                        <td>{{ data.Lp }}</td>
+                        <td>{{ data.AsalSekolah }}</td>
+                        <td>
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary"
+                            [routerLink]="
+                              '/admin/Edit-Daftar-Peserta-Lulus-PPDB/' + data.Id
+                            "
+                          >
+                            Edit
+                          </button>
+
+                          <button
+                            nz-button
+                            nz-popconfirm
+                            nzOkText="Yes"
+                            nzCancelText="No"
+                            nzPopconfirmTitle="Are you sure to delete this task?"
+                            class="btn btn-outline-danger ms-2"
+                            (nzOnConfirm)="dataDelet(data.Id)"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </nz-table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item-5 -->
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="line"></div>
+
+              <div class="row mt-5">
+                <div class="col-12">
+                  <p class="text-input">Link Telegram Grup Informasi PPDB</p>
+                </div>
+
+                <div class="row">
+                  <div class="col-4">
+                    <input
+                      class="form-control mb-4 input-link"
+                      type="text"
+                      [(ngModel)]="url"
+                      placeholder="Masukan Link Grup Telegram"
+                    />
+
+                    <button
+                      (click)="saveChange()"
+                      class="btn btn-primary btn-upload"
+                    >
+                      Simpan Perubahan
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

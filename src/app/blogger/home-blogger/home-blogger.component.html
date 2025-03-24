@@ -1,0 +1,50 @@
+<div class="appnav" [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+    <app-navbar></app-navbar>
+</div>
+
+<div class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 pt-5 profile">
+                <div class="row mx-0 mt-4">
+                    <div class="col-12 col-md-6 px-0">
+                        <img style="width: 100%;" src="../../../assets/Gallery/bendera.png"
+                            alt="">
+                    </div>
+                    <div class="col-12 col-md-6 px-3 my-4 ps-md-5 py-md-5 opening">
+                        <h1>Selamat Datang di <span>Blog</span> Smk Negeri 7 Batam</h1>
+                        <p class="mt-4">Mari berkreasi bersama kami dengan menyampaikan cerita anda</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5" style="z-index: 1;">
+                <div class="tab_box" style="position: relative;">
+                    <div class="row px-2">
+                        <div class="col-12 button">
+                            <button class="tab_btn active" (click)="filterBlogs('Semua')">Semua</button>
+                            <button class="tab_btn" *ngFor="let category of uniqueCategories" (click)="filterBlogs(category)">{{ category }}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_box mt-5">
+                    <div class="content active">
+                        <div class="row">
+                            <div class="col-12 col-md-6 px-1 px-md-3" *ngFor="let blog of filteredBlogs">
+                                <a [routerLink]="['/Blog'+blog.templateId, blog.judul,blog.templateId]">
+                                    <div class="card mb-4" *ngFor="let nonMainPhoto of getNonMainPhotos(blog.fotos)">
+                                        <img [src]="nonMainPhoto" class="card-img-top" alt="...">
+                                        <div class="card-body mb-2">
+                                            <p>{{blog.tanggal}}</p>
+                                            <h5 class="card-text">{{blog.judul}}</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

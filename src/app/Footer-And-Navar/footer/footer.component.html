@@ -1,0 +1,182 @@
+<div class="bg-light">
+  <div class="asdasd"></div>
+  <div class="benner row justify-content-center">
+    <div class="col-9 banner">
+      <div class="row">
+        <div
+          class="col-lg-6 text-center text-lg-start pt-3 pt-lg-5 ps-1 ps-md-4"
+        >
+          <p class="Bergabung">Ayo Bergabung di<br />SMK Negeri 7 Batam !</p>
+          <img
+            class="mt-2"
+            src="../../assets/smk-bisa-hebat-png-5-300x144.png"
+            alt=""
+          />
+          <br />
+          <a
+            *ngIf="con[0]"
+            target="_blank"
+            [href]="'https://api.whatsapp.com/send?phone=' + con[0].telp"
+          >
+            <button type="button" class="btn btn-outline-primary my-3">
+              Hubungi Kami
+            </button>
+          </a>
+        </div>
+        <div
+          class="col-lg-6 img text-center d-lg-flex justify-content-lg-center align-items-lg-end"
+        >
+          <img src="../../assets/smk-removebg-preview.png" alt />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row footer">
+  <div class="skaju col-lg-4 text-center">
+    <img src="../../assets/Logo-Skaju 1.png" alt="" />
+
+    <div class="mt-3">
+      <div class="sosmed">
+        <a *ngIf="con[0]" target="_blank" [attr.href]="con[0].instagram">
+          <i class="fa fa-instagram"></i>
+        </a>
+
+        <a *ngIf="con[0]" target="_blank" [attr.href]="con[0].facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://www.youtube.com/@SMKNegeri7BatamOfficial"
+        >
+          <i class="fa fa-youtube"></i>
+        </a>
+
+        <a target="_blank" href="https://www.tiktok.com/@adminsmknegeri7ba?_t=8n6KL2FzfDs&_r=1">
+          <i class="ri-tiktok-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-8 mt-5 mt-lg-0">
+    <div class="row mx-4">
+      <div class="col-12 col-md-12 col-lg-2 text-md-center text-lg-start">
+        <h2 class="mt-3 mt-lg-0">Navigasi</h2>
+        <h5 class="mt-2 mt-lg-5" style="cursor: pointer" routerLink="/home">
+          Home
+        </h5>
+        <h5 class="mt-2 mt-lg-4" style="cursor: pointer" routerLink="/kontak">
+          Kontak
+        </h5>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 text-md-end text-lg-start">
+        <h2 class="mt-3 mt-lg-0">Tautan Penting</h2>
+
+        <a target="_blank" href="https://disdik.batam.go.id/">
+          <h5 class="mt-2 mt-lg-5">Disdik Kota Batam</h5>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/place/Dinas+Pendidikan+Provinsi+Kepulauan+Riau/@0.8673437,104.4670052,15z/data=!4m5!3m4!1s0x0:0x2151b8b0ff6f9761!8m2!3d0.8673744!4d104.4671179?shorturl=1"
+        >
+          <h5 class="mt-2 mt-lg-4">Disdik Provinsi Kepri</h5>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://dapo.kemdikbud.go.id/sekolah/C7CEC28F33ADBC383B95"
+        >
+          <h5 class="mt-2 mt-lg-4">Dapodik SMK Negeri 7 Batam</h5>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/place/SMK+Negeri+7+Batam/@1.1100945,104.0858798,15z/data=!4m5!3m4!1s0x0:0x9ca1222640c2273a!8m2!3d1.1100945!4d104.0858798?sa=X&ved=2ahUKEwjcvv3iy672AhUZyzgGHSSMDsUQ_BJ6BAg4EAU&shorturl=1"
+        >
+          <h5 class="mt-2 mt-lg-4">Peta Lokasi SMK Negeri 7 Batam</h5>
+        </a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <h2 class="mt-3 mt-lg-0">Tentang Kami</h2>
+        <h5 class="mt-2 mt-lg-5">
+          Perumahan Sekawan Pemko, <br />Kelurahan, Belian, Kec. Batam Kota,
+          <br />Kota Batam, Prov. Kepulauan Riau <br />Kode Pos : 29463
+        </h5>
+        <h5 class="mt-2 mt-lg-4" *ngIf="con[0]">{{ con[0].telp }}</h5>
+        <h5 class="mt-2 mt-lg-4">smknegeri7batam@gmail.com</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="maps col-lg-12 text-center mt-4">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.069501403606!2d104.0834131740487!3d1.1100850988792847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d988b07c424207%3A0x9ca1222640c2273a!2sSMK%20Negeri%207%20Batam!5e0!3m2!1sid!2sid!4v1697432533089!5m2!1sid!2sid"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div class="col-lg-12 hak-cipta text-center pt-2">
+    <h5>@2024 Hak Cipta, SMK NEGERI 7 BATAM</h5>
+  </div>
+</div>
+
+<!-- <svg
+xmlns="http://www.w3.org/2000/svg"
+width="132"
+height="24"
+viewBox="0 0 132 24"
+fill="none"
+>
+<a *ngIf="con[0]" target="_blank" [attr.href]="con[0].facebook">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M24 12C24 5.37321 18.6268 0 12 0C5.37321 0 0 5.37321 0 12C0 17.9893 4.3875 22.9538 10.125 23.8548V15.4698H7.07732V12H10.125V9.35625C10.125 6.34929 11.917 4.68696 14.6577 4.68696C15.9707 4.68696 17.3443 4.92161 17.3443 4.92161V7.875H15.8304C14.3405 7.875 13.8745 8.79964 13.8745 9.75V12H17.2023L16.6709 15.4698H13.875V23.8559C19.6125 22.9554 24 17.9909 24 12Z"
+    fill="white"
+  />
+</a>
+
+<a *ngIf="con[0]" target="_blank" [attr.href]="con[0].facebook">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M24 12C24 5.37321 18.6268 0 12 0C5.37321 0 0 5.37321 0 12C0 17.9893 4.3875 22.9538 10.125 23.8548V15.4698H7.07732V12H10.125V9.35625C10.125 6.34929 11.917 4.68696 14.6577 4.68696C15.9707 4.68696 17.3443 4.92161 17.3443 4.92161V7.875H15.8304C14.3405 7.875 13.8745 8.79964 13.8745 9.75V12H17.2023L16.6709 15.4698H13.875V23.8559C19.6125 22.9554 24 17.9909 24 12Z"
+    fill="white"
+  />
+</a>
+
+<a *ngIf="con[0]" target="_blank" [attr.href]="con[0].instagram">
+  <path
+    d="M66.9998 1.99982C68.3248 2.00378 69.5943 2.53187 70.5312 3.46876C71.4681 4.40566 71.9962 5.67522 72.0002 7.00018V16.9998C71.9962 18.3248 71.4681 19.5943 70.5312 20.5312C69.5943 21.4681 68.3248 21.9962 66.9998 22.0002H57.0002C55.6752 21.9962 54.4057 21.4681 53.4688 20.5312C52.5319 19.5943 52.0038 18.3248 51.9998 16.9998V7.00018C52.0038 5.67522 52.5319 4.40566 53.4688 3.46876C54.4057 2.53187 55.6752 2.00378 57.0002 1.99982H66.9998ZM66.9998 0H57.0002C53.15 0 50 3.15 50 7.00018V16.9998C50 20.85 53.15 24 57.0002 24H66.9998C70.85 24 74 20.85 74 16.9998V7.00018C74 3.15 70.85 0 66.9998 0Z"
+    fill="white"
+  />
+  <path
+    d="M68.4998 7C68.2031 7 67.9131 6.91203 67.6665 6.74721C67.4198 6.58238 67.2275 6.34811 67.114 6.07403C67.0005 5.79994 66.9708 5.49834 67.0286 5.20737C67.0865 4.91639 67.2294 4.64912 67.4392 4.43934C67.6489 4.22956 67.9162 4.0867 68.2072 4.02882C68.4982 3.97094 68.7998 4.00065 69.0738 4.11418C69.3479 4.22771 69.5822 4.41997 69.747 4.66665C69.9118 4.91332 69.9998 5.20333 69.9998 5.5C70.0002 5.6971 69.9617 5.89235 69.8865 6.07453C69.8113 6.25671 69.7008 6.42223 69.5614 6.56161C69.4221 6.70098 69.2565 6.81145 69.0743 6.88668C68.8922 6.96191 68.6969 7.00042 68.4998 7Z"
+    fill="white"
+  />
+  <path
+    d="M62 7.99982C62.7912 7.99982 63.5646 8.23443 64.2224 8.67397C64.8802 9.11352 65.3929 9.73826 65.6957 10.4692C65.9984 11.2001 66.0777 12.0044 65.9233 12.7804C65.769 13.5564 65.388 14.2691 64.8286 14.8286C64.2691 15.388 63.5564 15.769 62.7804 15.9233C62.0044 16.0777 61.2001 15.9984 60.4692 15.6957C59.7383 15.3929 59.1135 14.8802 58.674 14.2224C58.2344 13.5646 57.9998 12.7912 57.9998 12C58.001 10.9394 58.4228 9.92263 59.1727 9.1727C59.9226 8.42277 60.9394 8.00096 62 7.99982ZM62 6C60.8133 6 59.6533 6.35189 58.6666 7.01118C57.6799 7.67047 56.9109 8.60754 56.4567 9.7039C56.0026 10.8003 55.8838 12.0067 56.1153 13.1705C56.3468 14.3344 56.9182 15.4035 57.7574 16.2426C58.5965 17.0818 59.6656 17.6532 60.8295 17.8847C61.9933 18.1162 63.1997 17.9974 64.2961 17.5433C65.3925 17.0892 66.3295 16.3201 66.9888 15.3334C67.6481 14.3467 68 13.1867 68 12C68 10.4087 67.3679 8.88258 66.2426 7.75736C65.1174 6.63214 63.5913 6 62 6Z"
+    fill="white"
+  />
+</a>
+
+<a
+  target="_blank"
+  href="https://www.youtube.com/@SMKNegeri7BatamOfficial"
+>
+  <path
+    d="M131.794 5.29923C131.794 2.48681 129.725 0.224369 127.169 0.224369C123.706 0.0624981 120.174 0 116.565 0H115.44C111.839 0 108.301 0.0624982 104.838 0.224994C102.288 0.224994 100.219 2.49993 100.219 5.31236C100.063 7.53667 99.9966 9.76161 100 11.9865C99.9941 14.2115 100.065 16.4385 100.213 18.6676C100.213 21.48 102.282 23.7612 104.832 23.7612C108.47 23.93 112.202 24.005 115.996 23.9987C119.797 24.0112 123.518 23.9321 127.16 23.7612C129.717 23.7612 131.786 21.48 131.786 18.6676C131.936 16.4364 132.004 14.2115 131.998 11.9803C132.012 9.75536 131.944 7.52834 131.794 5.29923ZM112.94 18.1176V5.83672L122.003 11.974L112.94 18.1176Z"
+    fill="white"
+  />
+</a>
+
+<line x1="38" x2="38" y2="24" stroke="white" stroke-width="2" />
+<line x1="88" x2="88" y2="24" stroke="white" stroke-width="2" />
+</svg> -->

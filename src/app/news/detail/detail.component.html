@@ -1,0 +1,192 @@
+<div
+  class="appnav"
+  [class.header_change]="isScrolled"
+  [class.header]="!isScrolled"
+  #appnav
+>
+  <app-nav></app-nav>
+</div>
+
+<div class="news">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12">
+        <div #boundary class="row respon-berita">
+          <div
+            class="col-12 col-md-12 col-lg-7 col-sm-12 Details px-0 mt-5 text-center text-md-start text-lg-start me-5"
+            *ngIf="listOfData">
+            <h1 class="mt-4 pt-md-4 px-4 px-md-0 px-lg-0 mb-4">
+              {{ listOfData.judul }}
+            </h1>
+            <div class="col-12 text-start">
+              <img class="image" style="width: 100%; height: auto;"
+                *ngIf="listOfData.foto && listOfData.foto.length > 0" [src]="getMainImage(listOfData.foto)" alt="" />
+              <div class="mt-4 mb-4 px-3 px-md-0 px-lg-0">
+                <p style="white-space: pre-line">{{ listOfData.isi }}</p>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-6 my-2 px-4 px-md-2" *ngFor="let foto of listOfData.foto">
+                  <img [src]="foto.url" alt="" />
+                </div>
+              </div>
+              <div class="px-3 px-md-0 px-lg-0 mt-4">
+                <h5 style="white-space: pre-line">{{ listOfData.hashtag }}</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 point STICKY" stickyThing [boundary]="boundary">
+            <ul class="list-group border px-3" style="margin-top: 90px !important; width: 300px !important">
+              <li class="list-group-item line">
+                <h2 style="text-transform: capitalize">
+                  {{ listOfData?.category }} Terbaru
+                </h2>
+              </li>
+              <li class="list-group-item line">
+                <ul *ngFor="let data of listOfDataBerita.slice(0, 3)">
+                  <li style="cursor: pointer" (click)="asd(data.judul)" [routerLink]="'/DetailBerita/' + data.judul">
+                    {{ data.judul }}
+                  </li>
+                </ul>
+                <div>
+                  <h2 class="mt-5">Kategori</h2>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <a routerLink="/berita">
+                  <h4>Berita Sekolah</h4>
+                </a>
+                <a routerLink="/pengumuman">
+                  <h4>Pengumuman</h4>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg-4 col-md-12 point NORMAL">
+            <ul class="list-group border px-3" style="margin-top: 90px !important; width: fit-content">
+              <li class="list-group-item line">
+                <h2 style="text-transform: capitalize">
+                  {{ listOfData?.category }} Terbaru
+                </h2>
+              </li>
+              <li class="list-group-item line">
+                <ul *ngFor="let data of listOfDataBerita.slice(0, 3)">
+                  <li style="cursor: pointer" (click)="asd(data.judul)" [routerLink]="'/DetailBerita/' + data.judul">
+                    {{ data.judul }}
+                  </li>
+                </ul>
+
+                <div>
+                  <h2 class="mt-5">Kategori</h2>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <a routerLink="/Berita">
+                  <h4>Berita Sekolah</h4>
+                </a>
+                <a routerLink="/Pengumuman">
+                  <h4>Pengumuman</h4>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 mt-4 comment">
+        <nz-table #basicTable [nzData]="komentars" [nzPageSize]="2">
+          <div class="row d-flex justify-content-center">
+            <div
+              class="col-11 col-md-5 mx-md-2 my-2 text-center user py-3"
+              *ngFor="let comment of basicTable.data"
+            >
+              <h2>{{ comment.nama }}</h2>
+              <p>{{ comment.keteranganKomentars }}</p>
+            </div>
+          </div>
+        </nz-table>
+      </div>
+
+      <div class="col-12 commented mt-5" [formGroup]="commentForm">
+        <h2 class="mb-4">Tinggalkan Komentar</h2>
+        <mat-error
+          *ngIf="
+            commentForm.get('comment')?.hasError('required') &&
+            commentForm.get('comment')?.touched
+          "
+          class="mb-3"
+        >
+          Comments is required
+        </mat-error>
+        <textarea
+          rows="4 "
+          nz-input
+          placeholder="Klik di sini..... "
+          formControlName="comment"
+        ></textarea>
+
+        <div class="row">
+          <div class="col-12 pt-2">
+            <input
+              class="input-2"
+              type="text "
+              placeholder="Nama "
+              formControlName="nama"
+            />
+
+            <mat-error
+              *ngIf="
+                commentForm.get('nama')?.hasError('required') &&
+                commentForm.get('nama')?.touched
+              "
+              class="mb-3"
+            >
+              Name is required
+            </mat-error>
+
+            <input
+              class="input-3 ms-1"
+              type="text "
+              placeholder="Email"
+              formControlName="email"
+            />
+            <mat-error
+              *ngIf="
+                commentForm.get('email')?.hasError('required') &&
+                commentForm.get('email')?.touched
+              "
+              class="mb-3"
+            >
+              Email is required
+            </mat-error>
+            <mat-error
+              *ngIf="
+                commentForm.get('email')?.hasError('email') &&
+                commentForm.get('email')?.touched
+              "
+              class="mb-3"
+            >
+              Invalid Email!
+            </mat-error>
+            <button
+              type="submit "
+              (click)="submitComment()"
+              [ngStyle]="getButtonStyle()"
+              (mouseenter)="toggleHover()"
+              (mouseleave)="toggleHover()"
+              class="btn btn-outline-primary mt-3 mt-md-0 ms-md-2"
+            >
+              Kirim Komentar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>

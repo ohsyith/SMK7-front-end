@@ -1,0 +1,27 @@
+<div class="appnav" [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+  <app-nav></app-nav>
+</div>
+
+<div class="literacy">
+  <div class="container">
+    <div class="row mt-5 px-2">
+      <div class="col-12 ms-md-3 px-4 px-md-0 mt-5 text-center text-md-start" style="position: relative">
+        <h1 class="mt-4 pt-md-4">LITERASI SMK NEGERI 7 BATAM</h1>
+      </div>
+
+      <div class="col-12 ms-md-3 px-4 px-md-0 mt-4 mb-md-3 text-center text-md-start">
+        <h2 class="">LITERASI SMK NEGERI 7 BATAM</h2>
+      </div>
+
+      <div class="row mt-3 m-auto">
+        <div class="col-6 " *ngFor="let d of getImage">
+          <img class="mb-3 mb-md-4 Achievemen" src="{{ d.foto }}" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>

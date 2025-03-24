@@ -1,0 +1,41 @@
+<div class="appnav" [class.header_change]="isScrolled" [class.header]="!isScrolled" #appnav>
+  <app-nav></app-nav>
+</div>
+
+<div class="special-job">
+  <div class="row mt-5 px-2">
+    <div class="col-12 ms-md-5 px-4 px-md-5 mt-5 text-center text-md-start">
+      <h1 class="mt-4 ms-2 pt-md-4">Bursa Kerja Khusus</h1>
+    </div>
+    <div class="line col-12 mt-4 text-center px-md-5 text-start text-md-center mb-3 mb-md-5">
+      <h5 class="ms-2 ms-md-0">Struktur Bursa Kerja Khusus SMK Negeri 7 Batam TP. {{tahun}}</h5>
+    </div>
+    <div class="px-md-5">
+      <div class="px-md-5">
+        <div class="row">
+          <div class="col-10 col-lg-12 d-flex justify-content-center mx-auto Job-Market-Structure mb-5">
+            <img [src]="foto" alt="">
+          </div>
+
+          <div class="col-12 contents" *ngFor="let entry of data">
+            <h2 class="my-3 text-center text-md-start">{{ entry.judul }}</h2>
+            <img class="my-3" [src]="findMainFoto(entry.foto)" alt="">
+            <p>{{ entry.isi }}</p>
+            <div class="row d-flex  img">
+              <div class="col-12 col-md-6 col-lg-4 my-2" *ngFor="let foto of getNonMainFotos(entry)">
+                <img [src]="foto.url" alt="">
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 mt-md-5">
+  <app-footer></app-footer>
+</div>
